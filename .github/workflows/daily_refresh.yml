@@ -1,0 +1,38 @@
+name: Daily Data Refresh
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests python-dotenv
+
+      - name: Run data refresh
+        env:
+          SENSORTOWER_API_TOKEN: ${{ secrets.SENSORTOWER_API_TOKEN }}
+        run: |
+          python scripts/data_refresh.py
+
+      - name: Commit and push updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add dashboard_data/ data/
+          git diff --staged --quiet || git commit -m "Daily data refresh $(date +%Y-%m-%d)"
+          git push
