@@ -17,18 +17,17 @@ def render():
     all_chart_types = sorted({a["chart_type"] for a in apps})
 
     selected_categories = st.sidebar.multiselect(
-        "Category", all_categories, default=all_categories
+        "Category", all_categories, placeholder="All categories"
     )
-    selected_charts = st.sidebar.multiselect(
-        "Chart Type", all_chart_types, default=all_chart_types
-    )
+    chart_options = ["All"] + all_chart_types
+    selected_chart = st.sidebar.selectbox("Chart Type", chart_options)
 
     # Filter
-    filtered = [
-        a for a in apps
-        if a["category"] in selected_categories
-        and a["chart_type"] in selected_charts
-    ]
+    filtered = apps
+    if selected_categories:
+        filtered = [a for a in filtered if a["category"] in selected_categories]
+    if selected_chart != "All":
+        filtered = [a for a in filtered if a["chart_type"] == selected_chart]
 
     if not filtered:
         st.info("No apps match the selected filters.")
