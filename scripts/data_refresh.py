@@ -22,6 +22,7 @@ from generate_dashboard_data import (
     DATA_DIR,
     build_rankings,
     build_app_details,
+    build_all_apps_table,
     build_category_summary,
     build_publisher_summary,
     build_daily_snapshot,
@@ -103,6 +104,10 @@ def refresh_data():
 
     with open(current_dir / "publisher_summary.json", "w") as f:
         json.dump(pub_summary, f, indent=2)
+
+    all_apps_table = build_all_apps_table(rankings, app_details)
+    with open(current_dir / "all_apps_table.json", "w") as f:
+        json.dump(all_apps_table, f, indent=2, default=str)
 
     # Save daily snapshot
     snapshots_dir = DATA_DIR / "historical" / "snapshots"

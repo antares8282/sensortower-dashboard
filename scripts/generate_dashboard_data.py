@@ -15,14 +15,26 @@ DATA_DIR = PROJECT_ROOT / "dashboard_data"
 PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 
 CATEGORIES = {
-    "6014": "Games",
-    "6015": "Finance",
-    "6005": "Social Networking",
-    "6007": "Productivity",
+    "6002": "Utilities",
+    "6000": "Business",
     "6008": "Photo & Video",
+    "6007": "Productivity",
+    "6012": "Lifestyle",
+    "6013": "Health & Fitness",
 }
 
-CATEGORY_ID_TO_NAME = {int(k): v for k, v in CATEGORIES.items()}
+# Full iOS category mapping for name resolution
+ALL_IOS_CATEGORIES = {
+    6000: "Business", 6001: "Weather", 6002: "Utilities", 6003: "Travel",
+    6004: "Sports", 6005: "Social Networking", 6006: "Reference",
+    6007: "Productivity", 6008: "Photo & Video", 6009: "News",
+    6010: "Navigation", 6011: "Music", 6012: "Lifestyle",
+    6013: "Health & Fitness", 6014: "Games", 6015: "Finance",
+    6016: "Entertainment", 6017: "Education", 6018: "Books",
+    6020: "Medical", 6021: "Newsstand", 6022: "Catalogs",
+    6023: "Food & Drink", 6024: "Shopping",
+}
+CATEGORY_ID_TO_NAME = ALL_IOS_CATEGORIES
 
 
 def get_revenue(app):
@@ -162,9 +174,64 @@ def build_app_details(free_data, grossing_data):
                         "top_countries": app.get("top_countries", []),
                         "supported_languages": app.get("supported_languages", []),
                         "bundle_id": app.get("bundle_id", ""),
+                        "app_age_years": _compute_app_age(app.get("release_date", "")),
                     }
 
     return apps
+
+
+def _compute_app_age(release_date_str):
+    """Compute app age in years from release date string."""
+    if not release_date_str:
+        return None
+    try:
+        release_dt = datetime.fromisoformat(release_date_str.replace("Z", "+00:00"))
+        age_days = (datetime.now(release_dt.tzinfo) - release_dt).days
+        return round(age_days / 365.25, 1)
+    except (ValueError, TypeError):
+        return None
+
+
+def build_all_apps_table(rankings, app_details):
+    """Build all_apps_table.json: flat list for the main dashboard tables."""
+    seen = {}
+
+    for cat_name, cat_data in rankings.items():
+        for chart_type, chart_data in cat_data.items():
+            chart_label = "Top Free" if "free" in chart_type else "Top Grossing"
+            for app_entry in chart_data.get("apps", []):
+                aid = str(app_entry["app_id"])
+                detail = app_details.get(aid) or app_details.get(int(aid), {})
+
+                if aid not in seen:
+                    seen[aid] = {
+                        "app_id": app_entry["app_id"],
+                        "name": app_entry.get("name", "Unknown"),
+                        "publisher_name": app_entry.get("publisher_name", "Unknown"),
+                        "icon_url": app_entry.get("icon_url", ""),
+                        "category": cat_name,
+                        "chart_type": chart_label,
+                        "rank": app_entry.get("rank", 0),
+                        "rating": app_entry.get("rating", 0),
+                        "revenue": app_entry.get("revenue", 0),
+                        "downloads": app_entry.get("downloads", 0),
+                        "has_iap": app_entry.get("has_iap", False),
+                        "price": app_entry.get("price", 0),
+                        "release_date": detail.get("release_date", ""),
+                        "updated_date": detail.get("updated_date", ""),
+                        "app_age_years": detail.get("app_age_years"),
+                        "charts": [{"category": cat_name, "chart": chart_label, "rank": app_entry["rank"]}],
+                    }
+                else:
+                    seen[aid]["charts"].append({
+                        "category": cat_name,
+                        "chart": chart_label,
+                        "rank": app_entry["rank"],
+                    })
+                    seen[aid]["revenue"] = max(seen[aid]["revenue"], app_entry.get("revenue", 0))
+                    seen[aid]["downloads"] = max(seen[aid]["downloads"], app_entry.get("downloads", 0))
+
+    return list(seen.values())
 
 
 def build_category_summary(rankings, app_details):
@@ -342,6 +409,9 @@ def generate_all():
     print("Building publisher summary...")
     pub_summary = build_publisher_summary(app_details, rankings)
 
+    print("Building all apps table...")
+    all_apps_table = build_all_apps_table(rankings, app_details)
+
     # Save current data
     current_dir = DATA_DIR / "current"
     current_dir.mkdir(parents=True, exist_ok=True)
@@ -361,6 +431,10 @@ def generate_all():
     with open(current_dir / "publisher_summary.json", "w") as f:
         json.dump(pub_summary, f, indent=2)
     print(f"  Wrote publisher_summary.json ({len(pub_summary)} publishers)")
+
+    with open(current_dir / "all_apps_table.json", "w") as f:
+        json.dump(all_apps_table, f, indent=2, default=str)
+    print(f"  Wrote all_apps_table.json ({len(all_apps_table)} unique apps)")
 
     # Save historical snapshot
     today = datetime.now().strftime("%Y-%m-%d")

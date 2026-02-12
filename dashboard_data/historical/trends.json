@@ -1,61 +1,91 @@
 {
   "dates": [
-    "2026-02-11"
+    "2026-02-11",
+    "2026-02-12"
   ],
   "categories": {
-    "Games": {
+    "Utilities": {
       "grossing_revenue": [
-        706000000
+        0,
+        51600000
       ],
       "grossing_downloads": [
-        37800000
+        0,
+        9601000
       ],
       "free_downloads": [
-        65400000
+        0,
+        34001000
       ]
     },
-    "Finance": {
+    "Business": {
       "grossing_revenue": [
-        8450000
+        0,
+        81700000
       ],
       "grossing_downloads": [
-        3580000
+        0,
+        12259000
       ],
       "free_downloads": [
-        13800000
-      ]
-    },
-    "Social Networking": {
-      "grossing_revenue": [
-        108000000
-      ],
-      "grossing_downloads": [
-        25110000
-      ],
-      "free_downloads": [
-        53901000
-      ]
-    },
-    "Productivity": {
-      "grossing_revenue": [
-        348600000
-      ],
-      "grossing_downloads": [
-        79130000
-      ],
-      "free_downloads": [
-        93500000
+        0,
+        27500000
       ]
     },
     "Photo & Video": {
       "grossing_revenue": [
+        406000000,
         406000000
       ],
       "grossing_downloads": [
+        52500000,
         52500000
       ],
       "free_downloads": [
-        68200000
+        68200000,
+        66310000
+      ]
+    },
+    "Productivity": {
+      "grossing_revenue": [
+        348600000,
+        348600000
+      ],
+      "grossing_downloads": [
+        79130000,
+        79130000
+      ],
+      "free_downloads": [
+        93500000,
+        94000000
+      ]
+    },
+    "Lifestyle": {
+      "grossing_revenue": [
+        0,
+        134200000
+      ],
+      "grossing_downloads": [
+        0,
+        7060000
+      ],
+      "free_downloads": [
+        0,
+        20700000
+      ]
+    },
+    "Health & Fitness": {
+      "grossing_revenue": [
+        0,
+        85000000
+      ],
+      "grossing_downloads": [
+        0,
+        11740000
+      ],
+      "free_downloads": [
+        0,
+        15700000
       ]
     }
   }

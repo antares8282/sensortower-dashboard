@@ -35,22 +35,6 @@ st.sidebar.markdown(
     unsafe_allow_html=True,
 )
 
-# Navigation
-page = st.sidebar.radio(
-    "Navigate",
-    [
-        "🏠 Overview",
-        "📱 Rankings",
-        "🔍 App Details",
-        "📈 Trends",
-        "🏢 Publishers",
-        "⚖️ Compare",
-    ],
-    label_visibility="collapsed",
-)
-
-st.sidebar.divider()
-
 # Load metadata for sidebar
 from components.data_loader import load_metadata
 meta = load_metadata()
@@ -60,28 +44,41 @@ if meta:
     st.sidebar.caption(f"Apps tracked: {meta.get('total_apps', '?')}")
     st.sidebar.caption(f"Platform: {meta.get('platform', 'iOS')} • {meta.get('country', 'US')}")
 
+    # API usage counter
+    usage = meta.get("api_usage_monthly", 0)
+    budget = 2500
+    pct = usage / budget * 100
+    if usage >= 2000:
+        color = "#FF4B4B"
+    elif usage >= 1500:
+        color = "#FFA500"
+    else:
+        color = "#4CAF50"
+    st.sidebar.markdown(
+        f'<div style="background:{color}22; border:1px solid {color}; border-radius:8px; '
+        f'padding:6px 12px; text-align:center; margin-top:8px;">'
+        f'<span style="color:{color}; font-weight:600; font-size:0.85rem;">'
+        f'🔑 API: {usage:,} / {budget:,} ({pct:.1f}%)</span></div>',
+        unsafe_allow_html=True,
+    )
+
+st.sidebar.divider()
+
+# Route: detail view or rankings view
+if st.session_state.get("selected_app_id"):
+    # Back button in sidebar
+    if st.sidebar.button("← Back to Rankings", use_container_width=True):
+        del st.session_state.selected_app_id
+        st.rerun()
+
+    from pages.p3_app_details import render
+    render()
+else:
+    from pages.p1_overview import render
+    render()
+
 # Logout
 st.sidebar.divider()
 if st.sidebar.button("🚪 Logout", use_container_width=True):
     st.session_state.authenticated = False
     st.rerun()
-
-# Route to pages
-if page == "🏠 Overview":
-    from pages.p1_overview import render
-    render()
-elif page == "📱 Rankings":
-    from pages.p2_rankings import render
-    render()
-elif page == "🔍 App Details":
-    from pages.p3_app_details import render
-    render()
-elif page == "📈 Trends":
-    from pages.p4_trends import render
-    render()
-elif page == "🏢 Publishers":
-    from pages.p5_publishers import render
-    render()
-elif page == "⚖️ Compare":
-    from pages.p6_compare import render
-    render()

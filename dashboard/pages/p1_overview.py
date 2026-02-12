@@ -1,95 +1,85 @@
-"""Overview page — KPI cards, category charts, top revenue leaders."""
+"""Overview page — two filterable tables: by downloads & by revenue."""
 import streamlit as st
-from components.data_loader import load_category_summary, load_app_details, load_metadata
+from components.data_loader import load_all_apps_table
 from components.formatters import fmt_money, fmt_number, fmt_rating
-from components.charts import revenue_by_category_bar, downloads_by_category_bar, top_apps_revenue_bar
 
 
 def render():
-    st.title("Market Overview")
+    st.title("App Rankings")
 
-    cat_summary = load_category_summary()
-    app_details = load_app_details()
-    meta = load_metadata()
+    apps = load_all_apps_table()
+    if not apps:
+        st.warning("No data available. Run data refresh first.")
+        return
 
-    # ---- KPI Row ----
-    total_apps = len(app_details)
-    total_revenue = sum(c["grossing_revenue"] for c in cat_summary.values())
-    total_downloads = sum(c["grossing_downloads"] for c in cat_summary.values())
-    avg_rating = sum(c["avg_rating"] for c in cat_summary.values()) / max(len(cat_summary), 1)
+    # ---- Sidebar Filters ----
+    all_categories = sorted({a["category"] for a in apps})
+    all_chart_types = sorted({a["chart_type"] for a in apps})
 
-    k1, k2, k3, k4, k5 = st.columns(5)
-    k1.metric("Apps Tracked", total_apps)
-    k2.metric("Est. Monthly Revenue", fmt_money(total_revenue))
-    k3.metric("Est. Monthly Downloads", fmt_number(total_downloads))
-    k4.metric("Avg. Rating", fmt_rating(avg_rating))
-    k5.metric("Categories", len(cat_summary))
-
-    st.divider()
-
-    # ---- Category Charts ----
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.subheader("Revenue by Category")
-        st.caption("Top Grossing apps, estimated monthly revenue")
-        fig = revenue_by_category_bar(cat_summary)
-        st.plotly_chart(fig, use_container_width=True)
-
-    with col2:
-        st.subheader("Downloads by Category")
-        st.caption("Top Grossing apps, estimated monthly downloads")
-        fig = downloads_by_category_bar(cat_summary)
-        st.plotly_chart(fig, use_container_width=True)
-
-    st.divider()
-
-    # ---- Category Summary Table ----
-    st.subheader("Category Performance")
-
-    cat_rows = []
-    for name, data in cat_summary.items():
-        cat_rows.append({
-            "Category": name,
-            "Revenue": fmt_money(data["grossing_revenue"]),
-            "Downloads": fmt_number(data["grossing_downloads"]),
-            "Rev/Download": fmt_money(data["revenue_per_download"]),
-            "Avg Rating": fmt_rating(data["avg_rating"]),
-            "Apps": data["total_apps_tracked"],
-        })
-
-    st.dataframe(
-        cat_rows,
-        use_container_width=True,
-        hide_index=True,
-        column_config={
-            "Category": st.column_config.TextColumn(width="medium"),
-            "Revenue": st.column_config.TextColumn(width="small"),
-            "Downloads": st.column_config.TextColumn(width="small"),
-        },
+    selected_categories = st.sidebar.multiselect(
+        "Category", all_categories, default=all_categories
+    )
+    selected_charts = st.sidebar.multiselect(
+        "Chart Type", all_chart_types, default=all_chart_types
     )
 
+    # Filter
+    filtered = [
+        a for a in apps
+        if a["category"] in selected_categories
+        and a["chart_type"] in selected_charts
+    ]
+
+    if not filtered:
+        st.info("No apps match the selected filters.")
+        return
+
+    st.caption(f"Showing {len(filtered)} apps")
+
+    # ---- Helper to build table rows ----
+    def build_rows(sorted_apps):
+        rows = []
+        for i, a in enumerate(sorted_apps, 1):
+            rows.append({
+                "#": i,
+                "App": a["name"],
+                "Publisher": a["publisher_name"],
+                "Category": a["category"],
+                "Chart": a["chart_type"],
+                "Rating": fmt_rating(a.get("rating", 0)),
+                "Downloads": fmt_number(a.get("downloads", 0)),
+                "Revenue": fmt_money(a.get("revenue", 0)),
+                "Age (yrs)": round(a.get("app_age_years", 0), 1),
+                "Released": (a.get("release_date") or "")[:10],
+                "Updated": (a.get("updated_date") or "")[:10],
+                "IAP": "Yes" if a.get("has_iap") else "No",
+            })
+        return rows
+
+    # ---- Table 1: By Downloads ----
+    st.subheader("Top by Downloads")
+    by_downloads = sorted(filtered, key=lambda x: x.get("downloads", 0), reverse=True)
+    st.dataframe(build_rows(by_downloads), use_container_width=True, hide_index=True, height=420)
+
+    # App selector for downloads table
+    dl_names = [f"{a['name']} — {a['publisher_name']}" for a in by_downloads]
+    dl_selected = st.selectbox("Select app to view details", dl_names, key="dl_select", index=None, placeholder="Pick an app...")
+    if dl_selected and st.button("View Details →", key="dl_btn"):
+        idx = dl_names.index(dl_selected)
+        st.session_state.selected_app_id = by_downloads[idx]["app_id"]
+        st.rerun()
+
     st.divider()
 
-    # ---- Top 15 Revenue Leaders ----
-    st.subheader("Top 15 Revenue Leaders")
+    # ---- Table 2: By Revenue ----
+    st.subheader("Top by Revenue")
+    by_revenue = sorted(filtered, key=lambda x: x.get("revenue", 0), reverse=True)
+    st.dataframe(build_rows(by_revenue), use_container_width=True, hide_index=True, height=420)
 
-    all_apps = list(app_details.values())
-    all_apps.sort(key=lambda x: x.get("revenue", 0), reverse=True)
-
-    fig = top_apps_revenue_bar(all_apps, n=15)
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Also as a table
-    top_rows = []
-    for i, app in enumerate(all_apps[:15], 1):
-        top_rows.append({
-            "#": i,
-            "App": app["name"],
-            "Publisher": app["publisher_name"],
-            "Revenue": fmt_money(app.get("revenue", 0)),
-            "Downloads": fmt_number(app.get("downloads", 0)),
-            "Rating": fmt_rating(app.get("rating", 0)),
-        })
-
-    st.dataframe(top_rows, use_container_width=True, hide_index=True)
+    # App selector for revenue table
+    rev_names = [f"{a['name']} — {a['publisher_name']}" for a in by_revenue]
+    rev_selected = st.selectbox("Select app to view details", rev_names, key="rev_select", index=None, placeholder="Pick an app...")
+    if rev_selected and st.button("View Details →", key="rev_btn"):
+        idx = rev_names.index(rev_selected)
+        st.session_state.selected_app_id = by_revenue[idx]["app_id"]
+        st.rerun()

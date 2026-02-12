@@ -5,11 +5,12 @@ from .formatters import fmt_money, fmt_number
 
 
 COLORS = {
-    "Games": "#FF6B6B",
-    "Finance": "#4ECDC4",
-    "Social Networking": "#45B7D1",
+    "Utilities": "#FF6B6B",
+    "Business": "#4ECDC4",
+    "Photo & Video": "#45B7D1",
     "Productivity": "#96CEB4",
-    "Photo & Video": "#FFEAA7",
+    "Lifestyle": "#FFEAA7",
+    "Health & Fitness": "#DDA0DD",
 }
 
 CHART_BG = "rgba(0,0,0,0)"

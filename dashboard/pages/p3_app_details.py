@@ -1,33 +1,24 @@
 """App Details page — drill-down view for individual apps."""
 import streamlit as st
-from components.data_loader import load_app_details, get_all_apps_list
+from datetime import datetime
+from components.data_loader import load_app_details
 from components.formatters import fmt_money, fmt_number, fmt_rating
 
 
 def render():
     st.title("App Details")
 
-    app_details = load_app_details()
-    apps_list = get_all_apps_list()
-
-    if not apps_list:
-        st.warning("No app data available.")
+    app_id = st.session_state.get("selected_app_id")
+    if not app_id:
+        st.info("Select an app from the rankings table to view details.")
         return
 
-    # App selector
-    app_names = [f"{name}" for aid, name in apps_list]
-    selected_name = st.selectbox("Select an app", app_names, index=0)
-
-    # Find the selected app
-    selected_idx = app_names.index(selected_name)
-    app_id = apps_list[selected_idx][0]
+    app_details = load_app_details()
     app = app_details.get(str(app_id), {})
 
     if not app:
         st.warning("App details not found.")
         return
-
-    st.divider()
 
     # ---- App Header ----
     col1, col2 = st.columns([1, 4])
@@ -45,14 +36,25 @@ def render():
 
     st.divider()
 
+    # ---- Compute App Age ----
+    app_age = None
+    release_str = app.get("release_date", "")
+    if release_str:
+        try:
+            release_dt = datetime.fromisoformat(release_str.replace("Z", "+00:00"))
+            app_age = round((datetime.now(release_dt.tzinfo) - release_dt).days / 365.25, 1)
+        except (ValueError, TypeError):
+            pass
+
     # ---- Key Metrics ----
-    m1, m2, m3, m4, m5, m6 = st.columns(6)
+    m1, m2, m3, m4, m5, m6, m7 = st.columns(7)
     m1.metric("Est. Revenue", fmt_money(app.get("revenue", 0)))
     m2.metric("Est. Downloads", fmt_number(app.get("downloads", 0)))
     m3.metric("Rating", fmt_rating(app.get("rating", 0)))
     m4.metric("Total Ratings", fmt_number(app.get("global_rating_count", 0)))
     m5.metric("Price", f"${app['price']:.2f}" if app.get("price", 0) > 0 else "Free")
     m6.metric("Has IAP", "Yes" if app.get("in_app_purchases") else "No")
+    m7.metric("App Age", f"{app_age} yrs" if app_age is not None else "N/A")
 
     st.divider()
 
@@ -106,4 +108,4 @@ def render():
     # ---- App Store Link ----
     if app.get("url"):
         st.divider()
-        st.link_button("🔗 View on App Store", app["url"])
+        st.link_button("View on App Store", app["url"])

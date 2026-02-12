@@ -60,3 +60,9 @@ def get_all_apps_list():
     apps = [(aid, a["name"]) for aid, a in details.items()]
     apps.sort(key=lambda x: x[1])
     return apps
+
+
+@st.cache_data(ttl=300)
+def load_all_apps_table():
+    with open(DATA_DIR / "current" / "all_apps_table.json") as f:
+        return json.load(f)
