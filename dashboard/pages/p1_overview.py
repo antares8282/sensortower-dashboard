@@ -49,7 +49,7 @@ def render():
                 "Rating": fmt_rating(a.get("rating", 0)),
                 "Downloads": fmt_number(a.get("downloads", 0)),
                 "Revenue": fmt_money(a.get("revenue", 0)),
-                "Age (yrs)": round(a.get("app_age_years", 0), 1),
+                "Age (yrs)": round(a.get("app_age_years") or 0, 1),
                 "Released": (a.get("release_date") or "")[:10],
                 "Updated": (a.get("updated_date") or "")[:10],
                 "IAP": "Yes" if a.get("has_iap") else "No",
