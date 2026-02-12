@@ -1,4 +1,5 @@
-"""Overview page — two filterable tables: by downloads & by revenue."""
+"""Overview page — two clickable tables: by downloads & by revenue."""
+import pandas as pd
 import streamlit as st
 from components.data_loader import load_all_apps_table
 from components.formatters import fmt_money, fmt_number, fmt_rating
@@ -33,10 +34,10 @@ def render():
         st.info("No apps match the selected filters.")
         return
 
-    st.caption(f"Showing {len(filtered)} apps")
+    st.caption(f"Showing {len(filtered)} apps — click a row to view details")
 
-    # ---- Helper to build table rows ----
-    def build_rows(sorted_apps):
+    # ---- Helper to build dataframe ----
+    def build_df(sorted_apps):
         rows = []
         for i, a in enumerate(sorted_apps, 1):
             rows.append({
@@ -53,19 +54,26 @@ def render():
                 "Updated": (a.get("updated_date") or "")[:10],
                 "IAP": "Yes" if a.get("has_iap") else "No",
             })
-        return rows
+        return pd.DataFrame(rows)
 
     # ---- Table 1: By Downloads ----
     st.subheader("Top by Downloads")
     by_downloads = sorted(filtered, key=lambda x: x.get("downloads", 0), reverse=True)
-    st.dataframe(build_rows(by_downloads), use_container_width=True, hide_index=True, height=420)
+    df_dl = build_df(by_downloads)
 
-    # App selector for downloads table
-    dl_names = [f"{a['name']} — {a['publisher_name']}" for a in by_downloads]
-    dl_selected = st.selectbox("Select app to view details", dl_names, key="dl_select", index=None, placeholder="Pick an app...")
-    if dl_selected and st.button("View Details →", key="dl_btn"):
-        idx = dl_names.index(dl_selected)
-        st.session_state.selected_app_id = by_downloads[idx]["app_id"]
+    dl_event = st.dataframe(
+        df_dl,
+        use_container_width=True,
+        hide_index=True,
+        height=420,
+        on_select="rerun",
+        selection_mode="single-row",
+        key="dl_table",
+    )
+
+    if dl_event and dl_event.selection and dl_event.selection.rows:
+        row_idx = dl_event.selection.rows[0]
+        st.session_state.selected_app_id = by_downloads[row_idx]["app_id"]
         st.rerun()
 
     st.divider()
@@ -73,12 +81,19 @@ def render():
     # ---- Table 2: By Revenue ----
     st.subheader("Top by Revenue")
     by_revenue = sorted(filtered, key=lambda x: x.get("revenue", 0), reverse=True)
-    st.dataframe(build_rows(by_revenue), use_container_width=True, hide_index=True, height=420)
+    df_rev = build_df(by_revenue)
 
-    # App selector for revenue table
-    rev_names = [f"{a['name']} — {a['publisher_name']}" for a in by_revenue]
-    rev_selected = st.selectbox("Select app to view details", rev_names, key="rev_select", index=None, placeholder="Pick an app...")
-    if rev_selected and st.button("View Details →", key="rev_btn"):
-        idx = rev_names.index(rev_selected)
-        st.session_state.selected_app_id = by_revenue[idx]["app_id"]
+    rev_event = st.dataframe(
+        df_rev,
+        use_container_width=True,
+        hide_index=True,
+        height=420,
+        on_select="rerun",
+        selection_mode="single-row",
+        key="rev_table",
+    )
+
+    if rev_event and rev_event.selection and rev_event.selection.rows:
+        row_idx = rev_event.selection.rows[0]
+        st.session_state.selected_app_id = by_revenue[row_idx]["app_id"]
         st.rerun()
