@@ -3,12 +3,13 @@ Daily data refresh script.
 Run via GitHub Actions or manually: python scripts/data_refresh.py
 
 Fetches fresh data from SensorTower API, updates dashboard_data/.
-Cost: ~20 API calls per run (5 categories × 2 chart types × 2 calls each).
+Cost: ~100 API calls per run (23 categories × 2 chart types × 2 calls + sales estimates).
 """
 import sys
 import json
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
+from collections import defaultdict
 
 PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
@@ -32,6 +33,66 @@ from generate_dashboard_data import (
 )
 
 
+def fetch_sales_estimates(client, app_ids_list):
+    """Fetch sales estimates for 1m, 3m, 6m periods.
+
+    Returns dict keyed by app_id → {downloads_1m, revenue_1m, downloads_3m, ...}
+    """
+    today = datetime.now()
+    periods = {
+        "1m": (today - timedelta(days=30), today),
+        "3m": (today - timedelta(days=90), today),
+        "6m": (today - timedelta(days=180), today),
+    }
+
+    # Initialize results
+    results = defaultdict(lambda: {
+        "downloads_1m": 0, "revenue_1m": 0,
+        "downloads_3m": 0, "revenue_3m": 0,
+        "downloads_6m": 0, "revenue_6m": 0,
+    })
+
+    # Batch app_ids in groups of 100
+    batches = []
+    for i in range(0, len(app_ids_list), 100):
+        batches.append(app_ids_list[i:i + 100])
+
+    for period_key, (start_dt, end_dt) in periods.items():
+        start_str = start_dt.strftime("%Y-%m-%d")
+        end_str = end_dt.strftime("%Y-%m-%d")
+        dl_key = f"downloads_{period_key}"
+        rev_key = f"revenue_{period_key}"
+
+        for batch_idx, batch in enumerate(batches):
+            print(f"  Sales estimates {period_key} batch {batch_idx + 1}/{len(batches)} ({len(batch)} apps)...")
+            try:
+                data = client.get_sales_estimates(
+                    app_ids=batch,
+                    device="ios",
+                    date_granularity="monthly",
+                    start_date=start_str,
+                    end_date=end_str,
+                    use_cache=True,  # Cache sales estimates
+                )
+                if isinstance(data, list):
+                    for record in data:
+                        aid = record.get("aid")
+                        if aid:
+                            results[aid][dl_key] += record.get("iu", 0) or 0
+                            results[aid][rev_key] += int((record.get("ir", 0) or 0) / 100)
+                elif isinstance(data, dict):
+                    # Some responses wrap in a dict
+                    for record in data.get("data", data.get("estimates", [])):
+                        aid = record.get("aid")
+                        if aid:
+                            results[aid][dl_key] += record.get("iu", 0) or 0
+                            results[aid][rev_key] += int((record.get("ir", 0) or 0) / 100)
+            except Exception as e:
+                print(f"    WARNING: Sales estimates failed for {period_key} batch {batch_idx + 1}: {e}")
+
+    return dict(results)
+
+
 def refresh_data():
     """Fetch fresh data from API and rebuild dashboard data."""
     client = SensorTowerClient(cache_ttl_hours=12)  # Short TTL for refresh
@@ -43,6 +104,9 @@ def refresh_data():
         print("WARNING: Monthly usage is high! Consider skipping refresh.")
 
     today = datetime.now().strftime("%Y-%m-%d")
+    # Use yesterday for rankings (today's data may not be available yet)
+    ranking_date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    print(f"Using ranking date: {ranking_date}")
 
     # Collect data in the same format as the initial collection scripts
     free_data = {}
@@ -56,7 +120,8 @@ def refresh_data():
             category=cat_id,
             chart_type=CHART_TOP_FREE,
             country="US",
-            limit=20,
+            date=ranking_date,
+            limit=50,
             resolve_details=True,
             use_cache=False,  # Force fresh data
         )
@@ -71,7 +136,8 @@ def refresh_data():
             category=cat_id,
             chart_type=CHART_TOP_GROSSING,
             country="US",
-            limit=20,
+            date=ranking_date,
+            limit=50,
             resolve_details=True,
             use_cache=False,
         )
@@ -89,6 +155,12 @@ def refresh_data():
     cat_summary = build_category_summary(rankings, app_details)
     pub_summary = build_publisher_summary(app_details, rankings)
 
+    # Collect all unique app_ids for sales estimates
+    all_app_ids = list({int(aid) for aid in app_details.keys()})
+    print(f"\nFetching sales estimates for {len(all_app_ids)} unique apps...")
+    sales_estimates = fetch_sales_estimates(client, all_app_ids)
+    print(f"  Got estimates for {len(sales_estimates)} apps")
+
     # Save current
     current_dir = DATA_DIR / "current"
     current_dir.mkdir(parents=True, exist_ok=True)
@@ -105,7 +177,7 @@ def refresh_data():
     with open(current_dir / "publisher_summary.json", "w") as f:
         json.dump(pub_summary, f, indent=2)
 
-    all_apps_table = build_all_apps_table(rankings, app_details)
+    all_apps_table = build_all_apps_table(rankings, app_details, sales_estimates)
     with open(current_dir / "all_apps_table.json", "w") as f:
         json.dump(all_apps_table, f, indent=2, default=str)
 

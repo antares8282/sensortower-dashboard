@@ -15,12 +15,28 @@ DATA_DIR = PROJECT_ROOT / "dashboard_data"
 PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 
 CATEGORIES = {
-    "6002": "Utilities",
     "6000": "Business",
-    "6008": "Photo & Video",
+    "6001": "Weather",
+    "6002": "Utilities",
+    "6003": "Travel",
+    "6004": "Sports",
+    "6005": "Social Networking",
+    "6006": "Reference",
     "6007": "Productivity",
+    "6008": "Photo & Video",
+    "6009": "News",
+    "6010": "Navigation",
+    "6011": "Music",
     "6012": "Lifestyle",
     "6013": "Health & Fitness",
+    "6014": "Games",
+    "6015": "Finance",
+    "6016": "Entertainment",
+    "6017": "Education",
+    "6018": "Books",
+    "6020": "Medical",
+    "6023": "Food & Drink",
+    "6024": "Shopping",
 }
 
 # Full iOS category mapping for name resolution
@@ -81,7 +97,7 @@ def build_rankings(free_data, grossing_data):
             ranked = []
             app_ids = src.get("ranking", [])
             apps_by_id = {a["app_id"]: a for a in src.get("apps", [])}
-            for rank, aid in enumerate(app_ids[:20], 1):
+            for rank, aid in enumerate(app_ids[:50], 1):
                 app = apps_by_id.get(aid, {})
                 ranked.append({
                     "rank": rank,
@@ -106,7 +122,7 @@ def build_rankings(free_data, grossing_data):
             ranked = []
             app_ids = src.get("ranking", [])
             apps_by_id = {a["app_id"]: a for a in src.get("apps", [])}
-            for rank, aid in enumerate(app_ids[:20], 1):
+            for rank, aid in enumerate(app_ids[:50], 1):
                 app = apps_by_id.get(aid, {})
                 ranked.append({
                     "rank": rank,
@@ -192,8 +208,18 @@ def _compute_app_age(release_date_str):
         return None
 
 
-def build_all_apps_table(rankings, app_details):
-    """Build all_apps_table.json: flat list for the main dashboard tables."""
+def build_all_apps_table(rankings, app_details, sales_estimates=None):
+    """Build all_apps_table.json: flat list for the main dashboard tables.
+
+    Args:
+        rankings: Rankings data by category
+        app_details: App detail records
+        sales_estimates: Optional dict keyed by app_id (int or str) with keys:
+            downloads_1m, revenue_1m, downloads_3m, revenue_3m, downloads_6m, revenue_6m
+    """
+    if sales_estimates is None:
+        sales_estimates = {}
+
     seen = {}
 
     for cat_name, cat_data in rankings.items():
@@ -202,6 +228,7 @@ def build_all_apps_table(rankings, app_details):
             for app_entry in chart_data.get("apps", []):
                 aid = str(app_entry["app_id"])
                 detail = app_details.get(aid) or app_details.get(int(aid), {})
+                estimates = sales_estimates.get(int(aid), sales_estimates.get(aid, {}))
 
                 if aid not in seen:
                     seen[aid] = {
@@ -220,6 +247,12 @@ def build_all_apps_table(rankings, app_details):
                         "release_date": detail.get("release_date", ""),
                         "updated_date": detail.get("updated_date", ""),
                         "app_age_years": detail.get("app_age_years"),
+                        "downloads_1m": estimates.get("downloads_1m", app_entry.get("downloads", 0)),
+                        "revenue_1m": estimates.get("revenue_1m", app_entry.get("revenue", 0)),
+                        "downloads_3m": estimates.get("downloads_3m", 0),
+                        "revenue_3m": estimates.get("revenue_3m", 0),
+                        "downloads_6m": estimates.get("downloads_6m", 0),
+                        "revenue_6m": estimates.get("revenue_6m", 0),
                         "charts": [{"category": cat_name, "chart": chart_label, "rank": app_entry["rank"]}],
                     }
                 else:

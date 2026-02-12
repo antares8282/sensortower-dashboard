@@ -1,91 +1,382 @@
 {
   "dates": [
     "2026-02-11",
-    "2026-02-12"
+    "2026-02-12",
+    "2026-02-13"
   ],
   "categories": {
-    "Utilities": {
-      "grossing_revenue": [
-        0,
-        51600000
-      ],
-      "grossing_downloads": [
-        0,
-        9601000
-      ],
-      "free_downloads": [
-        0,
-        34001000
-      ]
-    },
     "Business": {
       "grossing_revenue": [
         0,
-        81700000
+        81700000,
+        91380000
       ],
       "grossing_downloads": [
         0,
-        12259000
+        12259000,
+        14362000
       ],
       "free_downloads": [
         0,
-        27500000
+        27500000,
+        36070000
       ]
     },
-    "Photo & Video": {
+    "Weather": {
       "grossing_revenue": [
-        406000000,
-        406000000
+        0,
+        0,
+        10240000
       ],
       "grossing_downloads": [
-        52500000,
-        52500000
+        0,
+        0,
+        2062000
       ],
       "free_downloads": [
-        68200000,
-        66310000
+        0,
+        0,
+        3154000
+      ]
+    },
+    "Utilities": {
+      "grossing_revenue": [
+        0,
+        51600000,
+        69080000
+      ],
+      "grossing_downloads": [
+        0,
+        9601000,
+        18867000
+      ],
+      "free_downloads": [
+        0,
+        34001000,
+        50651000
+      ]
+    },
+    "Travel": {
+      "grossing_revenue": [
+        0,
+        0,
+        7690000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        4272000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        33390000
+      ]
+    },
+    "Sports": {
+      "grossing_revenue": [
+        0,
+        0,
+        41040000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        3044000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        6630000
+      ]
+    },
+    "Social Networking": {
+      "grossing_revenue": [
+        108000000,
+        0,
+        144800000
+      ],
+      "grossing_downloads": [
+        25110000,
+        0,
+        33180000
+      ],
+      "free_downloads": [
+        53901000,
+        0,
+        67371000
+      ]
+    },
+    "Reference": {
+      "grossing_revenue": [
+        0,
+        0,
+        16310000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        8712000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        12610000
       ]
     },
     "Productivity": {
       "grossing_revenue": [
         348600000,
-        348600000
+        348600000,
+        377900000
       ],
       "grossing_downloads": [
         79130000,
-        79130000
+        79130000,
+        90495000
       ],
       "free_downloads": [
         93500000,
-        94000000
+        94000000,
+        117100000
+      ]
+    },
+    "Photo & Video": {
+      "grossing_revenue": [
+        406000000,
+        406000000,
+        435900000
+      ],
+      "grossing_downloads": [
+        52500000,
+        52500000,
+        65820000
+      ],
+      "free_downloads": [
+        68200000,
+        66310000,
+        95620000
+      ]
+    },
+    "News": {
+      "grossing_revenue": [
+        0,
+        0,
+        33290000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        11106000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        12380000
+      ]
+    },
+    "Navigation": {
+      "grossing_revenue": [
+        0,
+        0,
+        14060000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        2184000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        21320000
+      ]
+    },
+    "Music": {
+      "grossing_revenue": [
+        0,
+        0,
+        113260000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        16577000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        27200000
       ]
     },
     "Lifestyle": {
       "grossing_revenue": [
         0,
-        134200000
+        134200000,
+        149901000
       ],
       "grossing_downloads": [
         0,
-        7060000
+        7060000,
+        12565000
       ],
       "free_downloads": [
         0,
-        20700000
+        20700000,
+        28570000
       ]
     },
     "Health & Fitness": {
       "grossing_revenue": [
         0,
-        85000000
+        85000000,
+        119800000
       ],
       "grossing_downloads": [
         0,
-        11740000
+        11740000,
+        20226000
       ],
       "free_downloads": [
         0,
-        15700000
+        15700000,
+        24570000
+      ]
+    },
+    "Games": {
+      "grossing_revenue": [
+        706000000,
+        0,
+        1009000000
+      ],
+      "grossing_downloads": [
+        37800000,
+        0,
+        58960000
+      ],
+      "free_downloads": [
+        65400000,
+        0,
+        111800000
+      ]
+    },
+    "Finance": {
+      "grossing_revenue": [
+        8450000,
+        0,
+        11179000
+      ],
+      "grossing_downloads": [
+        3580000,
+        0,
+        5193000
+      ],
+      "free_downloads": [
+        13800000,
+        0,
+        22340000
+      ]
+    },
+    "Entertainment": {
+      "grossing_revenue": [
+        0,
+        0,
+        565700000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        57320000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        72820000
+      ]
+    },
+    "Education": {
+      "grossing_revenue": [
+        0,
+        0,
+        115780000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        20427000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        23160000
+      ]
+    },
+    "Books": {
+      "grossing_revenue": [
+        0,
+        0,
+        51970000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        5164000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        8909000
+      ]
+    },
+    "Medical": {
+      "grossing_revenue": [
+        0,
+        0,
+        4690000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        1675000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        6320000
+      ]
+    },
+    "Food & Drink": {
+      "grossing_revenue": [
+        0,
+        0,
+        6245000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        2374000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        20350000
+      ]
+    },
+    "Shopping": {
+      "grossing_revenue": [
+        0,
+        0,
+        4223000
+      ],
+      "grossing_downloads": [
+        0,
+        0,
+        4456000
+      ],
+      "free_downloads": [
+        0,
+        0,
+        48230000
       ]
     }
   }
