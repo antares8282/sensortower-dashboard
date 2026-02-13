@@ -55,14 +55,76 @@ def render():
             pass
 
     # ---- Key Metrics ----
-    m1, m2, m3, m4, m5, m6, m7 = st.columns(7)
+    m1, m2, m3, m4, m5 = st.columns(5)
     m1.metric("Est. Revenue", fmt_money(app.get("revenue", 0)))
     m2.metric("Est. Downloads", fmt_number(app.get("downloads", 0)))
-    m3.metric("Rating", fmt_rating(app.get("rating", 0)))
-    m4.metric("Total Ratings", fmt_number(app.get("global_rating_count", 0)))
-    m5.metric("Price", f"${app['price']:.2f}" if app.get("price", 0) > 0 else "Free")
-    m6.metric("Has IAP", "Yes" if app.get("in_app_purchases") else "No")
-    m7.metric("App Age", f"{app_age} yrs" if app_age is not None else "N/A")
+    m3.metric("Price", f"${app['price']:.2f}" if app.get("price", 0) > 0 else "Free")
+    m4.metric("Has IAP", "Yes" if app.get("in_app_purchases") else "No")
+    m5.metric("App Age", f"{app_age} yrs" if app_age is not None else "N/A")
+
+    st.divider()
+
+    # ---- Rating & Reviews Section ----
+    st.subheader("Ratings & Reviews")
+    r1, r2, r3 = st.columns([2, 2, 3])
+
+    with r1:
+        rating = app.get("rating", 0)
+        st.markdown(
+            f"""
+            <div style="text-align: center; padding: 1.5rem; background: #1A1D23; border-radius: 12px;">
+                <div style="font-size: 3.5rem; font-weight: 700; color: #FFD700; margin-bottom: 0.5rem;">
+                    {fmt_rating(rating)}
+                </div>
+                <div style="font-size: 1.2rem; color: #888;">
+                    {'⭐' * int(round(rating))}
+                </div>
+                <div style="margin-top: 0.5rem; color: #888; font-size: 0.9rem;">
+                    Average Rating
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    with r2:
+        global_count = app.get("global_rating_count", 0)
+        us_count = app.get("rating_count", 0)
+        st.markdown(
+            f"""
+            <div style="text-align: center; padding: 1.5rem; background: #1A1D23; border-radius: 12px;">
+                <div style="font-size: 2rem; font-weight: 700; color: #4CAF50; margin-bottom: 0.5rem;">
+                    {fmt_number(global_count)}
+                </div>
+                <div style="color: #888; font-size: 0.9rem; margin-bottom: 0.8rem;">
+                    Global Ratings
+                </div>
+                <div style="font-size: 1.3rem; font-weight: 600; color: #2196F3;">
+                    {fmt_number(us_count)}
+                </div>
+                <div style="color: #888; font-size: 0.9rem;">
+                    US Ratings
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    with r3:
+        st.markdown(
+            """
+            <div style="padding: 1.5rem; background: #1A1D23; border-radius: 12px;">
+                <div style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">
+                    <strong>📊 Rating Distribution</strong>
+                </div>
+                <div style="color: #666; font-style: italic; padding: 1.5rem; text-align: center;">
+                    Rating breakdown not available<br/>
+                    <span style="font-size: 0.8rem;">(Requires SensorTower Premium tier)</span>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
     st.divider()
 
