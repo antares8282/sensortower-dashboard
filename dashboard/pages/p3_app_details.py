@@ -9,9 +9,17 @@ def render():
     st.title("App Details")
 
     app_id = st.session_state.get("selected_app_id")
+
+    # Fallback to last viewed app if no selection
+    if not app_id and "last_viewed_app_id" in st.session_state:
+        app_id = st.session_state.last_viewed_app_id
+
     if not app_id:
-        st.info("Select an app from the rankings table to view details.")
+        st.info("Select an app from Rankings or Opportunities to view details.")
         return
+
+    # Store as last viewed
+    st.session_state.last_viewed_app_id = app_id
 
     app_details = load_app_details()
     app = app_details.get(str(app_id), {})

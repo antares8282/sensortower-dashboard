@@ -19,7 +19,8 @@ st.set_page_config(
 )
 
 # Auth gate
-if not check_password():
+USE_AUTH = False  # Set to True to re-enable authentication
+if USE_AUTH and not check_password():
     st.stop()
 
 # --- Authenticated content ---
@@ -64,17 +65,55 @@ if meta:
 
 st.sidebar.divider()
 
-# Route: detail view or rankings view
-if st.session_state.get("selected_app_id"):
-    # Back button in sidebar
-    if st.sidebar.button("← Back to Rankings", use_container_width=True):
-        del st.session_state.selected_app_id
-        st.rerun()
+# Initialize page state
+if "page" not in st.session_state:
+    st.session_state.page = "rankings"
 
+# Sidebar navigation
+st.sidebar.markdown("### Navigation")
+if st.sidebar.button(
+    "📊 Rankings",
+    use_container_width=True,
+    type="primary" if st.session_state.page == "rankings" else "secondary"
+):
+    st.session_state.page = "rankings"
+    if "selected_app_id" in st.session_state:
+        del st.session_state.selected_app_id
+    st.rerun()
+
+if st.sidebar.button(
+    "💡 Opportunities",
+    use_container_width=True,
+    type="primary" if st.session_state.page == "opportunities" else "secondary"
+):
+    st.session_state.page = "opportunities"
+    if "selected_app_id" in st.session_state:
+        del st.session_state.selected_app_id
+    st.rerun()
+
+if st.sidebar.button(
+    "🔍 App Details",
+    use_container_width=True,
+    type="primary" if st.session_state.page == "app_details" else "secondary"
+):
+    st.session_state.page = "app_details"
+    st.rerun()
+
+st.sidebar.divider()
+
+# Auto-switch to app details on selection
+if st.session_state.get("selected_app_id"):
+    st.session_state.page = "app_details"
+
+# Route to pages
+if st.session_state.page == "app_details":
     from pages.p3_app_details import render
     render()
-else:
-    from pages.p1_overview import render
+elif st.session_state.page == "opportunities":
+    from pages.p2_opportunities import render
+    render()
+else:  # rankings
+    from pages.p1_rankings import render
     render()
 
 # Logout
