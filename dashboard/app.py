@@ -19,13 +19,48 @@ st.set_page_config(
 )
 
 # Auth gate
-USE_AUTH = False  # Set to True to re-enable authentication
-if USE_AUTH and not check_password():
+if not check_password():
     st.stop()
 
 # --- Authenticated content ---
 
-# Sidebar branding
+# Initialize page state
+if "page" not in st.session_state:
+    st.session_state.page = "rankings"
+
+# Sidebar navigation (TOP)
+st.sidebar.markdown("### Navigation")
+if st.sidebar.button(
+    "📊 Rankings",
+    use_container_width=True,
+    type="primary" if st.session_state.page == "rankings" else "secondary"
+):
+    st.session_state.page = "rankings"
+    if "selected_app_id" in st.session_state:
+        del st.session_state.selected_app_id
+    st.rerun()
+
+if st.sidebar.button(
+    "💡 Opportunities",
+    use_container_width=True,
+    type="primary" if st.session_state.page == "opportunities" else "secondary"
+):
+    st.session_state.page = "opportunities"
+    if "selected_app_id" in st.session_state:
+        del st.session_state.selected_app_id
+    st.rerun()
+
+if st.sidebar.button(
+    "🔍 App Details",
+    use_container_width=True,
+    type="primary" if st.session_state.page == "app_details" else "secondary"
+):
+    st.session_state.page = "app_details"
+    st.rerun()
+
+st.sidebar.divider()
+
+# Sidebar branding & metadata (AFTER navigation)
 st.sidebar.markdown(
     """
     <div style="text-align: center; padding: 0.5rem 0 1rem 0;">
@@ -62,42 +97,6 @@ if meta:
         f'🔑 API: {usage:,} / {budget:,} ({pct:.1f}%)</span></div>',
         unsafe_allow_html=True,
     )
-
-st.sidebar.divider()
-
-# Initialize page state
-if "page" not in st.session_state:
-    st.session_state.page = "rankings"
-
-# Sidebar navigation
-st.sidebar.markdown("### Navigation")
-if st.sidebar.button(
-    "📊 Rankings",
-    use_container_width=True,
-    type="primary" if st.session_state.page == "rankings" else "secondary"
-):
-    st.session_state.page = "rankings"
-    if "selected_app_id" in st.session_state:
-        del st.session_state.selected_app_id
-    st.rerun()
-
-if st.sidebar.button(
-    "💡 Opportunities",
-    use_container_width=True,
-    type="primary" if st.session_state.page == "opportunities" else "secondary"
-):
-    st.session_state.page = "opportunities"
-    if "selected_app_id" in st.session_state:
-        del st.session_state.selected_app_id
-    st.rerun()
-
-if st.sidebar.button(
-    "🔍 App Details",
-    use_container_width=True,
-    type="primary" if st.session_state.page == "app_details" else "secondary"
-):
-    st.session_state.page = "app_details"
-    st.rerun()
 
 st.sidebar.divider()
 
