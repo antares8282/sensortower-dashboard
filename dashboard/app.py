@@ -9,20 +9,12 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from components.auth import check_password
-
 st.set_page_config(
     page_title="PowerStack Labs | Market Intel",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
-# Auth gate
-if not check_password():
-    st.stop()
-
-# --- Authenticated content ---
 
 # Initialize page state
 if "page" not in st.session_state:
@@ -115,8 +107,3 @@ else:  # rankings
     from pages.p1_rankings import render
     render()
 
-# Logout
-st.sidebar.divider()
-if st.sidebar.button("🚪 Logout", use_container_width=True):
-    st.session_state.authenticated = False
-    st.rerun()

@@ -227,4 +227,33 @@ def refresh_data():
 
 
 if __name__ == "__main__":
-    refresh_data()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Refresh SensorTower dashboard data")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Validate environment and API connectivity without making bulk API calls or writing files",
+    )
+    args = parser.parse_args()
+
+    if args.dry_run:
+        print("DRY RUN: Validating environment and API token...")
+        client = SensorTowerClient(cache_ttl_hours=12)
+        usage = client.get_monthly_usage()
+        print(f"  API token: valid. Monthly usage: {usage}/2500")
+        print(f"  dashboard_data/ exists: {(PROJECT_ROOT / 'dashboard_data').exists()}")
+        print(f"  data/raw/cache/ exists: {(PROJECT_ROOT / 'data' / 'raw' / 'cache').exists()}")
+        print("DRY RUN complete. No data fetched or written.")
+        sys.exit(0)
+
+    try:
+        refresh_data()
+    except KeyboardInterrupt:
+        print("\nRefresh interrupted.")
+        sys.exit(1)
+    except Exception as e:
+        import traceback
+        print(f"\nERROR: Data refresh failed: {type(e).__name__}: {e}")
+        traceback.print_exc()
+        sys.exit(1)

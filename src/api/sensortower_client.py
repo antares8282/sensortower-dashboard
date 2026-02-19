@@ -34,7 +34,8 @@ class SensorTowerClient:
     """API client with smart caching to minimize requests"""
 
     BASE_URL = "https://api.sensortower.com/v1"
-    CACHE_DIR = Path("data/raw/cache")
+    _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+    CACHE_DIR = _PROJECT_ROOT / "data" / "raw" / "cache"
 
     def __init__(
         self,
@@ -53,7 +54,7 @@ class SensorTowerClient:
 
         self.CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-        self.usage_log_file = Path("data/api_usage_log.json")
+        self.usage_log_file = self._PROJECT_ROOT / "data" / "api_usage_log.json"
         self._load_usage_log()
 
     # ---- Usage tracking ----

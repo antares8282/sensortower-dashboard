@@ -6,13 +6,19 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write  # Required to push updated data files back to the repo
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # Prevent hanging if an API call stalls
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # Required for authenticated push
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -33,6 +39,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add dashboard_data/ data/
+          git add dashboard_data/ data/api_usage_log.json data/processed/
           git diff --staged --quiet || git commit -m "Daily data refresh $(date +%Y-%m-%d)"
-          git push
+          git push origin HEAD:main
