@@ -1,11 +1,11 @@
 [
   {
     "publisher_name": "Google",
-    "app_count": 31,
-    "chart_appearances": 37,
-    "total_revenue": 244134000,
-    "total_downloads": 87180000,
-    "avg_rating": 4.51,
+    "app_count": 30,
+    "chart_appearances": 36,
+    "total_revenue": 245133000,
+    "total_downloads": 86180000,
+    "avg_rating": 4.5,
     "categories": [
       "Books",
       "Business",
@@ -25,19 +25,17 @@
       "Utilities"
     ],
     "top_app_name": "YouTube",
-    "top_app_revenue": 193000000
+    "top_app_revenue": 194000000
   },
   {
     "publisher_name": "Microsoft Corporation",
-    "app_count": 13,
-    "chart_appearances": 18,
-    "total_revenue": 25255000,
-    "total_downloads": 22900000,
+    "app_count": 12,
+    "chart_appearances": 17,
+    "total_revenue": 25254000,
+    "total_downloads": 22300000,
     "avg_rating": 4.68,
     "categories": [
       "Business",
-      "Entertainment",
-      "Games",
       "Lifestyle",
       "Photo & Video",
       "Productivity",
@@ -92,7 +90,7 @@
     "publisher_name": "Next Vision Limited",
     "app_count": 7,
     "chart_appearances": 11,
-    "total_revenue": 2800000,
+    "total_revenue": 2900000,
     "total_downloads": 960000,
     "avg_rating": 4.7,
     "categories": [
@@ -171,7 +169,7 @@
       "Travel"
     ],
     "top_app_name": "Disney+",
-    "top_app_revenue": 51000000
+    "top_app_revenue": 52000000
   },
   {
     "publisher_name": "Adobe Inc.",
@@ -188,6 +186,22 @@
     ],
     "top_app_name": "Acrobat Reader: PDF Editor",
     "top_app_revenue": 8000000
+  },
+  {
+    "publisher_name": "Monkey Taps",
+    "app_count": 4,
+    "chart_appearances": 7,
+    "total_revenue": 1800000,
+    "total_downloads": 900000,
+    "avg_rating": 4.83,
+    "categories": [
+      "Education",
+      "Health & Fitness",
+      "Lifestyle",
+      "Reference"
+    ],
+    "top_app_name": "Vocabulary - Learn words daily",
+    "top_app_revenue": 800000
   },
   {
     "publisher_name": "SINGAPORE NEW READING TECHNOLOGY PTE. LTD.",
@@ -237,43 +251,6 @@
     "top_app_revenue": 900000
   },
   {
-    "publisher_name": "The New York Times Company",
-    "app_count": 4,
-    "chart_appearances": 6,
-    "total_revenue": 11700000,
-    "total_downloads": 650000,
-    "avg_rating": 4.83,
-    "categories": [
-      "Cat 7012",
-      "Cat 7019",
-      "Entertainment",
-      "Food & Drink",
-      "Games",
-      "News",
-      "Newsstand",
-      "Reference",
-      "Sports"
-    ],
-    "top_app_name": "NYTimes: US and Global News",
-    "top_app_revenue": 6000000
-  },
-  {
-    "publisher_name": "Monkey Taps",
-    "app_count": 3,
-    "chart_appearances": 6,
-    "total_revenue": 1400000,
-    "total_downloads": 800000,
-    "avg_rating": 4.83,
-    "categories": [
-      "Education",
-      "Health & Fitness",
-      "Lifestyle",
-      "Reference"
-    ],
-    "top_app_name": "Vocabulary - Learn words daily",
-    "top_app_revenue": 800000
-  },
-  {
     "publisher_name": "TikTok Ltd.",
     "app_count": 5,
     "chart_appearances": 6,
@@ -287,6 +264,22 @@
     ],
     "top_app_name": "TikTok - Videos, Shop & LIVE",
     "top_app_revenue": 117000000
+  },
+  {
+    "publisher_name": "Playrix",
+    "app_count": 4,
+    "chart_appearances": 6,
+    "total_revenue": 79000000,
+    "total_downloads": 3500000,
+    "avg_rating": 4.68,
+    "categories": [
+      "Cat 7003",
+      "Cat 7012",
+      "Entertainment",
+      "Games"
+    ],
+    "top_app_name": "Township",
+    "top_app_revenue": 27000000
   },
   {
     "publisher_name": "Century Games Pte. Ltd.",
@@ -322,6 +315,24 @@
     "top_app_revenue": 4000000
   },
   {
+    "publisher_name": "East End Technologies Ltd.",
+    "app_count": 5,
+    "chart_appearances": 5,
+    "total_revenue": 750000,
+    "total_downloads": 14000,
+    "avg_rating": 4.59,
+    "categories": [
+      "Business",
+      "Productivity",
+      "Reference",
+      "Travel",
+      "Utilities",
+      "Weather"
+    ],
+    "top_app_name": "Scan QR Code.",
+    "top_app_revenue": 500000
+  },
+  {
     "publisher_name": "Air Apps Systems",
     "app_count": 3,
     "chart_appearances": 5,
@@ -335,6 +346,47 @@
       "Utilities"
     ],
     "top_app_name": "Translate Now - AI Translator",
+    "top_app_revenue": 3000000
+  },
+  {
+    "publisher_name": "The New York Times Company",
+    "app_count": 4,
+    "chart_appearances": 5,
+    "total_revenue": 11700000,
+    "total_downloads": 650000,
+    "avg_rating": 4.83,
+    "categories": [
+      "Cat 7012",
+      "Cat 7019",
+      "Entertainment",
+      "Food & Drink",
+      "Games",
+      "News",
+      "Newsstand",
+      "Reference",
+      "Sports"
+    ],
+    "top_app_name": "NYTimes: US and Global News",
+    "top_app_revenue": 6000000
+  },
+  {
+    "publisher_name": "AIBY",
+    "app_count": 5,
+    "chart_appearances": 5,
+    "total_revenue": 4300000,
+    "total_downloads": 800000,
+    "avg_rating": 4.54,
+    "categories": [
+      "Cat 6027",
+      "Education",
+      "Health & Fitness",
+      "Lifestyle",
+      "Photo & Video",
+      "Productivity",
+      "Reference",
+      "Utilities"
+    ],
+    "top_app_name": "ChatOn AI - Chat Bot Assistant",
     "top_app_revenue": 3000000
   },
   {
@@ -368,22 +420,6 @@
     ],
     "top_app_name": "Simply Piano: Learn Piano Fast",
     "top_app_revenue": 4000000
-  },
-  {
-    "publisher_name": "Playrix",
-    "app_count": 4,
-    "chart_appearances": 5,
-    "total_revenue": 79000000,
-    "total_downloads": 3500000,
-    "avg_rating": 4.68,
-    "categories": [
-      "Cat 7003",
-      "Cat 7012",
-      "Entertainment",
-      "Games"
-    ],
-    "top_app_name": "Township",
-    "top_app_revenue": 27000000
   },
   {
     "publisher_name": "TAPSUITE YAZILIM HIZMETLERI ANONIM SIRKETI",
@@ -420,7 +456,7 @@
     "app_count": 3,
     "chart_appearances": 4,
     "total_revenue": 3600000,
-    "total_downloads": 340000,
+    "total_downloads": 330000,
     "avg_rating": 4.75,
     "categories": [
       "Business",
@@ -432,36 +468,18 @@
     "top_app_revenue": 2000000
   },
   {
-    "publisher_name": "WeatherFlow",
-    "app_count": 4,
+    "publisher_name": "The Weather Channel Interactive",
+    "app_count": 2,
     "chart_appearances": 4,
-    "total_revenue": 140000,
-    "total_downloads": 4000,
-    "avg_rating": 4.74,
+    "total_revenue": 2200000,
+    "total_downloads": 220000,
+    "avg_rating": 4.61,
     "categories": [
-      "Sports",
+      "Lifestyle",
       "Weather"
     ],
-    "top_app_name": "FishWeather: Marine Forecasts",
-    "top_app_revenue": 50000
-  },
-  {
-    "publisher_name": "East End Technologies Ltd.",
-    "app_count": 4,
-    "chart_appearances": 4,
-    "total_revenue": 700000,
-    "total_downloads": 13000,
-    "avg_rating": 4.58,
-    "categories": [
-      "Business",
-      "Productivity",
-      "Reference",
-      "Travel",
-      "Utilities",
-      "Weather"
-    ],
-    "top_app_name": "Scan QR Code.",
-    "top_app_revenue": 500000
+    "top_app_name": "The Weather Channel - Radar",
+    "top_app_revenue": 2000000
   },
   {
     "publisher_name": "AT&T Services, Inc.",
@@ -491,6 +509,23 @@
     ],
     "top_app_name": "TP-Link Tapo",
     "top_app_revenue": 3000000
+  },
+  {
+    "publisher_name": "NBCUniversal Media, LLC",
+    "app_count": 4,
+    "chart_appearances": 4,
+    "total_revenue": 4000,
+    "total_downloads": 1010000,
+    "avg_rating": 4.53,
+    "categories": [
+      "Entertainment",
+      "News",
+      "Photo & Video",
+      "Sports",
+      "Travel"
+    ],
+    "top_app_name": "Universal Orlando Resort",
+    "top_app_revenue": 1000
   },
   {
     "publisher_name": "MLB",
@@ -569,28 +604,10 @@
     "top_app_revenue": 14000000
   },
   {
-    "publisher_name": "AIBY",
-    "app_count": 4,
-    "chart_appearances": 4,
-    "total_revenue": 4000000,
-    "total_downloads": 700000,
-    "avg_rating": 4.6,
-    "categories": [
-      "Education",
-      "Health & Fitness",
-      "Lifestyle",
-      "Productivity",
-      "Reference",
-      "Utilities"
-    ],
-    "top_app_name": "ChatOn AI - Chat Bot Assistant",
-    "top_app_revenue": 3000000
-  },
-  {
     "publisher_name": "X Corp.",
     "app_count": 2,
     "chart_appearances": 4,
-    "total_revenue": 33000000,
+    "total_revenue": 32000000,
     "total_downloads": 8000000,
     "avg_rating": 4.73,
     "categories": [
@@ -600,7 +617,7 @@
       "Utilities"
     ],
     "top_app_name": "Grok - AI Chat & Video",
-    "top_app_revenue": 22000000
+    "top_app_revenue": 21000000
   },
   {
     "publisher_name": "PIXOCIAL TECHNOLOGY (SINGAPORE) PTE. LTD.",
@@ -661,23 +678,6 @@
     "top_app_revenue": 16000000
   },
   {
-    "publisher_name": "Supercell",
-    "app_count": 3,
-    "chart_appearances": 4,
-    "total_revenue": 48000000,
-    "total_downloads": 3400000,
-    "avg_rating": 4.69,
-    "categories": [
-      "Cat 7001",
-      "Cat 7003",
-      "Cat 7017",
-      "Entertainment",
-      "Games"
-    ],
-    "top_app_name": "Brawl Stars",
-    "top_app_revenue": 21000000
-  },
-  {
     "publisher_name": "Dream Games",
     "app_count": 2,
     "chart_appearances": 4,
@@ -708,6 +708,25 @@
     "top_app_revenue": 9000000
   },
   {
+    "publisher_name": "Supercell",
+    "app_count": 4,
+    "chart_appearances": 4,
+    "total_revenue": 58000000,
+    "total_downloads": 4100000,
+    "avg_rating": 4.69,
+    "categories": [
+      "Cat 7001",
+      "Cat 7003",
+      "Cat 7009",
+      "Cat 7015",
+      "Cat 7017",
+      "Entertainment",
+      "Games"
+    ],
+    "top_app_name": "Brawl Stars",
+    "top_app_revenue": 21000000
+  },
+  {
     "publisher_name": "Netflix, Inc.",
     "app_count": 3,
     "chart_appearances": 4,
@@ -724,18 +743,18 @@
     "top_app_revenue": 10000000
   },
   {
-    "publisher_name": "VIZ Media, LLC",
-    "app_count": 2,
+    "publisher_name": "Unbound Medicine, Inc.",
+    "app_count": 4,
     "chart_appearances": 4,
-    "total_revenue": 2070000,
-    "total_downloads": 70000,
-    "avg_rating": 4.87,
+    "total_revenue": 130000,
+    "total_downloads": 4000,
+    "avg_rating": 4.85,
     "categories": [
-      "Books",
-      "Entertainment"
+      "Health & Fitness",
+      "Medical"
     ],
-    "top_app_name": "Shonen Jump Manga & Comics",
-    "top_app_revenue": 2000000
+    "top_app_name": "Davis's Drug Guide - Nurses",
+    "top_app_revenue": 50000
   },
   {
     "publisher_name": "Block, Inc.",
@@ -787,20 +806,6 @@
     "top_app_revenue": 800000
   },
   {
-    "publisher_name": "The Weather Channel Interactive",
-    "app_count": 2,
-    "chart_appearances": 3,
-    "total_revenue": 2200000,
-    "total_downloads": 220000,
-    "avg_rating": 4.6,
-    "categories": [
-      "Lifestyle",
-      "Weather"
-    ],
-    "top_app_name": "The Weather Channel - Radar",
-    "top_app_revenue": 2000000
-  },
-  {
     "publisher_name": "Aviation Data Systems, Inc",
     "app_count": 2,
     "chart_appearances": 3,
@@ -830,12 +835,27 @@
     "top_app_revenue": 400000
   },
   {
+    "publisher_name": "Windy Weather World Inc",
+    "app_count": 2,
+    "chart_appearances": 3,
+    "total_revenue": 1050000,
+    "total_downloads": 208000,
+    "avg_rating": 4.44,
+    "categories": [
+      "Navigation",
+      "Sports",
+      "Weather"
+    ],
+    "top_app_name": "Windy.app \u2014 Wind, Tides, Radar",
+    "top_app_revenue": 1000000
+  },
+  {
     "publisher_name": "CNN Interactive Group, Inc.",
     "app_count": 2,
     "chart_appearances": 3,
     "total_revenue": 301000,
     "total_downloads": 60000,
-    "avg_rating": 4.46,
+    "avg_rating": 4.47,
     "categories": [
       "News",
       "Newsstand",
@@ -843,6 +863,20 @@
     ],
     "top_app_name": "CNN: Live & Breaking News",
     "top_app_revenue": 300000
+  },
+  {
+    "publisher_name": "WeatherFlow",
+    "app_count": 3,
+    "chart_appearances": 3,
+    "total_revenue": 120000,
+    "total_downloads": 3000,
+    "avg_rating": 4.74,
+    "categories": [
+      "Sports",
+      "Weather"
+    ],
+    "top_app_name": "FishWeather: Marine Forecasts",
+    "top_app_revenue": 50000
   },
   {
     "publisher_name": "Impala Studios",
@@ -928,52 +962,19 @@
     "top_app_revenue": 3000000
   },
   {
-    "publisher_name": "The Pokemon Company",
-    "app_count": 3,
+    "publisher_name": "Univision Communications Inc.",
+    "app_count": 2,
     "chart_appearances": 3,
-    "total_revenue": 11600000,
-    "total_downloads": 3900000,
-    "avg_rating": 4.48,
-    "categories": [
-      "Cat 7003",
-      "Cat 7005",
-      "Cat 7014",
-      "Cat 7017",
-      "Games",
-      "Utilities"
-    ],
-    "top_app_name": "Pok\u00e9mon TCG Pocket",
-    "top_app_revenue": 9000000
-  },
-  {
-    "publisher_name": "NBCUniversal Media, LLC",
-    "app_count": 3,
-    "chart_appearances": 3,
-    "total_revenue": 3000,
-    "total_downloads": 960000,
-    "avg_rating": 4.52,
+    "total_revenue": 15001000,
+    "total_downloads": 1100000,
+    "avg_rating": 4.59,
     "categories": [
       "Entertainment",
       "News",
-      "Photo & Video",
-      "Travel"
-    ],
-    "top_app_name": "Universal Orlando Resort",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "TeamSnap, Inc.",
-    "app_count": 2,
-    "chart_appearances": 3,
-    "total_revenue": 260000,
-    "total_downloads": 130000,
-    "avg_rating": 4.16,
-    "categories": [
-      "Productivity",
       "Sports"
     ],
-    "top_app_name": "TeamSnap",
-    "top_app_revenue": 200000
+    "top_app_name": "ViX: TV, Sports and News",
+    "top_app_revenue": 15000000
   },
   {
     "publisher_name": "FIFA",
@@ -981,7 +982,7 @@
     "chart_appearances": 3,
     "total_revenue": 3000,
     "total_downloads": 6700000,
-    "avg_rating": 3.19,
+    "avg_rating": 2.91,
     "categories": [
       "Entertainment",
       "Sports"
@@ -1022,20 +1023,6 @@
     "top_app_revenue": 800000
   },
   {
-    "publisher_name": "ForUsApps, LLC",
-    "app_count": 2,
-    "chart_appearances": 3,
-    "total_revenue": 150000,
-    "total_downloads": 50000,
-    "avg_rating": 4.8,
-    "categories": [
-      "Reference",
-      "Social Networking"
-    ],
-    "top_app_name": "TrendTok Analytics & Tracker",
-    "top_app_revenue": 80000
-  },
-  {
     "publisher_name": "Vortemol Limited",
     "app_count": 2,
     "chart_appearances": 3,
@@ -1065,20 +1052,6 @@
     ],
     "top_app_name": "Yahoo Mail: Your Email & Inbox",
     "top_app_revenue": 1000000
-  },
-  {
-    "publisher_name": "Xiamen Meitu Technology Co., Ltd.",
-    "app_count": 2,
-    "chart_appearances": 3,
-    "total_revenue": 15000000,
-    "total_downloads": 5000000,
-    "avg_rating": 4.77,
-    "categories": [
-      "Photo & Video",
-      "Social Networking"
-    ],
-    "top_app_name": "Meitu AI Photo & Video Editor",
-    "top_app_revenue": 13000000
   },
   {
     "publisher_name": "Lightricks Ltd.",
@@ -1128,7 +1101,7 @@
     "chart_appearances": 3,
     "total_revenue": 350000,
     "total_downloads": 21000,
-    "avg_rating": 4.3,
+    "avg_rating": 4.31,
     "categories": [
       "Food & Drink",
       "Lifestyle",
@@ -1137,34 +1110,6 @@
     ],
     "top_app_name": "The New Yorker",
     "top_app_revenue": 300000
-  },
-  {
-    "publisher_name": "Gannett",
-    "app_count": 3,
-    "chart_appearances": 3,
-    "total_revenue": 130000,
-    "total_downloads": 3000,
-    "avg_rating": 4.49,
-    "categories": [
-      "News",
-      "Newsstand"
-    ],
-    "top_app_name": "Detroit Free Press: Freep",
-    "top_app_revenue": 60000
-  },
-  {
-    "publisher_name": "OnWater, LLC",
-    "app_count": 2,
-    "chart_appearances": 3,
-    "total_revenue": 80000,
-    "total_downloads": 80000,
-    "avg_rating": 4.41,
-    "categories": [
-      "Navigation",
-      "Sports"
-    ],
-    "top_app_name": "onWater: Fishing Spots Map",
-    "top_app_revenue": 40000
   },
   {
     "publisher_name": "SKYWORK AI PTE LTD",
@@ -1212,20 +1157,6 @@
     "top_app_revenue": 1000000
   },
   {
-    "publisher_name": "WELLTECH APPS LIMITED",
-    "app_count": 2,
-    "chart_appearances": 3,
-    "total_revenue": 1000000,
-    "total_downloads": 200000,
-    "avg_rating": 4.64,
-    "categories": [
-      "Health & Fitness",
-      "Lifestyle"
-    ],
-    "top_app_name": "WalkFit: Weight Loss Tracker",
-    "top_app_revenue": 500000
-  },
-  {
     "publisher_name": "Electronic Arts",
     "app_count": 2,
     "chart_appearances": 3,
@@ -1241,22 +1172,6 @@
     ],
     "top_app_name": "EA SPORTS FC Soccer Mobile 26",
     "top_app_revenue": 11000000
-  },
-  {
-    "publisher_name": "Voodoo",
-    "app_count": 3,
-    "chart_appearances": 3,
-    "total_revenue": 3200000,
-    "total_downloads": 4000000,
-    "avg_rating": 4.6,
-    "categories": [
-      "Cat 7001",
-      "Cat 7003",
-      "Cat 7017",
-      "Games"
-    ],
-    "top_app_name": "Castle Busters",
-    "top_app_revenue": 3000000
   },
   {
     "publisher_name": "SuperPlay",
@@ -1307,6 +1222,24 @@
     "top_app_revenue": 300000
   },
   {
+    "publisher_name": "Moon Active",
+    "app_count": 3,
+    "chart_appearances": 3,
+    "total_revenue": 38600000,
+    "total_downloads": 1700000,
+    "avg_rating": 4.81,
+    "categories": [
+      "Cat 7002",
+      "Cat 7003",
+      "Cat 7004",
+      "Cat 7012",
+      "Entertainment",
+      "Games"
+    ],
+    "top_app_name": "Coin Master",
+    "top_app_revenue": 27000000
+  },
+  {
     "publisher_name": "Inkitt",
     "app_count": 2,
     "chart_appearances": 3,
@@ -1323,6 +1256,20 @@
     "top_app_revenue": 1000000
   },
   {
+    "publisher_name": "VIZ Media, LLC",
+    "app_count": 2,
+    "chart_appearances": 3,
+    "total_revenue": 2070000,
+    "total_downloads": 70000,
+    "avg_rating": 4.87,
+    "categories": [
+      "Books",
+      "Entertainment"
+    ],
+    "top_app_name": "Shonen Jump Manga & Comics",
+    "top_app_revenue": 2000000
+  },
+  {
     "publisher_name": "CHANGDU (HK) TECHNOLOGY LIMITED",
     "app_count": 2,
     "chart_appearances": 3,
@@ -1335,20 +1282,6 @@
     ],
     "top_app_name": "MoboReader: Top Novels & Books",
     "top_app_revenue": 400000
-  },
-  {
-    "publisher_name": "Unbound Medicine, Inc.",
-    "app_count": 3,
-    "chart_appearances": 3,
-    "total_revenue": 120000,
-    "total_downloads": 3000,
-    "avg_rating": 4.84,
-    "categories": [
-      "Health & Fitness",
-      "Medical"
-    ],
-    "top_app_name": "Davis's Drug Guide - Nurses",
-    "top_app_revenue": 50000
   },
   {
     "publisher_name": "LinkedIn Corporation",
@@ -1589,7 +1522,7 @@
     "publisher_name": "SimplyWise, Inc.",
     "app_count": 2,
     "chart_appearances": 2,
-    "total_revenue": 750000,
+    "total_revenue": 760000,
     "total_downloads": 41000,
     "avg_rating": 4.82,
     "categories": [
@@ -1629,6 +1562,20 @@
     "top_app_revenue": 500000
   },
   {
+    "publisher_name": "Windfinder",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 70000,
+    "total_downloads": 40000,
+    "avg_rating": 4.8,
+    "categories": [
+      "Sports",
+      "Weather"
+    ],
+    "top_app_name": "Windfinder: Wind & Weather map",
+    "top_app_revenue": 70000
+  },
+  {
     "publisher_name": "Weather Underground, LLC",
     "app_count": 1,
     "chart_appearances": 2,
@@ -1657,20 +1604,6 @@
     "top_app_revenue": 20000
   },
   {
-    "publisher_name": "Nico Tranquilli",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 40000,
-    "total_downloads": 200000,
-    "avg_rating": 4.73,
-    "categories": [
-      "News",
-      "Weather"
-    ],
-    "top_app_name": "Earthquake - alerts and map",
-    "top_app_revenue": 40000
-  },
-  {
     "publisher_name": "Grailr LLC",
     "app_count": 1,
     "chart_appearances": 2,
@@ -1697,20 +1630,6 @@
     ],
     "top_app_name": "My Earthquake Alerts & Feed",
     "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Windy Weather World Inc",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 1000000,
-    "total_downloads": 200000,
-    "avg_rating": 4.69,
-    "categories": [
-      "Navigation",
-      "Weather"
-    ],
-    "top_app_name": "Windy.app \u2014 Wind, Tides, Radar",
-    "top_app_revenue": 1000000
   },
   {
     "publisher_name": "Windyty, SE",
@@ -1787,7 +1706,7 @@
     "app_count": 1,
     "chart_appearances": 2,
     "total_revenue": 100000,
-    "total_downloads": 100000,
+    "total_downloads": 90000,
     "avg_rating": 4.77,
     "categories": [
       "Health & Fitness",
@@ -2052,7 +1971,7 @@
     "publisher_name": "To Ngoc Mai",
     "app_count": 1,
     "chart_appearances": 2,
-    "total_revenue": 700000,
+    "total_revenue": 800000,
     "total_downloads": 200000,
     "avg_rating": 4.75,
     "categories": [
@@ -2060,14 +1979,14 @@
       "Utilities"
     ],
     "top_app_name": "TV Remote & Universal Control\u2122",
-    "top_app_revenue": 700000
+    "top_app_revenue": 800000
   },
   {
     "publisher_name": "Epic Games Inc.",
     "app_count": 2,
     "chart_appearances": 2,
     "total_revenue": 5001000,
-    "total_downloads": 5500000,
+    "total_downloads": 5600000,
     "avg_rating": 3.58,
     "categories": [
       "Cat 7001",
@@ -2099,7 +2018,7 @@
     "chart_appearances": 2,
     "total_revenue": 1200000,
     "total_downloads": 70000,
-    "avg_rating": 4.62,
+    "avg_rating": 4.63,
     "categories": [
       "Lifestyle",
       "Utilities"
@@ -2180,11 +2099,26 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Azteca Web, S.A. de C.V.",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 2000,
+    "total_downloads": 700000,
+    "avg_rating": 4.18,
+    "categories": [
+      "Entertainment",
+      "News",
+      "Sports"
+    ],
+    "top_app_name": "TV Azteca Deportes",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "FishBrain",
     "app_count": 1,
     "chart_appearances": 2,
     "total_revenue": 2000000,
-    "total_downloads": 300000,
+    "total_downloads": 200000,
     "avg_rating": 4.65,
     "categories": [
       "Social Networking",
@@ -2192,20 +2126,6 @@
     ],
     "top_app_name": "Fishbrain - Fishing App",
     "top_app_revenue": 2000000
-  },
-  {
-    "publisher_name": "United States Golf Association",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 500000,
-    "total_downloads": 50000,
-    "avg_rating": 4.76,
-    "categories": [
-      "Entertainment",
-      "Sports"
-    ],
-    "top_app_name": "GHIN",
-    "top_app_revenue": 500000
   },
   {
     "publisher_name": "18Birdies LLC",
@@ -2250,6 +2170,20 @@
     "top_app_revenue": 10000000
   },
   {
+    "publisher_name": "Real Vault, Inc.",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 200000,
+    "total_downloads": 90000,
+    "avg_rating": 4.81,
+    "categories": [
+      "Social Networking",
+      "Sports"
+    ],
+    "top_app_name": "Real - Sports",
+    "top_app_revenue": 200000
+  },
+  {
     "publisher_name": "CollX LLC",
     "app_count": 1,
     "chart_appearances": 2,
@@ -2277,6 +2211,20 @@
     ],
     "top_app_name": "Apple Sports",
     "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "TeamSnap, Inc.",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 260000,
+    "total_downloads": 130000,
+    "avg_rating": 4.16,
+    "categories": [
+      "Productivity",
+      "Sports"
+    ],
+    "top_app_name": "TeamSnap",
+    "top_app_revenue": 200000
   },
   {
     "publisher_name": "The Topps Company, Inc.",
@@ -2562,6 +2510,21 @@
     "top_app_revenue": 4000000
   },
   {
+    "publisher_name": "NAVER Z Corporation",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 700000,
+    "total_downloads": 900000,
+    "avg_rating": 4.71,
+    "categories": [
+      "Entertainment",
+      "Social Networking",
+      "Utilities"
+    ],
+    "top_app_name": "ZEPETO: Avatar, Connect & Live",
+    "top_app_revenue": 500000
+  },
+  {
     "publisher_name": "CLAPPER MEDIA GROUP INC.",
     "app_count": 1,
     "chart_appearances": 2,
@@ -2688,17 +2651,31 @@
     "top_app_revenue": 400000
   },
   {
-    "publisher_name": "Everblessed Technology Inc.",
+    "publisher_name": "ForUsApps, LLC",
     "app_count": 1,
     "chart_appearances": 2,
     "total_revenue": 70000,
+    "total_downloads": 20000,
+    "avg_rating": 4.81,
+    "categories": [
+      "Reference",
+      "Social Networking"
+    ],
+    "top_app_name": "ReelTrends - AI Creator Tools",
+    "top_app_revenue": 70000
+  },
+  {
+    "publisher_name": "Everblessed Technology Inc.",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 80000,
     "total_downloads": 100000,
     "avg_rating": 4.91,
     "categories": [
       "Reference"
     ],
     "top_app_name": "Blessed - Daily Verse & Prayer",
-    "top_app_revenue": 70000
+    "top_app_revenue": 80000
   },
   {
     "publisher_name": "Book Vitals Inc.",
@@ -2743,12 +2720,26 @@
     "top_app_revenue": 300000
   },
   {
+    "publisher_name": "DUOMO APP LIMITED",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 200000,
+    "total_downloads": 60000,
+    "avg_rating": 4.77,
+    "categories": [
+      "Lifestyle",
+      "Reference"
+    ],
+    "top_app_name": "Duomo: Daily Prayer & Bible",
+    "top_app_revenue": 200000
+  },
+  {
     "publisher_name": "HEYOS",
     "app_count": 1,
     "chart_appearances": 2,
     "total_revenue": 300000,
     "total_downloads": 200000,
-    "avg_rating": 4.22,
+    "avg_rating": 4.21,
     "categories": [
       "Productivity",
       "Reference"
@@ -2783,20 +2774,6 @@
     ],
     "top_app_name": "Bible Note: Sermon Notes",
     "top_app_revenue": 200000
-  },
-  {
-    "publisher_name": "Idea Garden LLC",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 100000,
-    "total_downloads": 40000,
-    "avg_rating": 4.81,
-    "categories": [
-      "Books",
-      "Reference"
-    ],
-    "top_app_name": "Bible Bff-Modern Bible Stories",
-    "top_app_revenue": 100000
   },
   {
     "publisher_name": "Lemon Tree Labs Inc",
@@ -2836,22 +2813,8 @@
       "Lifestyle",
       "Reference"
     ],
-    "top_app_name": "SewPal - Sewing Guides & Ideas",
+    "top_app_name": "Sewpal: Sewing Pattern & Guide",
     "top_app_revenue": 70000
-  },
-  {
-    "publisher_name": "Brickify LLC",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 60000,
-    "total_downloads": 30000,
-    "avg_rating": 4.64,
-    "categories": [
-      "Entertainment",
-      "Reference"
-    ],
-    "top_app_name": "Brickify: Collection Tracker",
-    "top_app_revenue": 60000
   },
   {
     "publisher_name": "COOL SUMMER LIMITED",
@@ -2898,20 +2861,6 @@
     "top_app_revenue": 7000000
   },
   {
-    "publisher_name": "Docusign",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 600000,
-    "total_downloads": 200000,
-    "avg_rating": 4.87,
-    "categories": [
-      "Business",
-      "Productivity"
-    ],
-    "top_app_name": "Docusign - Upload & Sign Docs",
-    "top_app_revenue": 600000
-  },
-  {
     "publisher_name": "Speechify Inc.",
     "app_count": 1,
     "chart_appearances": 2,
@@ -2924,20 +2873,6 @@
     ],
     "top_app_name": "Speechify \u2013 Text to Speech PDF",
     "top_app_revenue": 2000000
-  },
-  {
-    "publisher_name": "LIGHTNINGLINK NETWORKS PTE. LTD.",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 800000,
-    "total_downloads": 400000,
-    "avg_rating": 4.66,
-    "categories": [
-      "Productivity",
-      "Utilities"
-    ],
-    "top_app_name": "X-VPN: VPN Fast & Secure",
-    "top_app_revenue": 800000
   },
   {
     "publisher_name": "Mobile Jump Pte Ltd",
@@ -3024,6 +2959,20 @@
     "top_app_revenue": 59000000
   },
   {
+    "publisher_name": "Xiamen Meitu Technology Co., Ltd.",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 13000000,
+    "total_downloads": 3000000,
+    "avg_rating": 4.79,
+    "categories": [
+      "Photo & Video",
+      "Social Networking"
+    ],
+    "top_app_name": "Meitu AI Photo & Video Editor",
+    "top_app_revenue": 13000000
+  },
+  {
     "publisher_name": "Snap, Inc.",
     "app_count": 1,
     "chart_appearances": 2,
@@ -3078,20 +3027,6 @@
     ],
     "top_app_name": "InShot - Video Editor",
     "top_app_revenue": 1000000
-  },
-  {
-    "publisher_name": "Frameo A/S",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 400000,
-    "total_downloads": 200000,
-    "avg_rating": 4.89,
-    "categories": [
-      "Photo & Video",
-      "Social Networking"
-    ],
-    "top_app_name": "Frameo",
-    "top_app_revenue": 400000
   },
   {
     "publisher_name": "FaceApp Technology Limited",
@@ -3178,6 +3113,19 @@
     "top_app_revenue": 2000000
   },
   {
+    "publisher_name": "runwayml",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 1000000,
+    "total_downloads": 300000,
+    "avg_rating": 4.48,
+    "categories": [
+      "Photo & Video"
+    ],
+    "top_app_name": "RunwayML",
+    "top_app_revenue": 1000000
+  },
+  {
     "publisher_name": "Kick Streaming",
     "app_count": 1,
     "chart_appearances": 2,
@@ -3220,6 +3168,20 @@
     ],
     "top_app_name": "YouCam Perfect:AI Photo Editor",
     "top_app_revenue": 800000
+  },
+  {
+    "publisher_name": "Lyrebird Studio",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 800000,
+    "total_downloads": 400000,
+    "avg_rating": 4.65,
+    "categories": [
+      "Entertainment",
+      "Photo & Video"
+    ],
+    "top_app_name": "FaceLab: Face Age, Hair Filter",
+    "top_app_revenue": 400000
   },
   {
     "publisher_name": "Bloomberg Finance LP",
@@ -3362,22 +3324,6 @@
     "top_app_revenue": 500000
   },
   {
-    "publisher_name": "Spotify",
-    "app_count": 2,
-    "chart_appearances": 2,
-    "total_revenue": 11000,
-    "total_downloads": 5040000,
-    "avg_rating": 4.81,
-    "categories": [
-      "Entertainment",
-      "Music",
-      "News",
-      "Social Networking"
-    ],
-    "top_app_name": "Spotify: Music and Podcasts",
-    "top_app_revenue": 10000
-  },
-  {
     "publisher_name": "REDDIT, INC.",
     "app_count": 1,
     "chart_appearances": 2,
@@ -3489,21 +3435,6 @@
     "top_app_revenue": 100000
   },
   {
-    "publisher_name": "The Kroger Co.",
-    "app_count": 2,
-    "chart_appearances": 2,
-    "total_revenue": 2000,
-    "total_downloads": 206000,
-    "avg_rating": 4.64,
-    "categories": [
-      "Lifestyle",
-      "News",
-      "Shopping"
-    ],
-    "top_app_name": "FEED Mobile",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Sherwood Forestry Service, Inc.",
     "app_count": 1,
     "chart_appearances": 2,
@@ -3573,6 +3504,34 @@
     "top_app_revenue": 70000
   },
   {
+    "publisher_name": "Hearst Newspapers",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 110000,
+    "total_downloads": 2000,
+    "avg_rating": 4.36,
+    "categories": [
+      "News",
+      "Newsstand"
+    ],
+    "top_app_name": "The San Francisco Chronicle",
+    "top_app_revenue": 100000
+  },
+  {
+    "publisher_name": "Gannett",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 100000,
+    "total_downloads": 2000,
+    "avg_rating": 4.56,
+    "categories": [
+      "News",
+      "Newsstand"
+    ],
+    "top_app_name": "Detroit Free Press: Freep",
+    "top_app_revenue": 60000
+  },
+  {
     "publisher_name": "Groundspeak Inc.",
     "app_count": 1,
     "chart_appearances": 2,
@@ -3634,7 +3593,7 @@
     "chart_appearances": 2,
     "total_revenue": 2000,
     "total_downloads": 120000,
-    "avg_rating": 3.13,
+    "avg_rating": 3.12,
     "categories": [
       "Health & Fitness",
       "Navigation",
@@ -3663,27 +3622,13 @@
     "chart_appearances": 2,
     "total_revenue": 70000,
     "total_downloads": 200000,
-    "avg_rating": 4.69,
+    "avg_rating": 4.68,
     "categories": [
       "Navigation",
       "Utilities"
     ],
     "top_app_name": "Speedometer Simple",
     "top_app_revenue": 70000
-  },
-  {
-    "publisher_name": "TrailBehind",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 300000,
-    "total_downloads": 60000,
-    "avg_rating": 4.76,
-    "categories": [
-      "Navigation",
-      "Travel"
-    ],
-    "top_app_name": "Gaia GPS: Mobile Trail Maps",
-    "top_app_revenue": 300000
   },
   {
     "publisher_name": "Wavve Boating INC",
@@ -3727,6 +3672,34 @@
     "top_app_revenue": 200000
   },
   {
+    "publisher_name": "Randonauts, LLC",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 60000,
+    "total_downloads": 200000,
+    "avg_rating": 3.42,
+    "categories": [
+      "Lifestyle",
+      "Navigation"
+    ],
+    "top_app_name": "Randonautica",
+    "top_app_revenue": 60000
+  },
+  {
+    "publisher_name": "OnWater, LLC",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 80000,
+    "total_downloads": 80000,
+    "avg_rating": 4.41,
+    "categories": [
+      "Navigation",
+      "Sports"
+    ],
+    "top_app_name": "onWater: Fishing Spots Map",
+    "top_app_revenue": 40000
+  },
+  {
     "publisher_name": "Goldlab Applications Yazilim Bili\u015fim Anonim \u015eirketi",
     "app_count": 1,
     "chart_appearances": 2,
@@ -3760,7 +3733,7 @@
     "chart_appearances": 2,
     "total_revenue": 100000,
     "total_downloads": 100000,
-    "avg_rating": 3.87,
+    "avg_rating": 3.81,
     "categories": [
       "Navigation",
       "Utilities"
@@ -3926,7 +3899,7 @@
     "app_count": 2,
     "chart_appearances": 2,
     "total_revenue": 2000,
-    "total_downloads": 800000,
+    "total_downloads": 900000,
     "avg_rating": 4.68,
     "categories": [
       "Entertainment",
@@ -4006,17 +3979,17 @@
     "top_app_revenue": 300000
   },
   {
-    "publisher_name": "sin titulo, inc",
+    "publisher_name": "Moongate Studios, Inc.",
     "app_count": 1,
     "chart_appearances": 2,
     "total_revenue": 200000,
-    "total_downloads": 80000,
-    "avg_rating": 4.93,
+    "total_downloads": 60000,
+    "avg_rating": 4.67,
     "categories": [
-      "Music",
-      "Productivity"
+      "Lifestyle",
+      "Music"
     ],
-    "top_app_name": "[untitled]",
+    "top_app_name": "Moongate: Binaural Beats",
     "top_app_revenue": 200000
   },
   {
@@ -4202,20 +4175,6 @@
     "top_app_revenue": 4000000
   },
   {
-    "publisher_name": "NarrativeLab OU",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 400000,
-    "total_downloads": 200000,
-    "avg_rating": 4.33,
-    "categories": [
-      "Health & Fitness",
-      "Lifestyle"
-    ],
-    "top_app_name": "Blood Pressure Log, Heart Rate",
-    "top_app_revenue": 400000
-  },
-  {
     "publisher_name": "WINK TECH LIMITED",
     "app_count": 1,
     "chart_appearances": 2,
@@ -4331,7 +4290,7 @@
     "publisher_name": "Cronometer Software Inc",
     "app_count": 1,
     "chart_appearances": 2,
-    "total_revenue": 900000,
+    "total_revenue": 1000000,
     "total_downloads": 400000,
     "avg_rating": 4.77,
     "categories": [
@@ -4339,7 +4298,7 @@
       "Health & Fitness"
     ],
     "top_app_name": "Cronometer: Calorie Counter",
-    "top_app_revenue": 900000
+    "top_app_revenue": 1000000
   },
   {
     "publisher_name": "Hatch Baby, Inc.",
@@ -4368,6 +4327,20 @@
     ],
     "top_app_name": "BetterMe: Health Coaching",
     "top_app_revenue": 1000000
+  },
+  {
+    "publisher_name": "WELLTECH APPS LIMITED",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 500000,
+    "total_downloads": 100000,
+    "avg_rating": 4.73,
+    "categories": [
+      "Health & Fitness",
+      "Lifestyle"
+    ],
+    "top_app_name": "WalkFit: Weight Loss Tracker",
+    "top_app_revenue": 500000
   },
   {
     "publisher_name": "Hevy Studios S.L.",
@@ -4553,6 +4526,21 @@
     "top_app_revenue": 15000000
   },
   {
+    "publisher_name": "Voodoo",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 200000,
+    "total_downloads": 3000000,
+    "avg_rating": 4.57,
+    "categories": [
+      "Cat 7001",
+      "Cat 7003",
+      "Games"
+    ],
+    "top_app_name": "Hole.io",
+    "top_app_revenue": 100000
+  },
+  {
     "publisher_name": "Triumph Arcade",
     "app_count": 2,
     "chart_appearances": 2,
@@ -4570,19 +4558,21 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Hitapps Games LTD",
-    "app_count": 1,
+    "publisher_name": "The Pokemon Company",
+    "app_count": 2,
     "chart_appearances": 2,
-    "total_revenue": 4000000,
-    "total_downloads": 2000000,
-    "avg_rating": 4.66,
+    "total_revenue": 11000000,
+    "total_downloads": 3500000,
+    "avg_rating": 4.83,
     "categories": [
+      "Cat 7003",
       "Cat 7005",
-      "Cat 7019",
+      "Cat 7014",
+      "Cat 7017",
       "Games"
     ],
-    "top_app_name": "Solitaire Associations Journey",
-    "top_app_revenue": 4000000
+    "top_app_name": "Pok\u00e9mon TCG Pocket",
+    "top_app_revenue": 9000000
   },
   {
     "publisher_name": "Loom Games Oyun Yazilim ve Pazarlama Anonim Sirketi",
@@ -4597,24 +4587,6 @@
     ],
     "top_app_name": "Pixel Flow!",
     "top_app_revenue": 12000000
-  },
-  {
-    "publisher_name": "Moon Active",
-    "app_count": 2,
-    "chart_appearances": 2,
-    "total_revenue": 38000000,
-    "total_downloads": 1400000,
-    "avg_rating": 4.79,
-    "categories": [
-      "Cat 7002",
-      "Cat 7003",
-      "Cat 7004",
-      "Cat 7012",
-      "Entertainment",
-      "Games"
-    ],
-    "top_app_name": "Coin Master",
-    "top_app_revenue": 27000000
   },
   {
     "publisher_name": "King",
@@ -4662,6 +4634,21 @@
     ],
     "top_app_name": "Toon Blast",
     "top_app_revenue": 18000000
+  },
+  {
+    "publisher_name": "GARENA INTERNATIONAL I PRIVATE LIMITED",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 20000000,
+    "total_downloads": 2700000,
+    "avg_rating": 4.01,
+    "categories": [
+      "Cat 7001",
+      "Cat 7002",
+      "Games"
+    ],
+    "top_app_name": "Free Fire: 9th Anniversary",
+    "top_app_revenue": 15000000
   },
   {
     "publisher_name": "Omnilojo Pte Ltd",
@@ -4723,6 +4710,20 @@
     "top_app_revenue": 600000
   },
   {
+    "publisher_name": "FIS",
+    "app_count": 2,
+    "chart_appearances": 2,
+    "total_revenue": 2000,
+    "total_downloads": 230000,
+    "avg_rating": 2.37,
+    "categories": [
+      "Finance",
+      "Shopping"
+    ],
+    "top_app_name": "ebtEDGE",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Finelo Limited",
     "app_count": 2,
     "chart_appearances": 2,
@@ -4741,7 +4742,7 @@
     "publisher_name": "Crunchyroll, LLC",
     "app_count": 1,
     "chart_appearances": 2,
-    "total_revenue": 37000000,
+    "total_revenue": 38000000,
     "total_downloads": 1000000,
     "avg_rating": 4.76,
     "categories": [
@@ -4749,7 +4750,7 @@
       "Lifestyle"
     ],
     "top_app_name": "Crunchyroll",
-    "top_app_revenue": 37000000
+    "top_app_revenue": 38000000
   },
   {
     "publisher_name": "Hulu, LLC",
@@ -4832,6 +4833,20 @@
     "top_app_revenue": 17000000
   },
   {
+    "publisher_name": "CLOUD WHALE INTERACTIVE TECHNOLOGY LLC.",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 2000000,
+    "total_downloads": 600000,
+    "avg_rating": 4.45,
+    "categories": [
+      "Entertainment",
+      "Social Networking"
+    ],
+    "top_app_name": "PolyBuzz: Chat with Characters",
+    "top_app_revenue": 2000000
+  },
+  {
     "publisher_name": "SHORTTV LIMITED",
     "app_count": 1,
     "chart_appearances": 2,
@@ -4890,7 +4905,7 @@
     "chart_appearances": 2,
     "total_revenue": 3000000,
     "total_downloads": 2000000,
-    "avg_rating": 4.41,
+    "avg_rating": 4.42,
     "categories": [
       "Entertainment"
     ],
@@ -5011,20 +5026,6 @@
     "top_app_revenue": 800000
   },
   {
-    "publisher_name": "Piknik",
-    "app_count": 2,
-    "chart_appearances": 2,
-    "total_revenue": 900000,
-    "total_downloads": 700000,
-    "avg_rating": 4.03,
-    "categories": [
-      "Education",
-      "Entertainment"
-    ],
-    "top_app_name": "Toca Boca Jr: Fun Kids Games",
-    "top_app_revenue": 700000
-  },
-  {
     "publisher_name": "Monkimun Inc",
     "app_count": 1,
     "chart_appearances": 2,
@@ -5109,6 +5110,20 @@
     "top_app_revenue": 1000000
   },
   {
+    "publisher_name": "GTHW App Limited",
+    "app_count": 1,
+    "chart_appearances": 2,
+    "total_revenue": 800000,
+    "total_downloads": 200000,
+    "avg_rating": 4.65,
+    "categories": [
+      "Education",
+      "Productivity"
+    ],
+    "top_app_name": "Headway - Daily Micro Learning",
+    "top_app_revenue": 800000
+  },
+  {
     "publisher_name": "BENIPOL LIMITED",
     "app_count": 1,
     "chart_appearances": 2,
@@ -5140,8 +5155,8 @@
     "app_count": 2,
     "chart_appearances": 2,
     "total_revenue": 2000,
-    "total_downloads": 110000,
-    "avg_rating": 2.01,
+    "total_downloads": 120000,
+    "avg_rating": 2.0,
     "categories": [
       "Education"
     ],
@@ -5204,21 +5219,6 @@
     "top_app_revenue": 1000000
   },
   {
-    "publisher_name": "Barnes & Noble",
-    "app_count": 2,
-    "chart_appearances": 2,
-    "total_revenue": 2000,
-    "total_downloads": 80000,
-    "avg_rating": 3.31,
-    "categories": [
-      "Books",
-      "News",
-      "Shopping"
-    ],
-    "top_app_name": "Barnes & Noble NOOK",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Audible, Inc.",
     "app_count": 1,
     "chart_appearances": 2,
@@ -5261,18 +5261,19 @@
     "top_app_revenue": 1000000
   },
   {
-    "publisher_name": "Radish Media",
-    "app_count": 1,
+    "publisher_name": "Pubmark Inc.",
+    "app_count": 2,
     "chart_appearances": 2,
-    "total_revenue": 700000,
-    "total_downloads": 30000,
-    "avg_rating": 4.57,
+    "total_revenue": 2000,
+    "total_downloads": 27000,
+    "avg_rating": 4.76,
     "categories": [
       "Books",
-      "Entertainment"
+      "Entertainment",
+      "Shopping"
     ],
-    "top_app_name": "Tapas \u2013 Comics and Novels",
-    "top_app_revenue": 700000
+    "top_app_name": "BookBub",
+    "top_app_revenue": 1000
   },
   {
     "publisher_name": "Cloudary Holdings Limited",
@@ -5300,20 +5301,6 @@
       "Newsstand"
     ],
     "top_app_name": "WebComics - Webtoon, Manga",
-    "top_app_revenue": 200000
-  },
-  {
-    "publisher_name": "Tarteel Inc.",
-    "app_count": 1,
-    "chart_appearances": 2,
-    "total_revenue": 200000,
-    "total_downloads": 100000,
-    "avg_rating": 4.73,
-    "categories": [
-      "Books",
-      "Reference"
-    ],
-    "top_app_name": "Tarteel: AI Quran Memorization",
     "top_app_revenue": 200000
   },
   {
@@ -5404,7 +5391,7 @@
     "chart_appearances": 2,
     "total_revenue": 40000,
     "total_downloads": 100000,
-    "avg_rating": 4.09,
+    "avg_rating": 4.07,
     "categories": [
       "Books",
       "Entertainment"
@@ -5594,19 +5581,18 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Atmosphere Apps, Inc.",
+    "publisher_name": "NYSORA inc.",
     "app_count": 2,
     "chart_appearances": 2,
-    "total_revenue": 50000,
+    "total_revenue": 130000,
     "total_downloads": 2000,
-    "avg_rating": 4.83,
+    "avg_rating": 4.76,
     "categories": [
-      "Health & Fitness",
-      "Medical",
-      "Reference"
+      "Education",
+      "Medical"
     ],
-    "top_app_name": "Davis Drug Guide For Nurses",
-    "top_app_revenue": 30000
+    "top_app_name": "NYSORA Nerve Blocks",
+    "top_app_revenue": 100000
   },
   {
     "publisher_name": "Eko Health, Inc.",
@@ -5614,7 +5600,7 @@
     "chart_appearances": 2,
     "total_revenue": 120000,
     "total_downloads": 9000,
-    "avg_rating": 4.82,
+    "avg_rating": 4.84,
     "categories": [
       "Health & Fitness",
       "Medical"
@@ -5636,21 +5622,6 @@
     ],
     "top_app_name": "Body Temperature App For Fever",
     "top_app_revenue": 80000
-  },
-  {
-    "publisher_name": "7-Eleven, Inc.",
-    "app_count": 2,
-    "chart_appearances": 2,
-    "total_revenue": 2000,
-    "total_downloads": 570000,
-    "avg_rating": 4.77,
-    "categories": [
-      "Food & Drink",
-      "Lifestyle",
-      "Shopping"
-    ],
-    "top_app_name": "7-Eleven: Rewards & Shopping",
-    "top_app_revenue": 1000
   },
   {
     "publisher_name": "ReciMe Pty Ltd",
@@ -6001,6 +5972,20 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Public Storage",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 80000,
+    "avg_rating": 4.55,
+    "categories": [
+      "Business",
+      "Productivity"
+    ],
+    "top_app_name": "Public Storage",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Noise Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -6026,19 +6011,6 @@
     ],
     "top_app_name": "Element ONE",
     "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "FATCAT TECH PTE. LTD",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 8000,
-    "total_downloads": 200000,
-    "avg_rating": 4.59,
-    "categories": [
-      "Business"
-    ],
-    "top_app_name": "VPN - Super VPN Buck",
-    "top_app_revenue": 8000
   },
   {
     "publisher_name": "Bandana",
@@ -6109,6 +6081,20 @@
     ],
     "top_app_name": "Invoice2go: Easy Invoice Maker",
     "top_app_revenue": 1000000
+  },
+  {
+    "publisher_name": "airSlate, Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 200000,
+    "total_downloads": 30000,
+    "avg_rating": 4.42,
+    "categories": [
+      "Business",
+      "Productivity"
+    ],
+    "top_app_name": "pdfFiller: edit PDF documents",
+    "top_app_revenue": 200000
   },
   {
     "publisher_name": "Joist Software Inc.",
@@ -6195,20 +6181,6 @@
     "top_app_revenue": 400000
   },
   {
-    "publisher_name": "HoneyBook Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 1000,
-    "avg_rating": 4.77,
-    "categories": [
-      "Business",
-      "Productivity"
-    ],
-    "top_app_name": "HoneyBook - Small Business CRM",
-    "top_app_revenue": 200000
-  },
-  {
     "publisher_name": "Backstage LLC",
     "app_count": 1,
     "chart_appearances": 1,
@@ -6221,20 +6193,6 @@
     ],
     "top_app_name": "Backstage - Casting Calls",
     "top_app_revenue": 200000
-  },
-  {
-    "publisher_name": "OpenPhone Technologies Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 100000,
-    "total_downloads": 20000,
-    "avg_rating": 4.43,
-    "categories": [
-      "Business",
-      "Productivity"
-    ],
-    "top_app_name": "Quo (formerly OpenPhone)",
-    "top_app_revenue": 100000
   },
   {
     "publisher_name": "Luni",
@@ -6461,18 +6419,18 @@
     "top_app_revenue": 200000
   },
   {
-    "publisher_name": "Slava Barouline",
+    "publisher_name": "MobileTech OU",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 1000,
+    "total_revenue": 200000,
     "total_downloads": 40000,
-    "avg_rating": 4.69,
+    "avg_rating": 4.41,
     "categories": [
-      "News",
-      "Weather"
+      "Business",
+      "Utilities"
     ],
-    "top_app_name": "Earthquake+ Alerts & Tracker",
-    "top_app_revenue": 1000
+    "top_app_name": "Smart Air Printer Pro\uff0dAnyPrint",
+    "top_app_revenue": 200000
   },
   {
     "publisher_name": "Artisan Global LLC",
@@ -6531,6 +6489,34 @@
     "top_app_revenue": 6000
   },
   {
+    "publisher_name": "Christophe Pereira",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 20000,
+    "avg_rating": 4.35,
+    "categories": [
+      "Utilities",
+      "Weather"
+    ],
+    "top_app_name": "HD Thermometer \u228e",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Nico Tranquilli",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 40000,
+    "total_downloads": 200000,
+    "avg_rating": 4.73,
+    "categories": [
+      "News",
+      "Weather"
+    ],
+    "top_app_name": "Earthquake - alerts and map",
+    "top_app_revenue": 40000
+  },
+  {
     "publisher_name": "Cloudnine Weather LLC",
     "app_count": 1,
     "chart_appearances": 1,
@@ -6542,20 +6528,6 @@
       "Weather"
     ],
     "top_app_name": "OpenSnow",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "EMSC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 30000,
-    "avg_rating": 4.76,
-    "categories": [
-      "News",
-      "Weather"
-    ],
-    "top_app_name": "LastQuake",
     "top_app_revenue": 1000
   },
   {
@@ -6615,18 +6587,18 @@
     "top_app_revenue": 40000
   },
   {
-    "publisher_name": "Kinetic Stars",
+    "publisher_name": "BoatUS",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 10000,
-    "total_downloads": 20000,
-    "avg_rating": 4.87,
+    "total_revenue": 1000,
+    "total_downloads": 8000,
+    "avg_rating": 4.79,
     "categories": [
-      "Utilities",
+      "Sports",
       "Weather"
     ],
-    "top_app_name": "Moon Phases and Lunar Calendar",
-    "top_app_revenue": 10000
+    "top_app_name": "BoatUS - Boat Weather & Tides",
+    "top_app_revenue": 1000
   },
   {
     "publisher_name": "Centers For Disease Control and Prevention",
@@ -6634,7 +6606,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 20000,
-    "avg_rating": 2.48,
+    "avg_rating": 2.49,
     "categories": [
       "Health & Fitness",
       "Weather"
@@ -6654,20 +6626,6 @@
       "Weather"
     ],
     "top_app_name": "MyShake Earthquake Alerts",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Rayner Software LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 5000,
-    "avg_rating": 4.66,
-    "categories": [
-      "News",
-      "Weather"
-    ],
-    "top_app_name": "Firespot: Wildfire app",
     "top_app_revenue": 1000
   },
   {
@@ -6704,7 +6662,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 40000,
-    "avg_rating": 4.09,
+    "avg_rating": 4.1,
     "categories": [
       "Travel",
       "Weather"
@@ -6746,7 +6704,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 70000,
-    "avg_rating": 4.71,
+    "avg_rating": 4.67,
     "categories": [
       "Utilities",
       "Weather"
@@ -6755,16 +6713,17 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Hutch Johnson",
+    "publisher_name": "Damuben Kachhad",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
-    "total_downloads": 1000,
-    "avg_rating": 4.92,
+    "total_downloads": 10000,
+    "avg_rating": 3.92,
     "categories": [
+      "Utilities",
       "Weather"
     ],
-    "top_app_name": "Hutch's Weather",
+    "top_app_name": "Room Temperature Thermometer.",
     "top_app_revenue": 1000
   },
   {
@@ -6781,17 +6740,17 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Capital Weather LLC",
+    "publisher_name": "Sinus Electric Ltd",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 30000,
-    "avg_rating": 4.96,
+    "total_revenue": 10000,
+    "total_downloads": 100000,
+    "avg_rating": 3.83,
     "categories": [
       "Weather"
     ],
-    "top_app_name": "Capital Weather",
-    "top_app_revenue": 1000
+    "top_app_name": "Temperature in Room +",
+    "top_app_revenue": 10000
   },
   {
     "publisher_name": "Base Velocity, LLC",
@@ -6822,12 +6781,26 @@
     "top_app_revenue": 400000
   },
   {
+    "publisher_name": "Garmin DCI",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 50000,
+    "total_downloads": 1000,
+    "avg_rating": 4.71,
+    "categories": [
+      "Navigation",
+      "Weather"
+    ],
+    "top_app_name": "Garmin Pilot",
+    "top_app_revenue": 50000
+  },
+  {
     "publisher_name": "Maple Media Apps, LLC",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 90000,
     "total_downloads": 6000,
-    "avg_rating": 4.58,
+    "avg_rating": 4.59,
     "categories": [
       "Travel",
       "Weather"
@@ -6906,46 +6879,18 @@
     "top_app_revenue": 40000
   },
   {
-    "publisher_name": "Ambient,LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 6000,
-    "avg_rating": 4.6,
-    "categories": [
-      "Social Networking",
-      "Weather"
-    ],
-    "top_app_name": "Ambient Weather Network",
-    "top_app_revenue": 20000
-  },
-  {
     "publisher_name": "SDS Weather LLC",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 80000,
     "total_downloads": 1000,
-    "avg_rating": 3.52,
+    "avg_rating": 3.53,
     "categories": [
       "Education",
       "Weather"
     ],
     "top_app_name": "RadarOmega: Doppler Radar App",
     "top_app_revenue": 80000
-  },
-  {
-    "publisher_name": "Futura Innovation SRL",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 1000,
-    "avg_rating": 4.56,
-    "categories": [
-      "Utilities",
-      "Weather"
-    ],
-    "top_app_name": "Earthquake Network",
-    "top_app_revenue": 20000
   },
   {
     "publisher_name": "byss mobile",
@@ -6960,6 +6905,20 @@
     ],
     "top_app_name": "Weather Navigation for Car!",
     "top_app_revenue": 40000
+  },
+  {
+    "publisher_name": "Acme Weather",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 20000,
+    "total_downloads": 1000,
+    "avg_rating": 4.71,
+    "categories": [
+      "Utilities",
+      "Weather"
+    ],
+    "top_app_name": "Acme Weather",
+    "top_app_revenue": 20000
   },
   {
     "publisher_name": "True Software Scandinavia AB",
@@ -7001,20 +6960,6 @@
       "Utilities"
     ],
     "top_app_name": "PayRange",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Tenor",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 90000,
-    "avg_rating": 4.67,
-    "categories": [
-      "Social Networking",
-      "Utilities"
-    ],
-    "top_app_name": "GIF Keyboard",
     "top_app_revenue": 1000
   },
   {
@@ -7085,19 +7030,6 @@
     ],
     "top_app_name": "Facemoji AI Emoji Keyboard",
     "top_app_revenue": 300000
-  },
-  {
-    "publisher_name": "Secure Network",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 300000,
-    "avg_rating": 4.58,
-    "categories": [
-      "Utilities"
-    ],
-    "top_app_name": "VPN cat: Fast Secure Unlimited",
-    "top_app_revenue": 200000
   },
   {
     "publisher_name": "Sony Corporation",
@@ -7201,7 +7133,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 900000,
-    "avg_rating": 3.25,
+    "avg_rating": 3.24,
     "categories": [
       "Travel",
       "Utilities"
@@ -7237,6 +7169,32 @@
     "top_app_revenue": 10000
   },
   {
+    "publisher_name": "CBN Secure Technologies Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 50000,
+    "avg_rating": 4.69,
+    "categories": [
+      "Utilities"
+    ],
+    "top_app_name": "Virginia Mobile ID",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "CodeEx Technology",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 80000,
+    "avg_rating": 4.25,
+    "categories": [
+      "Utilities"
+    ],
+    "top_app_name": "PDF Converter \u2027",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Flyfrog LLC",
     "app_count": 1,
     "chart_appearances": 1,
@@ -7255,7 +7213,7 @@
     "chart_appearances": 1,
     "total_revenue": 300000,
     "total_downloads": 800000,
-    "avg_rating": 4.38,
+    "avg_rating": 4.39,
     "categories": [
       "Utilities"
     ],
@@ -7268,26 +7226,12 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 200000,
-    "avg_rating": 3.48,
+    "avg_rating": 3.49,
     "categories": [
       "Utilities"
     ],
     "top_app_name": "Hello Movie",
     "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "TapMedia Ltd",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 300000,
-    "total_downloads": 100000,
-    "avg_rating": 4.72,
-    "categories": [
-      "Productivity",
-      "Utilities"
-    ],
-    "top_app_name": "QR Reader for iPhone",
-    "top_app_revenue": 300000
   },
   {
     "publisher_name": "Calculated Industries",
@@ -7364,7 +7308,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 500000,
-    "total_downloads": 90000,
+    "total_downloads": 80000,
     "avg_rating": 4.53,
     "categories": [
       "Utilities"
@@ -7400,17 +7344,18 @@
     "top_app_revenue": 600000
   },
   {
-    "publisher_name": "NumLake Tech Limited",
+    "publisher_name": "Smart Tool Studio",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 300000,
-    "total_downloads": 1000,
-    "avg_rating": 4.59,
+    "total_revenue": 600000,
+    "total_downloads": 200000,
+    "avg_rating": 4.58,
     "categories": [
+      "Productivity",
       "Utilities"
     ],
-    "top_app_name": "Kemo Pro",
-    "top_app_revenue": 300000
+    "top_app_name": "Cleaner Neat: Clean Up Storage",
+    "top_app_revenue": 600000
   },
   {
     "publisher_name": "DevMeApp",
@@ -7438,6 +7383,20 @@
       "Utilities"
     ],
     "top_app_name": "Remote for Firestick \u00b7 Fire TV",
+    "top_app_revenue": 300000
+  },
+  {
+    "publisher_name": "NAICOO PTE. LTD.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 300000,
+    "total_downloads": 50000,
+    "avg_rating": 4.58,
+    "categories": [
+      "Productivity",
+      "Utilities"
+    ],
+    "top_app_name": "Smart Cleaner: Free Up Storage",
     "top_app_revenue": 300000
   },
   {
@@ -7496,6 +7455,19 @@
     "top_app_revenue": 300000
   },
   {
+    "publisher_name": "Mnboost Corp",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 300000,
+    "total_downloads": 20000,
+    "avg_rating": 4.35,
+    "categories": [
+      "Utilities"
+    ],
+    "top_app_name": "MonoBoost Cancel Subscriptions",
+    "top_app_revenue": 300000
+  },
+  {
     "publisher_name": "DigitalConverge Intellect Limited",
     "app_count": 1,
     "chart_appearances": 1,
@@ -7520,6 +7492,20 @@
     ],
     "top_app_name": "Pocket - AI Personal Assistant",
     "top_app_revenue": 400000
+  },
+  {
+    "publisher_name": "Hotels.com",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 300000,
+    "avg_rating": 4.79,
+    "categories": [
+      "Lifestyle",
+      "Travel"
+    ],
+    "top_app_name": "Hotels.com: Book hotels & more",
+    "top_app_revenue": 1000
   },
   {
     "publisher_name": "priceline.com",
@@ -7642,20 +7628,6 @@
       "Travel"
     ],
     "top_app_name": "Amtrak",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "GasBuddy Organization Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 200000,
-    "avg_rating": 4.69,
-    "categories": [
-      "Navigation",
-      "Travel"
-    ],
-    "top_app_name": "GasBuddy: Find & Pay for Gas",
     "top_app_revenue": 1000
   },
   {
@@ -7841,20 +7813,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Carnival Cruise Lines",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 200000,
-    "avg_rating": 4.67,
-    "categories": [
-      "Social Networking",
-      "Travel"
-    ],
-    "top_app_name": "Carnival HUB",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Six Flags Entertainment Corporation",
     "app_count": 1,
     "chart_appearances": 1,
@@ -7994,6 +7952,20 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Booz Allen Hamilton Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 100000,
+    "avg_rating": 4.88,
+    "categories": [
+      "Lifestyle",
+      "Travel"
+    ],
+    "top_app_name": "Recreation.gov",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "The Hertz Corporation",
     "app_count": 1,
     "chart_appearances": 1,
@@ -8019,6 +7991,19 @@
       "Utilities"
     ],
     "top_app_name": "Airalo: eSIM for travel & data",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Breeze Airways",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 100000,
+    "avg_rating": 4.8,
+    "categories": [
+      "Travel"
+    ],
+    "top_app_name": "Breeze Airways",
     "top_app_revenue": 1000
   },
   {
@@ -8060,20 +8045,6 @@
       "Travel"
     ],
     "top_app_name": "Priority Pass+",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Travel Arrow LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 200000,
-    "avg_rating": 4.52,
-    "categories": [
-      "Shopping",
-      "Travel"
-    ],
-    "top_app_name": "TravelArrow",
     "top_app_revenue": 1000
   },
   {
@@ -8327,20 +8298,6 @@
     "top_app_revenue": 40000
   },
   {
-    "publisher_name": "Amigo Travel, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 1000,
-    "avg_rating": 4.87,
-    "categories": [
-      "Social Networking",
-      "Travel"
-    ],
-    "top_app_name": "AmiGo Travel: Tips & Guides",
-    "top_app_revenue": 20000
-  },
-  {
     "publisher_name": "GyPSy Guide LLC",
     "app_count": 1,
     "chart_appearances": 1,
@@ -8388,7 +8345,7 @@
     "chart_appearances": 1,
     "total_revenue": 20000,
     "total_downloads": 1000,
-    "avg_rating": 3.45,
+    "avg_rating": 3.43,
     "categories": [
       "Travel"
     ],
@@ -8451,20 +8408,6 @@
     "top_app_revenue": 70000
   },
   {
-    "publisher_name": "Jordan Usiel Lopez Verdugo",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 8000,
-    "total_downloads": 1000,
-    "avg_rating": 3.44,
-    "categories": [
-      "Navigation",
-      "Travel"
-    ],
-    "top_app_name": "Cruce Directo Garitas",
-    "top_app_revenue": 8000
-  },
-  {
     "publisher_name": "INVENTO ONE PRIVATE LIMITED",
     "app_count": 1,
     "chart_appearances": 1,
@@ -8498,7 +8441,7 @@
     "chart_appearances": 1,
     "total_revenue": 40000,
     "total_downloads": 6000,
-    "avg_rating": 2.46,
+    "avg_rating": 2.45,
     "categories": [
       "Travel",
       "Utilities"
@@ -8533,6 +8476,20 @@
     ],
     "top_app_name": "Roame - Award Travel",
     "top_app_revenue": 30000
+  },
+  {
+    "publisher_name": "CODINYX LTD",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 70000,
+    "total_downloads": 40000,
+    "avg_rating": 4.75,
+    "categories": [
+      "Travel",
+      "Utilities"
+    ],
+    "top_app_name": "Flight Radar Airplane Tracker",
+    "top_app_revenue": 70000
   },
   {
     "publisher_name": "Oleksandr Vynnyk",
@@ -8574,6 +8531,20 @@
     ],
     "top_app_name": "Airclub - Flight Deals",
     "top_app_revenue": 60000
+  },
+  {
+    "publisher_name": "Nysonian Inc",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 30000,
+    "total_downloads": 1000,
+    "avg_rating": 4.5,
+    "categories": [
+      "Navigation",
+      "Travel"
+    ],
+    "top_app_name": "NOBL AIR",
+    "top_app_revenue": 30000
   },
   {
     "publisher_name": "JetBack Flight Tracking, LLC",
@@ -8636,7 +8607,7 @@
     "chart_appearances": 1,
     "total_revenue": 60000,
     "total_downloads": 10000,
-    "avg_rating": 4.61,
+    "avg_rating": 4.63,
     "categories": [
       "Travel",
       "Utilities"
@@ -8650,7 +8621,7 @@
     "chart_appearances": 1,
     "total_revenue": 50000,
     "total_downloads": 20000,
-    "avg_rating": 4.59,
+    "avg_rating": 4.6,
     "categories": [
       "Travel"
     ],
@@ -8728,20 +8699,6 @@
     "top_app_revenue": 20000
   },
   {
-    "publisher_name": "365Scores",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 40000,
-    "total_downloads": 400000,
-    "avg_rating": 4.58,
-    "categories": [
-      "News",
-      "Sports"
-    ],
-    "top_app_name": "365Scores: Live Sports Scores",
-    "top_app_revenue": 40000
-  },
-  {
     "publisher_name": "Fanatics, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -8754,20 +8711,6 @@
     ],
     "top_app_name": "Fanatics: Shop NFL, NBA & MLB",
     "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Livesport s.r.o.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 30000,
-    "total_downloads": 600000,
-    "avg_rating": 4.82,
-    "categories": [
-      "News",
-      "Sports"
-    ],
-    "top_app_name": "Flashscore: Live Scores & News",
-    "top_app_revenue": 30000
   },
   {
     "publisher_name": "beIN Media Group, LLC",
@@ -8803,7 +8746,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 80000,
-    "avg_rating": 4.68,
+    "avg_rating": 4.67,
     "categories": [
       "Social Networking",
       "Sports"
@@ -8985,20 +8928,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "1v1Me, Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 50000,
-    "avg_rating": 4.79,
-    "categories": [
-      "Entertainment",
-      "Sports"
-    ],
-    "top_app_name": "1v1Me - Esports Staking",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Seminole Hard Rock Digital, LLC.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -9083,6 +9012,34 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Aleksandr Alekseev",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 60000,
+    "total_downloads": 400000,
+    "avg_rating": 4.44,
+    "categories": [
+      "Lifestyle",
+      "Sports"
+    ],
+    "top_app_name": "Live Football TV. Soccer Score",
+    "top_app_revenue": 60000
+  },
+  {
+    "publisher_name": "digital roots technologies",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 20000,
+    "total_downloads": 200000,
+    "avg_rating": 4.29,
+    "categories": [
+      "Entertainment",
+      "Sports"
+    ],
+    "top_app_name": "Football Live Scores, Fixtures",
+    "top_app_revenue": 20000
+  },
+  {
     "publisher_name": "Ahmed kajjaj",
     "app_count": 1,
     "chart_appearances": 1,
@@ -9102,7 +9059,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 300000,
-    "avg_rating": 3.92,
+    "avg_rating": 3.93,
     "categories": [
       "Sports"
     ],
@@ -9115,7 +9072,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 400000,
-    "avg_rating": 4.47,
+    "avg_rating": 4.45,
     "categories": [
       "Sports"
     ],
@@ -9149,6 +9106,20 @@
     ],
     "top_app_name": "SwingU: Golf GPS Range Finder",
     "top_app_revenue": 300000
+  },
+  {
+    "publisher_name": "Cricbuzz.com",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 200000,
+    "total_downloads": 40000,
+    "avg_rating": 4.58,
+    "categories": [
+      "News",
+      "Sports"
+    ],
+    "top_app_name": "Cricbuzz Live Cricket Scores",
+    "top_app_revenue": 200000
   },
   {
     "publisher_name": "Cricket Acquisition Corporation",
@@ -9221,6 +9192,20 @@
     "top_app_revenue": 2000000
   },
   {
+    "publisher_name": "United States Golf Association",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 500000,
+    "total_downloads": 50000,
+    "avg_rating": 4.76,
+    "categories": [
+      "Entertainment",
+      "Sports"
+    ],
+    "top_app_name": "GHIN",
+    "top_app_revenue": 500000
+  },
+  {
     "publisher_name": "GRINT LLC",
     "app_count": 1,
     "chart_appearances": 1,
@@ -9239,7 +9224,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 900000,
-    "total_downloads": 80000,
+    "total_downloads": 70000,
     "avg_rating": 4.77,
     "categories": [
       "Entertainment",
@@ -9331,20 +9316,6 @@
     ],
     "top_app_name": "SwimTopia",
     "top_app_revenue": 300000
-  },
-  {
-    "publisher_name": "SwingVision, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 100000,
-    "total_downloads": 10000,
-    "avg_rating": 4.7,
-    "categories": [
-      "Health & Fitness",
-      "Sports"
-    ],
-    "top_app_name": "SwingVision: Tennis Pickleball",
-    "top_app_revenue": 100000
   },
   {
     "publisher_name": "UDisc LLC",
@@ -9443,20 +9414,6 @@
     "top_app_revenue": 300000
   },
   {
-    "publisher_name": "Real Vault, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 90000,
-    "avg_rating": 4.81,
-    "categories": [
-      "Social Networking",
-      "Sports"
-    ],
-    "top_app_name": "Real - Sports",
-    "top_app_revenue": 200000
-  },
-  {
     "publisher_name": "UTR",
     "app_count": 1,
     "chart_appearances": 1,
@@ -9490,27 +9447,13 @@
     "chart_appearances": 1,
     "total_revenue": 6000000,
     "total_downloads": 900000,
-    "avg_rating": 4.19,
+    "avg_rating": 4.18,
     "categories": [
       "Entertainment",
       "Sports"
     ],
     "top_app_name": "TOD \u2013 Sports & Entertainment",
     "top_app_revenue": 6000000
-  },
-  {
-    "publisher_name": "Pikkit, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 100000,
-    "total_downloads": 20000,
-    "avg_rating": 4.87,
-    "categories": [
-      "Social Networking",
-      "Sports"
-    ],
-    "top_app_name": "Pikkit: Sports Betting Tracker",
-    "top_app_revenue": 100000
   },
   {
     "publisher_name": "Props.cash",
@@ -9539,6 +9482,20 @@
     ],
     "top_app_name": "LUDEX Sports Card Scanner +TCG",
     "top_app_revenue": 200000
+  },
+  {
+    "publisher_name": "Linemate Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 100000,
+    "total_downloads": 30000,
+    "avg_rating": 4.85,
+    "categories": [
+      "Entertainment",
+      "Sports"
+    ],
+    "top_app_name": "Linemate: Find Your Next Bet",
+    "top_app_revenue": 100000
   },
   {
     "publisher_name": "Rithmm Inc.",
@@ -9736,34 +9693,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Seasoned, LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 70000,
-    "avg_rating": 4.46,
-    "categories": [
-      "Lifestyle",
-      "Social Networking"
-    ],
-    "top_app_name": "Seasoned: Jobs & Community",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "NAVER Z Corporation",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 700000,
-    "avg_rating": 4.77,
-    "categories": [
-      "Social Networking",
-      "Utilities"
-    ],
-    "top_app_name": "Sticker.ly - Sticker Maker",
-    "top_app_revenue": 200000
-  },
-  {
     "publisher_name": "Howbout Ltd.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -9789,6 +9718,20 @@
       "Social Networking"
     ],
     "top_app_name": "BFF: Make friends & meet up",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "CircleCo Inc",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 90000,
+    "avg_rating": 4.87,
+    "categories": [
+      "Education",
+      "Social Networking"
+    ],
+    "top_app_name": "Circle Communities",
     "top_app_revenue": 1000
   },
   {
@@ -9866,7 +9809,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 300000,
-    "avg_rating": 4.71,
+    "avg_rating": 4.72,
     "categories": [
       "Lifestyle",
       "Social Networking"
@@ -9894,27 +9837,13 @@
     "chart_appearances": 1,
     "total_revenue": 200000,
     "total_downloads": 300000,
-    "avg_rating": 4.68,
+    "avg_rating": 4.67,
     "categories": [
       "Entertainment",
       "Social Networking"
     ],
     "top_app_name": "Yari KonKan",
     "top_app_revenue": 200000
-  },
-  {
-    "publisher_name": "Zoosk, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 100000,
-    "total_downloads": 10000,
-    "avg_rating": 4.16,
-    "categories": [
-      "Lifestyle",
-      "Social Networking"
-    ],
-    "top_app_name": "Zoosk - Social Dating App",
-    "top_app_revenue": 100000
   },
   {
     "publisher_name": "Ifwe Inc.",
@@ -9928,6 +9857,20 @@
       "Social Networking"
     ],
     "top_app_name": "Tagged Dating: Chat & Go Live!",
+    "top_app_revenue": 300000
+  },
+  {
+    "publisher_name": "The Meet Group Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 300000,
+    "total_downloads": 100000,
+    "avg_rating": 4.29,
+    "categories": [
+      "Entertainment",
+      "Social Networking"
+    ],
+    "top_app_name": "MeetMe: Go Live & Meet People",
     "top_app_revenue": 300000
   },
   {
@@ -9986,20 +9929,6 @@
     "top_app_revenue": 2000000
   },
   {
-    "publisher_name": "DATING OASIS LIMITED",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 70000,
-    "avg_rating": 4.53,
-    "categories": [
-      "Lifestyle",
-      "Social Networking"
-    ],
-    "top_app_name": "Curvy Dating App: WooPlus",
-    "top_app_revenue": 200000
-  },
-  {
     "publisher_name": "KS Mobile, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -10026,20 +9955,6 @@
     ],
     "top_app_name": "3Fun: Couples & Singles Dating",
     "top_app_revenue": 600000
-  },
-  {
-    "publisher_name": "Backbone Labs, Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 30000,
-    "avg_rating": 4.8,
-    "categories": [
-      "Lifestyle",
-      "Social Networking"
-    ],
-    "top_app_name": "Backbone \u2014 Next-Level Play",
-    "top_app_revenue": 200000
   },
   {
     "publisher_name": "Bumpy Inc.",
@@ -10094,6 +10009,20 @@
       "Social Networking"
     ],
     "top_app_name": "FET: Kinky BDSM Dating App",
+    "top_app_revenue": 300000
+  },
+  {
+    "publisher_name": "Deep Vision Labs",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 300000,
+    "total_downloads": 200000,
+    "avg_rating": 4.56,
+    "categories": [
+      "Productivity",
+      "Social Networking"
+    ],
+    "top_app_name": "Reports+ Unfollowers Follower",
     "top_app_revenue": 300000
   },
   {
@@ -10170,7 +10099,7 @@
     "chart_appearances": 1,
     "total_revenue": 3000000,
     "total_downloads": 600000,
-    "avg_rating": 2.99,
+    "avg_rating": 3.0,
     "categories": [
       "Social Networking"
     ],
@@ -10194,14 +10123,14 @@
     "publisher_name": "Derinfy Pte. Ltd",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 600000,
+    "total_revenue": 700000,
     "total_downloads": 100000,
     "avg_rating": 4.24,
     "categories": [
       "Social Networking"
     ],
     "top_app_name": "Xena - Group Voice Party",
-    "top_app_revenue": 600000
+    "top_app_revenue": 700000
   },
   {
     "publisher_name": "Life.Church",
@@ -10230,6 +10159,20 @@
     ],
     "top_app_name": "Blue Letter Bible",
     "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Pakistan Data Management Services",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 60000,
+    "total_downloads": 100000,
+    "avg_rating": 4.75,
+    "categories": [
+      "Lifestyle",
+      "Reference"
+    ],
+    "top_app_name": "Quran Majeed \u2013 \u0627\u0644\u0642\u0631\u0627\u0646 \u0627\u0644\u0643\u0631\u064a\u0645",
+    "top_app_revenue": 60000
   },
   {
     "publisher_name": "Merriam-Webster, Inc.",
@@ -10316,34 +10259,6 @@
     "top_app_revenue": 20000
   },
   {
-    "publisher_name": "Vito Technology Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 50000,
-    "total_downloads": 80000,
-    "avg_rating": 4.76,
-    "categories": [
-      "Education",
-      "Reference"
-    ],
-    "top_app_name": "Sky Tonight - Stargazing Guide",
-    "top_app_revenue": 50000
-  },
-  {
-    "publisher_name": "Vector Marketing Corporation",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 30000,
-    "avg_rating": 4.32,
-    "categories": [
-      "Reference",
-      "Utilities"
-    ],
-    "top_app_name": "MyCutcoRep",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Rare Candy",
     "app_count": 1,
     "chart_appearances": 1,
@@ -10418,7 +10333,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 1000,
-    "avg_rating": 0.0,
+    "avg_rating": 2.0,
     "categories": [
       "Education",
       "Reference"
@@ -10439,6 +10354,34 @@
     ],
     "top_app_name": "HappyMood - All Games Library",
     "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "FivePrayer",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 300000,
+    "avg_rating": 4.67,
+    "categories": [
+      "Lifestyle",
+      "Reference"
+    ],
+    "top_app_name": "FivePrayer - Pray on Time",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "CLOUD STUDIOS Teknoloji Yat\u0131r\u0131m Anonim \u015eirketi",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 60000,
+    "total_downloads": 200000,
+    "avg_rating": 4.78,
+    "categories": [
+      "Lifestyle",
+      "Reference"
+    ],
+    "top_app_name": "Quran Widgets: Verses & Duas",
+    "top_app_revenue": 60000
   },
   {
     "publisher_name": "Orbit Studios",
@@ -10468,31 +10411,30 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Ailsa Maceirap",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 400000,
-    "avg_rating": 4.52,
-    "categories": [
-      "Entertainment",
-      "Reference"
-    ],
-    "top_app_name": "Seekee - Watch Movie,drama TV",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Sukaina Webhan",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
-    "total_downloads": 10000,
-    "avg_rating": 1.0,
+    "total_downloads": 20000,
+    "avg_rating": 2.0,
     "categories": [
       "Reference",
       "Utilities"
     ],
     "top_app_name": "MOCCHA CHAMELON SketchFlow",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Ha Nguyen Thi",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 10000,
+    "avg_rating": 3.67,
+    "categories": [
+      "Reference"
+    ],
+    "top_app_name": "R:B Applicatione",
     "top_app_revenue": 1000
   },
   {
@@ -10625,7 +10567,7 @@
     "publisher_name": "ML & AI Solutions",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 60000,
+    "total_revenue": 70000,
     "total_downloads": 10000,
     "avg_rating": 4.66,
     "categories": [
@@ -10633,7 +10575,7 @@
       "Reference"
     ],
     "top_app_name": "ScanCoin: identify & check",
-    "top_app_revenue": 60000
+    "top_app_revenue": 70000
   },
   {
     "publisher_name": "Truthly, Inc.",
@@ -10664,20 +10606,6 @@
     "top_app_revenue": 70000
   },
   {
-    "publisher_name": "DUOMO APP LIMITED",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 60000,
-    "avg_rating": 4.77,
-    "categories": [
-      "Lifestyle",
-      "Reference"
-    ],
-    "top_app_name": "Duomo: Daily Prayer & Bible",
-    "top_app_revenue": 200000
-  },
-  {
     "publisher_name": "HIGHONE (HK) Inc",
     "app_count": 1,
     "chart_appearances": 1,
@@ -10706,6 +10634,20 @@
     "top_app_revenue": 100000
   },
   {
+    "publisher_name": "Idea Garden LLC",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 100000,
+    "total_downloads": 40000,
+    "avg_rating": 4.81,
+    "categories": [
+      "Books",
+      "Reference"
+    ],
+    "top_app_name": "Bible Bff-Modern Bible Stories",
+    "top_app_revenue": 100000
+  },
+  {
     "publisher_name": "Scate",
     "app_count": 1,
     "chart_appearances": 1,
@@ -10718,6 +10660,20 @@
     ],
     "top_app_name": "Cardly AI: Sports Card Scanner",
     "top_app_revenue": 90000
+  },
+  {
+    "publisher_name": "Brickify LLC",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 60000,
+    "total_downloads": 30000,
+    "avg_rating": 4.64,
+    "categories": [
+      "Entertainment",
+      "Reference"
+    ],
+    "top_app_name": "Brickify: Collection Tracker",
+    "top_app_revenue": 60000
   },
   {
     "publisher_name": "HP Inc.",
@@ -10753,27 +10709,13 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 200000,
-    "avg_rating": 2.18,
+    "avg_rating": 2.19,
     "categories": [
       "Business",
       "Productivity"
     ],
     "top_app_name": "PingID",
     "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "TimeTree, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 500000,
-    "avg_rating": 4.85,
-    "categories": [
-      "Productivity",
-      "Social Networking"
-    ],
-    "top_app_name": "TimeTree: Shared Calendar",
-    "top_app_revenue": 200000
   },
   {
     "publisher_name": "Notion Labs, Incorporated",
@@ -10788,6 +10730,20 @@
     ],
     "top_app_name": "Notion: Notes, Tasks, AI",
     "top_app_revenue": 500000
+  },
+  {
+    "publisher_name": "LIGHTNINGLINK NETWORKS PTE. LTD.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 800000,
+    "total_downloads": 400000,
+    "avg_rating": 4.66,
+    "categories": [
+      "Productivity",
+      "Utilities"
+    ],
+    "top_app_name": "X-VPN: VPN Fast & Secure",
+    "top_app_revenue": 800000
   },
   {
     "publisher_name": "\u82cf\u5a1f \u9648",
@@ -10809,7 +10765,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 100000,
-    "avg_rating": 4.85,
+    "avg_rating": 4.84,
     "categories": [
       "Finance",
       "Productivity"
@@ -10887,6 +10843,19 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "\u6ce2 \u738b",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 10000,
+    "total_downloads": 40000,
+    "avg_rating": 4.6,
+    "categories": [
+      "Productivity"
+    ],
+    "top_app_name": "AI Cut:Photo&Video Editor",
+    "top_app_revenue": 10000
+  },
+  {
     "publisher_name": "Sociallite LLC",
     "app_count": 1,
     "chart_appearances": 1,
@@ -10901,12 +10870,26 @@
     "top_app_revenue": 20000
   },
   {
+    "publisher_name": "Kaizen Technologies LLC.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 10000,
+    "total_downloads": 70000,
+    "avg_rating": 4.68,
+    "categories": [
+      "Productivity",
+      "Utilities"
+    ],
+    "top_app_name": "PushClock - Loud Alarm Clock",
+    "top_app_revenue": 10000
+  },
+  {
     "publisher_name": "OpenClaw Foundation",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 30000,
-    "avg_rating": 0.0,
+    "avg_rating": 5.0,
     "categories": [
       "Productivity",
       "Utilities"
@@ -10971,6 +10954,20 @@
     "top_app_revenue": 600000
   },
   {
+    "publisher_name": "Docusign",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 600000,
+    "total_downloads": 200000,
+    "avg_rating": 4.87,
+    "categories": [
+      "Business",
+      "Productivity"
+    ],
+    "top_app_name": "Docusign - Upload & Sign Docs",
+    "top_app_revenue": 600000
+  },
+  {
     "publisher_name": "OurFamilyWizard, LLC",
     "app_count": 1,
     "chart_appearances": 1,
@@ -10983,6 +10980,20 @@
     ],
     "top_app_name": "OurFamilyWizard Co-Parent App",
     "top_app_revenue": 400000
+  },
+  {
+    "publisher_name": "Dashlane",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 600000,
+    "total_downloads": 1000,
+    "avg_rating": 4.8,
+    "categories": [
+      "Productivity",
+      "Utilities"
+    ],
+    "top_app_name": "Dashlane Password Manager",
+    "top_app_revenue": 600000
   },
   {
     "publisher_name": "Mega Limited",
@@ -11241,7 +11252,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 500000,
-    "total_downloads": 70000,
+    "total_downloads": 80000,
     "avg_rating": 4.35,
     "categories": [
       "Productivity",
@@ -11276,20 +11287,6 @@
       "Social Networking"
     ],
     "top_app_name": "PhotoCircle",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "PlanetArt",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 100000,
-    "avg_rating": 4.8,
-    "categories": [
-      "Photo & Video",
-      "Shopping"
-    ],
-    "top_app_name": "FreePrints \u2013 Print Photos",
     "top_app_revenue": 1000
   },
   {
@@ -11367,7 +11364,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 3000000,
-    "avg_rating": 4.53,
+    "avg_rating": 4.54,
     "categories": [
       "Entertainment",
       "Photo & Video"
@@ -11459,12 +11456,26 @@
     "top_app_revenue": 10000
   },
   {
+    "publisher_name": "LITTLE YELLOW DUCK TECHNOLOGY CO., LIMITED",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 200000,
+    "avg_rating": 3.85,
+    "categories": [
+      "Cat 6027",
+      "Photo & Video"
+    ],
+    "top_app_name": "FaceEra \u2013 Age & Photo AI",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "najan kumar",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 200000,
-    "avg_rating": 1.8,
+    "avg_rating": 1.67,
     "categories": [
       "Photo & Video"
     ],
@@ -11575,7 +11586,7 @@
     "chart_appearances": 1,
     "total_revenue": 600000,
     "total_downloads": 100000,
-    "avg_rating": 3.91,
+    "avg_rating": 3.9,
     "categories": [
       "Photo & Video"
     ],
@@ -11623,31 +11634,18 @@
     "top_app_revenue": 1000000
   },
   {
-    "publisher_name": "Insta360",
+    "publisher_name": "Glam Labs, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 700000,
-    "total_downloads": 500000,
-    "avg_rating": 4.47,
+    "total_revenue": 800000,
+    "total_downloads": 100000,
+    "avg_rating": 4.46,
     "categories": [
+      "Cat 6027",
       "Photo & Video"
     ],
-    "top_app_name": "Insta360",
-    "top_app_revenue": 700000
-  },
-  {
-    "publisher_name": "Lyrebird Studio",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 400000,
-    "total_downloads": 300000,
-    "avg_rating": 4.58,
-    "categories": [
-      "Entertainment",
-      "Photo & Video"
-    ],
-    "top_app_name": "FaceLab: Face Age, Hair Filter",
-    "top_app_revenue": 400000
+    "top_app_name": "Glam AI: Video & Photo Editor",
+    "top_app_revenue": 800000
   },
   {
     "publisher_name": "Video editor & maker app",
@@ -11676,19 +11674,6 @@
     ],
     "top_app_name": "Vids AI - Reels Video Editor",
     "top_app_revenue": 500000
-  },
-  {
-    "publisher_name": "runwayml",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000000,
-    "total_downloads": 300000,
-    "avg_rating": 4.48,
-    "categories": [
-      "Photo & Video"
-    ],
-    "top_app_name": "RunwayML",
-    "top_app_revenue": 1000000
   },
   {
     "publisher_name": "HeyGen Technology Inc",
@@ -11749,7 +11734,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 80000,
-    "total_downloads": 200000,
+    "total_downloads": 100000,
     "avg_rating": 4.62,
     "categories": [
       "Lifestyle",
@@ -11770,6 +11755,20 @@
       "Social Networking"
     ],
     "top_app_name": "Nextdoor: Neighborhood Network",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Thomas Gesland",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 8000,
+    "avg_rating": 1.97,
+    "categories": [
+      "Entertainment",
+      "News"
+    ],
+    "top_app_name": "Programaci\u00f3n TV Mexico (MX)",
     "top_app_revenue": 1000
   },
   {
@@ -11818,7 +11817,7 @@
     "publisher_name": "Guru Network Limited",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 20000,
+    "total_revenue": 30000,
     "total_downloads": 30000,
     "avg_rating": 4.89,
     "categories": [
@@ -11826,7 +11825,7 @@
       "News"
     ],
     "top_app_name": "Podcast App & Player - Castbox",
-    "top_app_revenue": 20000
+    "top_app_revenue": 30000
   },
   {
     "publisher_name": "Fire Friends, LLC",
@@ -11867,6 +11866,19 @@
       "News"
     ],
     "top_app_name": "FOX LOCAL: Live News & Weather",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Gray Television Group, Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 50000,
+    "avg_rating": 3.0,
+    "categories": [
+      "News"
+    ],
+    "top_app_name": "Telemundo Mobile WALA-SP",
     "top_app_revenue": 1000
   },
   {
@@ -11938,20 +11950,6 @@
     "top_app_revenue": 100000
   },
   {
-    "publisher_name": "Tribune Publishing Company, LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 50000,
-    "total_downloads": 1000,
-    "avg_rating": 4.45,
-    "categories": [
-      "News",
-      "Reference"
-    ],
-    "top_app_name": "Chicago Tribune",
-    "top_app_revenue": 50000
-  },
-  {
     "publisher_name": "dmg media ltd",
     "app_count": 1,
     "chart_appearances": 1,
@@ -11964,6 +11962,20 @@
     ],
     "top_app_name": "Daily Mail: Breaking News",
     "top_app_revenue": 400000
+  },
+  {
+    "publisher_name": "TELEGRAPH MEDIA GROUP HOLDINGS LIMITED",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 500000,
+    "total_downloads": 20000,
+    "avg_rating": 4.61,
+    "categories": [
+      "News",
+      "Newsstand"
+    ],
+    "top_app_name": "The Telegraph: UK & World News",
+    "top_app_revenue": 500000
   },
   {
     "publisher_name": "Guardian News and Media Limited",
@@ -11992,20 +12004,6 @@
     ],
     "top_app_name": "Pocket Casts: Podcast Player",
     "top_app_revenue": 60000
-  },
-  {
-    "publisher_name": "Hearst Newspapers",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 100000,
-    "total_downloads": 1000,
-    "avg_rating": 4.53,
-    "categories": [
-      "News",
-      "Newsstand"
-    ],
-    "top_app_name": "The San Francisco Chronicle",
-    "top_app_revenue": 100000
   },
   {
     "publisher_name": "The Star Tribune Media Company",
@@ -12329,6 +12327,34 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "GEC s.r.l.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 50000,
+    "total_downloads": 20000,
+    "avg_rating": 4.72,
+    "categories": [
+      "Navigation",
+      "Travel"
+    ],
+    "top_app_name": "Aqua Map Boating",
+    "top_app_revenue": 50000
+  },
+  {
+    "publisher_name": "tripshot inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 10000,
+    "avg_rating": 4.83,
+    "categories": [
+      "Business",
+      "Navigation"
+    ],
+    "top_app_name": "TripShot",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Metropolitan Transportation Authority",
     "app_count": 1,
     "chart_appearances": 1,
@@ -12397,20 +12423,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Randonauts, LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 60000,
-    "total_downloads": 200000,
-    "avg_rating": 3.42,
-    "categories": [
-      "Lifestyle",
-      "Navigation"
-    ],
-    "top_app_name": "Randonautica",
-    "top_app_revenue": 60000
-  },
-  {
     "publisher_name": "Javad Amel Khabazan",
     "app_count": 1,
     "chart_appearances": 1,
@@ -12438,7 +12450,7 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Atlas Obscura, Inc",
+    "publisher_name": "Stuzo, LLC",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
@@ -12448,21 +12460,7 @@
       "Navigation",
       "Travel"
     ],
-    "top_app_name": "Atlas Obscura Travel Guide",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Organic Maps",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 100000,
-    "avg_rating": 4.76,
-    "categories": [
-      "Navigation",
-      "Travel"
-    ],
-    "top_app_name": "Organic Maps\u30fbOffline Maps, GPS",
+    "top_app_name": "Marathon ARCO Rewards",
     "top_app_revenue": 1000
   },
   {
@@ -12497,7 +12495,7 @@
     "publisher_name": "NavX Studios LLC",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 60000,
+    "total_revenue": 70000,
     "total_downloads": 10000,
     "avg_rating": 4.76,
     "categories": [
@@ -12505,7 +12503,7 @@
       "Weather"
     ],
     "top_app_name": "iNavX: Marine Navigation",
-    "top_app_revenue": 60000
+    "top_app_revenue": 70000
   },
   {
     "publisher_name": "Route4Me Inc",
@@ -12690,20 +12688,6 @@
     "top_app_revenue": 30000
   },
   {
-    "publisher_name": "RISER GmbH",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 60000,
-    "total_downloads": 30000,
-    "avg_rating": 4.61,
-    "categories": [
-      "Navigation",
-      "Social Networking"
-    ],
-    "top_app_name": "Cardo Ride - Motorcycle App",
-    "top_app_revenue": 60000
-  },
-  {
     "publisher_name": "Circuit Routing",
     "app_count": 1,
     "chart_appearances": 1,
@@ -12716,6 +12700,20 @@
     ],
     "top_app_name": "Spoke Route Planner",
     "top_app_revenue": 500000
+  },
+  {
+    "publisher_name": "TrailBehind",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 300000,
+    "total_downloads": 60000,
+    "avg_rating": 4.76,
+    "categories": [
+      "Navigation",
+      "Travel"
+    ],
+    "top_app_name": "Gaia GPS: Mobile Trail Maps",
+    "top_app_revenue": 300000
   },
   {
     "publisher_name": "BaseMap Inc",
@@ -12744,20 +12742,6 @@
     ],
     "top_app_name": "Detecht - Motorcycle App & GPS",
     "top_app_revenue": 90000
-  },
-  {
-    "publisher_name": "Argo Navigation, LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 40000,
-    "total_downloads": 9000,
-    "avg_rating": 4.9,
-    "categories": [
-      "Navigation",
-      "Utilities"
-    ],
-    "top_app_name": "Argo - Boating Navigation",
-    "top_app_revenue": 40000
   },
   {
     "publisher_name": "TruckersReport.com",
@@ -12792,7 +12776,7 @@
     "chart_appearances": 1,
     "total_revenue": 90000,
     "total_downloads": 30000,
-    "avg_rating": 4.38,
+    "avg_rating": 4.37,
     "categories": [
       "Navigation",
       "Social Networking"
@@ -12843,6 +12827,20 @@
     "top_app_revenue": 50000
   },
   {
+    "publisher_name": "Chris Hager",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 30000,
+    "total_downloads": 1000,
+    "avg_rating": 4.0,
+    "categories": [
+      "Business",
+      "Navigation"
+    ],
+    "top_app_name": "Bristol Maps",
+    "top_app_revenue": 30000
+  },
+  {
     "publisher_name": "Oran Dynamics Ltd",
     "app_count": 1,
     "chart_appearances": 1,
@@ -12871,18 +12869,32 @@
     "top_app_revenue": 50000
   },
   {
-    "publisher_name": "Radio France",
+    "publisher_name": "BFK ARASTIRMA GELISTIRME YAZILIM BILGISAYAR SANAYI VE TICARET ANONIM SIRKETI",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 50000,
-    "avg_rating": 4.85,
+    "total_revenue": 40000,
+    "total_downloads": 10000,
+    "avg_rating": 4.55,
     "categories": [
-      "Music",
-      "News"
+      "Navigation",
+      "Social Networking"
     ],
-    "top_app_name": "Radio France - podcast, direct",
-    "top_app_revenue": 1000
+    "top_app_name": "Phone Locator 360: Find Family",
+    "top_app_revenue": 40000
+  },
+  {
+    "publisher_name": "Spotify",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 10000,
+    "total_downloads": 5000000,
+    "avg_rating": 4.78,
+    "categories": [
+      "Entertainment",
+      "Music"
+    ],
+    "top_app_name": "Spotify: Music and Podcasts",
+    "top_app_revenue": 10000
   },
   {
     "publisher_name": "TouchTunes Interactive Network",
@@ -12910,6 +12922,20 @@
       "Social Networking"
     ],
     "top_app_name": "Bandsintown Concerts",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "AMI Entertainment",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 80000,
+    "avg_rating": 4.54,
+    "categories": [
+      "Entertainment",
+      "Music"
+    ],
+    "top_app_name": "AMI Play",
     "top_app_revenue": 1000
   },
   {
@@ -12960,13 +12986,27 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 80000,
-    "avg_rating": 3.8,
+    "avg_rating": 3.75,
     "categories": [
       "Music",
       "Utilities"
     ],
     "top_app_name": "Skullcandy",
     "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Thai Huy Nguyen",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 10000,
+    "total_downloads": 300000,
+    "avg_rating": 4.56,
+    "categories": [
+      "Entertainment",
+      "Music"
+    ],
+    "top_app_name": "Youtify - Music & Playlists",
+    "top_app_revenue": 10000
   },
   {
     "publisher_name": "Shenzhen Shokz Co., Ltd.",
@@ -12981,20 +13021,6 @@
     ],
     "top_app_name": "Shokz",
     "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Capp Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 40000,
-    "total_downloads": 100000,
-    "avg_rating": 4.78,
-    "categories": [
-      "Music",
-      "Social Networking"
-    ],
-    "top_app_name": "Airbuds Widget",
-    "top_app_revenue": 40000
   },
   {
     "publisher_name": "JLab Audio",
@@ -13024,17 +13050,18 @@
     "top_app_revenue": 20000
   },
   {
-    "publisher_name": "\u82f1\u6770 \u674e",
+    "publisher_name": "EaseClickMobi Co. Ltd.",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 100000,
+    "total_revenue": 1000,
     "total_downloads": 200000,
-    "avg_rating": 4.64,
+    "avg_rating": 4.71,
     "categories": [
-      "Music"
+      "Music",
+      "Utilities"
     ],
-    "top_app_name": "Music Recognition- Song Finder",
-    "top_app_revenue": 100000
+    "top_app_name": "RaMusi: Offline Music Player",
+    "top_app_revenue": 1000
   },
   {
     "publisher_name": "chae limited",
@@ -13095,7 +13122,7 @@
     "chart_appearances": 1,
     "total_revenue": 30000,
     "total_downloads": 200000,
-    "avg_rating": 4.37,
+    "avg_rating": 4.38,
     "categories": [
       "Music",
       "Utilities"
@@ -13313,17 +13340,17 @@
     "top_app_revenue": 600000
   },
   {
-    "publisher_name": "Moongate Studios, Inc.",
+    "publisher_name": "sin titulo, inc",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 200000,
-    "total_downloads": 50000,
-    "avg_rating": 4.67,
+    "total_downloads": 80000,
+    "avg_rating": 4.93,
     "categories": [
-      "Lifestyle",
-      "Music"
+      "Music",
+      "Productivity"
     ],
-    "top_app_name": "Moongate: Binaural Beats",
+    "top_app_name": "[untitled]",
     "top_app_revenue": 200000
   },
   {
@@ -13421,6 +13448,20 @@
       "Reference"
     ],
     "top_app_name": "Zillow Real Estate & Rentals",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Apartments LLC",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 100000,
+    "avg_rating": 4.86,
+    "categories": [
+      "Business",
+      "Lifestyle"
+    ],
+    "top_app_name": "Apartments.com Rental Finder",
     "top_app_revenue": 1000
   },
   {
@@ -13756,6 +13797,19 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Resideo Technologies, Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 90000,
+    "avg_rating": 4.77,
+    "categories": [
+      "Lifestyle"
+    ],
+    "top_app_name": "First Alert by Resideo",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Flagship AI, Inc",
     "app_count": 1,
     "chart_appearances": 1,
@@ -13803,26 +13857,12 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 60000,
-    "avg_rating": 4.65,
+    "avg_rating": 4.62,
     "categories": [
       "Finance",
       "Lifestyle"
     ],
     "top_app_name": "Instant Cash Advance - Zora",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Humanity Labs Ltd",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 50000,
-    "avg_rating": 4.65,
-    "categories": [
-      "Lifestyle",
-      "Social Networking"
-    ],
-    "top_app_name": "Goose \u2014 For the boys",
     "top_app_revenue": 1000
   },
   {
@@ -13852,20 +13892,6 @@
     ],
     "top_app_name": "Badoo Dating: Meet New People",
     "top_app_revenue": 3000000
-  },
-  {
-    "publisher_name": "iScape Holdings Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 300000,
-    "total_downloads": 10000,
-    "avg_rating": 4.61,
-    "categories": [
-      "Lifestyle",
-      "Photo & Video"
-    ],
-    "top_app_name": "iScape: Landscape Design",
-    "top_app_revenue": 300000
   },
   {
     "publisher_name": "Bloomer Inc",
@@ -13924,6 +13950,20 @@
     "top_app_revenue": 200000
   },
   {
+    "publisher_name": "Beijing Light For You Technology Co., Ltd.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000000,
+    "total_downloads": 600000,
+    "avg_rating": 4.19,
+    "categories": [
+      "Lifestyle",
+      "Reference"
+    ],
+    "top_app_name": "\u6d4b\u6d4b-\u5973\u6027\u60c5\u611f\u503e\u8bc9\u76f4\u64ad\u793e\u533a",
+    "top_app_revenue": 1000000
+  },
+  {
     "publisher_name": "Dil Mil, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -13966,20 +14006,6 @@
     "top_app_revenue": 700000
   },
   {
-    "publisher_name": "MIXI, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 700000,
-    "total_downloads": 200000,
-    "avg_rating": 4.88,
-    "categories": [
-      "Lifestyle",
-      "Photo & Video"
-    ],
-    "top_app_name": "FamilyAlbum - Photo Sharing",
-    "top_app_revenue": 700000
-  },
-  {
     "publisher_name": "Raya App Inc",
     "app_count": 1,
     "chart_appearances": 1,
@@ -14012,7 +14038,7 @@
     "chart_appearances": 1,
     "total_revenue": 200000,
     "total_downloads": 1000,
-    "avg_rating": 2.36,
+    "avg_rating": 2.34,
     "categories": [
       "Lifestyle",
       "Utilities"
@@ -14131,6 +14157,20 @@
     "top_app_revenue": 300000
   },
   {
+    "publisher_name": "Better Half Limited",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 200000,
+    "total_downloads": 60000,
+    "avg_rating": 4.73,
+    "categories": [
+      "Health & Fitness",
+      "Lifestyle"
+    ],
+    "top_app_name": "Paired: Couples & Relationship",
+    "top_app_revenue": 200000
+  },
+  {
     "publisher_name": "Xeanco Limited",
     "app_count": 1,
     "chart_appearances": 1,
@@ -14156,19 +14196,6 @@
     ],
     "top_app_name": "Meete - Meet New Friends",
     "top_app_revenue": 400000
-  },
-  {
-    "publisher_name": "The Lox Club Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 100000,
-    "total_downloads": 1000,
-    "avg_rating": 4.22,
-    "categories": [
-      "Lifestyle"
-    ],
-    "top_app_name": "Lox Club - Jewish Dating App",
-    "top_app_revenue": 100000
   },
   {
     "publisher_name": "nove8",
@@ -14213,6 +14240,20 @@
     "top_app_revenue": 500000
   },
   {
+    "publisher_name": "NarrativeLab OU",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 400000,
+    "total_downloads": 200000,
+    "avg_rating": 4.33,
+    "categories": [
+      "Health & Fitness",
+      "Lifestyle"
+    ],
+    "top_app_name": "Blood Pressure Log, Heart Rate",
+    "top_app_revenue": 400000
+  },
+  {
     "publisher_name": "Owlet Baby Care, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -14239,6 +14280,19 @@
     ],
     "top_app_name": "Phone Tracker - Family Locator",
     "top_app_revenue": 1000000
+  },
+  {
+    "publisher_name": "Fenlake Global",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 200000,
+    "total_downloads": 30000,
+    "avg_rating": 4.54,
+    "categories": [
+      "Lifestyle"
+    ],
+    "top_app_name": "BalanceMe-Health AI&Self Care",
+    "top_app_revenue": 200000
   },
   {
     "publisher_name": "Vert Ventures",
@@ -14279,20 +14333,6 @@
     ],
     "top_app_name": "AI Decor - AI Home Design",
     "top_app_revenue": 200000
-  },
-  {
-    "publisher_name": "Fitness International, LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 70000,
-    "avg_rating": 2.68,
-    "categories": [
-      "Health & Fitness",
-      "Lifestyle"
-    ],
-    "top_app_name": "LA Fitness Mobile",
-    "top_app_revenue": 1000
   },
   {
     "publisher_name": "Crunch Fitness",
@@ -14518,6 +14558,20 @@
     "top_app_revenue": 300000
   },
   {
+    "publisher_name": "Nourish Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 60000,
+    "avg_rating": 4.85,
+    "categories": [
+      "Health & Fitness",
+      "Medical"
+    ],
+    "top_app_name": "Nourish: Eating Well Made Easy",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Dialed Labs Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -14537,7 +14591,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 100000,
-    "avg_rating": 2.09,
+    "avg_rating": 2.07,
     "categories": [
       "Health & Fitness",
       "Sports"
@@ -14551,7 +14605,7 @@
     "chart_appearances": 1,
     "total_revenue": 20000,
     "total_downloads": 100000,
-    "avg_rating": 4.38,
+    "avg_rating": 4.42,
     "categories": [
       "Health & Fitness"
     ],
@@ -15109,6 +15163,21 @@
     "top_app_revenue": 20000
   },
   {
+    "publisher_name": "Hitapps Games LTD",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 4000000,
+    "total_downloads": 2000000,
+    "avg_rating": 4.66,
+    "categories": [
+      "Cat 7005",
+      "Cat 7019",
+      "Games"
+    ],
+    "top_app_name": "Solitaire Associations Journey",
+    "top_app_revenue": 4000000
+  },
+  {
     "publisher_name": "Lion Studios Plus",
     "app_count": 1,
     "chart_appearances": 1,
@@ -15161,7 +15230,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 100000,
-    "avg_rating": 3.71,
+    "avg_rating": 3.49,
     "categories": [
       "Cat 7016",
       "Games"
@@ -15202,22 +15271,6 @@
     "top_app_revenue": 3000000
   },
   {
-    "publisher_name": "Appchi Media Ltd",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 5000000,
-    "total_downloads": 70000,
-    "avg_rating": 4.76,
-    "categories": [
-      "Cat 7005",
-      "Cat 7006",
-      "Games",
-      "Lifestyle"
-    ],
-    "top_app_name": "Quick Hit Casino - Vegas Slots",
-    "top_app_revenue": 5000000
-  },
-  {
     "publisher_name": "Niantic, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -15238,7 +15291,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 11000000,
-    "total_downloads": 90000,
+    "total_downloads": 80000,
     "avg_rating": 3.98,
     "categories": [
       "Cat 7014",
@@ -15247,21 +15300,6 @@
     ],
     "top_app_name": "Evony",
     "top_app_revenue": 11000000
-  },
-  {
-    "publisher_name": "GARENA INTERNATIONAL I PRIVATE LIMITED",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 15000000,
-    "total_downloads": 2000000,
-    "avg_rating": 3.99,
-    "categories": [
-      "Cat 7001",
-      "Cat 7002",
-      "Games"
-    ],
-    "top_app_name": "Free Fire: 9th Anniversary",
-    "top_app_revenue": 15000000
   },
   {
     "publisher_name": "Bandai Namco Entertainment Inc.",
@@ -15278,6 +15316,21 @@
     ],
     "top_app_name": "DRAGON BALL LEGENDS",
     "top_app_revenue": 8000000
+  },
+  {
+    "publisher_name": "COGNOSPHERE PTE. LTD.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 7000000,
+    "total_downloads": 200000,
+    "avg_rating": 4.23,
+    "categories": [
+      "Cat 7002",
+      "Cat 7014",
+      "Games"
+    ],
+    "top_app_name": "Genshin Impact",
+    "top_app_revenue": 7000000
   },
   {
     "publisher_name": "Happibits",
@@ -15368,21 +15421,6 @@
     ],
     "top_app_name": "Sword x Staff",
     "top_app_revenue": 4000000
-  },
-  {
-    "publisher_name": "Combo Games",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 3000000,
-    "total_downloads": 500000,
-    "avg_rating": 4.77,
-    "categories": [
-      "Cat 7003",
-      "Cat 7012",
-      "Games"
-    ],
-    "top_app_name": "Yarn Loop: Knit Puzzle",
-    "top_app_revenue": 3000000
   },
   {
     "publisher_name": "PayPal, Inc.",
@@ -15495,19 +15533,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Discover Financial Services",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 200000,
-    "avg_rating": 4.86,
-    "categories": [
-      "Finance"
-    ],
-    "top_app_name": "Discover Mobile",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Progressive Insurance",
     "app_count": 1,
     "chart_appearances": 1,
@@ -15602,6 +15627,20 @@
       "Finance"
     ],
     "top_app_name": "Wise - Global Money",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "HealthEquity",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 100000,
+    "avg_rating": 4.32,
+    "categories": [
+      "Finance",
+      "Health & Fitness"
+    ],
+    "top_app_name": "HealthEquity Mobile",
     "top_app_revenue": 1000
   },
   {
@@ -15797,20 +15836,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "FIS",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 200000,
-    "avg_rating": 1.82,
-    "categories": [
-      "Finance",
-      "Shopping"
-    ],
-    "top_app_name": "ebtEDGE",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Cleo AI Ltd",
     "app_count": 1,
     "chart_appearances": 1,
@@ -15838,20 +15863,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Gusto, inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 100000,
-    "avg_rating": 4.82,
-    "categories": [
-      "Business",
-      "Finance"
-    ],
-    "top_app_name": "Gusto Mobile",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "One Finance, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -15862,19 +15873,6 @@
       "Finance"
     ],
     "top_app_name": "OnePay \u2013 Mobile Banking",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Bright Capital Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 100000,
-    "avg_rating": 4.77,
-    "categories": [
-      "Finance"
-    ],
-    "top_app_name": "Bright: Loans & Credit Builder",
     "top_app_revenue": 1000
   },
   {
@@ -15933,6 +15931,19 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Visible Ideas",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 80000,
+    "avg_rating": 4.84,
+    "categories": [
+      "Finance"
+    ],
+    "top_app_name": "Split Pay \u2013 Pay Rent in Two",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Kikoff Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -15965,7 +15976,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 1000000,
-    "avg_rating": 3.83,
+    "avg_rating": 3.61,
     "categories": [
       "Finance"
     ],
@@ -15985,20 +15996,6 @@
     ],
     "top_app_name": "Splitwise",
     "top_app_revenue": 500000
-  },
-  {
-    "publisher_name": "Credit Sesame, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 10000,
-    "avg_rating": 4.81,
-    "categories": [
-      "Business",
-      "Finance"
-    ],
-    "top_app_name": "Credit Sesame: Grow Your Score",
-    "top_app_revenue": 20000
   },
   {
     "publisher_name": "Seeking Alpha Ltd.",
@@ -16027,20 +16024,6 @@
     ],
     "top_app_name": "MileIQ: Mileage Tracker & Log",
     "top_app_revenue": 2000000
-  },
-  {
-    "publisher_name": "REACTIVE APPS CORP.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 40000,
-    "total_downloads": 1000,
-    "avg_rating": 4.76,
-    "categories": [
-      "Business",
-      "Finance"
-    ],
-    "top_app_name": "Smart Receipts: Expenses & Tax",
-    "top_app_revenue": 40000
   },
   {
     "publisher_name": "Fusion Media Limited",
@@ -16269,7 +16252,7 @@
     "publisher_name": "Quicken Inc.",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 70000,
+    "total_revenue": 80000,
     "total_downloads": 10000,
     "avg_rating": 4.54,
     "categories": [
@@ -16277,7 +16260,7 @@
       "Finance"
     ],
     "top_app_name": "Quicken: Intelligent Money",
-    "top_app_revenue": 70000
+    "top_app_revenue": 80000
   },
   {
     "publisher_name": "Monarch Money, Inc.",
@@ -16292,6 +16275,20 @@
     ],
     "top_app_name": "Monarch: Budget & Track Money",
     "top_app_revenue": 200000
+  },
+  {
+    "publisher_name": "CardPointers LLC",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 30000,
+    "total_downloads": 8000,
+    "avg_rating": 4.73,
+    "categories": [
+      "Finance",
+      "Travel"
+    ],
+    "top_app_name": "CardPointers for Credit Cards",
+    "top_app_revenue": 30000
   },
   {
     "publisher_name": "Kraken",
@@ -16320,19 +16317,6 @@
     ],
     "top_app_name": "Till: Kids & Teen Banking",
     "top_app_revenue": 30000
-  },
-  {
-    "publisher_name": "OptionStrat LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 1000,
-    "avg_rating": 4.82,
-    "categories": [
-      "Finance"
-    ],
-    "top_app_name": "OptionStrat: Options Toolkit",
-    "top_app_revenue": 20000
   },
   {
     "publisher_name": "Get Aura Inc.",
@@ -16397,7 +16381,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 200000,
-    "total_downloads": 60000,
+    "total_downloads": 50000,
     "avg_rating": 4.84,
     "categories": [
       "Finance",
@@ -16435,6 +16419,20 @@
     "top_app_revenue": 70000
   },
   {
+    "publisher_name": "Blossom Social Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 40000,
+    "total_downloads": 40000,
+    "avg_rating": 4.75,
+    "categories": [
+      "Finance",
+      "Social Networking"
+    ],
+    "top_app_name": "Blossom: Social Investing",
+    "top_app_revenue": 40000
+  },
+  {
     "publisher_name": "DASTA Incorporated",
     "app_count": 1,
     "chart_appearances": 1,
@@ -16448,17 +16446,18 @@
     "top_app_revenue": 40000
   },
   {
-    "publisher_name": "FASTFOUR, LLC.",
+    "publisher_name": "Akash Jain",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 6000,
-    "total_downloads": 1000,
-    "avg_rating": 4.79,
+    "total_revenue": 50000,
+    "total_downloads": 100000,
+    "avg_rating": 4.8,
     "categories": [
-      "Finance"
+      "Finance",
+      "Productivity"
     ],
-    "top_app_name": "FASTFOUR LLC.",
-    "top_app_revenue": 6000
+    "top_app_name": "Budget Planner App - Fleur",
+    "top_app_revenue": 50000
   },
   {
     "publisher_name": "Kudos Technologies, Inc.",
@@ -16473,6 +16472,19 @@
     ],
     "top_app_name": "Kudos: Put Your Wallet to Work",
     "top_app_revenue": 70000
+  },
+  {
+    "publisher_name": "Budget Bestie Corp.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 30000,
+    "total_downloads": 10000,
+    "avg_rating": 4.68,
+    "categories": [
+      "Finance"
+    ],
+    "top_app_name": "Budget Bestie",
+    "top_app_revenue": 30000
   },
   {
     "publisher_name": "Ditch Technologies",
@@ -16502,6 +16514,20 @@
     "top_app_revenue": 100000
   },
   {
+    "publisher_name": "Valenyr Information Technology Consultants FZCO",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 20000,
+    "total_downloads": 7000,
+    "avg_rating": 4.72,
+    "categories": [
+      "Business",
+      "Finance"
+    ],
+    "top_app_name": "Profit AI - Trading Assistant",
+    "top_app_revenue": 20000
+  },
+  {
     "publisher_name": "Dumbo Credit",
     "app_count": 1,
     "chart_appearances": 1,
@@ -16519,7 +16545,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 50000,
-    "total_downloads": 100000,
+    "total_downloads": 90000,
     "avg_rating": 4.68,
     "categories": [
       "Finance",
@@ -16555,20 +16581,6 @@
     ],
     "top_app_name": "ClaimHunt \u2013 Claim Settlement",
     "top_app_revenue": 40000
-  },
-  {
-    "publisher_name": "Red Rock Tech, LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 9000,
-    "total_downloads": 1000,
-    "avg_rating": 4.62,
-    "categories": [
-      "Finance",
-      "Utilities"
-    ],
-    "top_app_name": "GetPaid: Find & Claim Money",
-    "top_app_revenue": 9000
   },
   {
     "publisher_name": "StubHub Inc.",
@@ -16711,20 +16723,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "AXS",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 500000,
-    "avg_rating": 4.64,
-    "categories": [
-      "Entertainment",
-      "Music"
-    ],
-    "top_app_name": "AXS Tickets",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Pluto.tv",
     "app_count": 1,
     "chart_appearances": 1,
@@ -16781,6 +16779,19 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Patreon",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 400000,
+    "avg_rating": 4.87,
+    "categories": [
+      "Entertainment"
+    ],
+    "top_app_name": "Patreon",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "VIZIO",
     "app_count": 1,
     "chart_appearances": 1,
@@ -16793,20 +16804,6 @@
     ],
     "top_app_name": "VIZIO | WatchFree+",
     "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Wildlife Studios",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000000,
-    "total_downloads": 1000000,
-    "avg_rating": 4.74,
-    "categories": [
-      "Books",
-      "Entertainment"
-    ],
-    "top_app_name": "Color by Number\uff1aColoring Games",
-    "top_app_revenue": 1000000
   },
   {
     "publisher_name": "ITV America Inc.",
@@ -16855,7 +16852,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 300000,
-    "avg_rating": 4.83,
+    "avg_rating": 4.82,
     "categories": [
       "Cat 6026",
       "Entertainment"
@@ -16901,20 +16898,6 @@
       "Lifestyle"
     ],
     "top_app_name": "Viki: Asian Dramas, Movies, TV",
-    "top_app_revenue": 4000000
-  },
-  {
-    "publisher_name": "GLOBO COM. E PART. S/A",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 4000000,
-    "total_downloads": 300000,
-    "avg_rating": 4.58,
-    "categories": [
-      "Entertainment",
-      "News"
-    ],
-    "top_app_name": "Globoplay: Novelas, s\u00e9ries e +",
     "top_app_revenue": 4000000
   },
   {
@@ -16989,7 +16972,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 2000000,
-    "total_downloads": 100000,
+    "total_downloads": 90000,
     "avg_rating": 4.75,
     "categories": [
       "Entertainment",
@@ -17080,20 +17063,6 @@
     "top_app_revenue": 3000000
   },
   {
-    "publisher_name": "Univision Communications Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 14000000,
-    "total_downloads": 1000000,
-    "avg_rating": 4.62,
-    "categories": [
-      "Entertainment",
-      "Sports"
-    ],
-    "top_app_name": "ViX: TV, Sports and News",
-    "top_app_revenue": 14000000
-  },
-  {
     "publisher_name": "Chai Research Corp.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -17160,32 +17129,32 @@
     "top_app_revenue": 2000000
   },
   {
+    "publisher_name": "PARTY GAME PTELTD",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 800000,
+    "total_downloads": 300000,
+    "avg_rating": 2.83,
+    "categories": [
+      "Entertainment",
+      "Lifestyle"
+    ],
+    "top_app_name": "MonkeyCool - Make New Friends",
+    "top_app_revenue": 800000
+  },
+  {
     "publisher_name": "Character.AI",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000000,
     "total_downloads": 300000,
-    "avg_rating": 4.31,
+    "avg_rating": 4.3,
     "categories": [
       "Entertainment",
       "Utilities"
     ],
     "top_app_name": "Character AI: Chat, Talk, Text",
     "top_app_revenue": 1000000
-  },
-  {
-    "publisher_name": "CLOUD WHALE INTERACTIVE TECHNOLOGY LLC.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 2000000,
-    "total_downloads": 600000,
-    "avg_rating": 4.45,
-    "categories": [
-      "Entertainment",
-      "Social Networking"
-    ],
-    "top_app_name": "PolyBuzz: Chat with Characters",
-    "top_app_revenue": 2000000
   },
   {
     "publisher_name": "CRATER PTE. LTD.",
@@ -17347,7 +17316,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 70000,
-    "avg_rating": 1.96,
+    "avg_rating": 1.98,
     "categories": [
       "Education",
       "Utilities"
@@ -17368,6 +17337,20 @@
     ],
     "top_app_name": "brightwheel: Child Care App",
     "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Piknik",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 700000,
+    "total_downloads": 400000,
+    "avg_rating": 4.01,
+    "categories": [
+      "Education",
+      "Entertainment"
+    ],
+    "top_app_name": "Toca Boca Jr: Fun Kids Games",
+    "top_app_revenue": 700000
   },
   {
     "publisher_name": "EAB Global, Inc",
@@ -17409,19 +17392,6 @@
       "Education"
     ],
     "top_app_name": "Procare: Childcare App",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Zoobean, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 90000,
-    "avg_rating": 4.76,
-    "categories": [
-      "Education"
-    ],
-    "top_app_name": "Beanstack Tracker",
     "top_app_revenue": 1000
   },
   {
@@ -17481,6 +17451,19 @@
     "top_app_revenue": 1000000
   },
   {
+    "publisher_name": "EDgear of America Inc",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 1000,
+    "avg_rating": 2.37,
+    "categories": [
+      "Education"
+    ],
+    "top_app_name": "JCampus Student",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Age of Learning, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -17525,20 +17508,6 @@
     "top_app_revenue": 200000
   },
   {
-    "publisher_name": "ApexTech Ltd",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 200000,
-    "total_downloads": 200000,
-    "avg_rating": 4.57,
-    "categories": [
-      "Books",
-      "Education"
-    ],
-    "top_app_name": "Micro Learning - SmartyMe",
-    "top_app_revenue": 200000
-  },
-  {
     "publisher_name": "Parrot Learning Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -17558,7 +17527,7 @@
     "chart_appearances": 1,
     "total_revenue": 200000,
     "total_downloads": 200000,
-    "avg_rating": 4.76,
+    "avg_rating": 4.77,
     "categories": [
       "Education"
     ],
@@ -17577,6 +17546,20 @@
       "Lifestyle"
     ],
     "top_app_name": "GraceNotes \u2013 Gratitude Journal",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Zaid Naim",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 8000,
+    "avg_rating": 5.0,
+    "categories": [
+      "Education",
+      "Utilities"
+    ],
+    "top_app_name": "Najah - \u0646\u062c\u0627\u062d",
     "top_app_revenue": 1000
   },
   {
@@ -17704,20 +17687,6 @@
     "top_app_revenue": 400000
   },
   {
-    "publisher_name": "GTHW App Limited",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 800000,
-    "total_downloads": 200000,
-    "avg_rating": 4.65,
-    "categories": [
-      "Education",
-      "Productivity"
-    ],
-    "top_app_name": "Headway - Daily Micro Learning",
-    "top_app_revenue": 800000
-  },
-  {
     "publisher_name": "Bebi Family Games",
     "app_count": 1,
     "chart_appearances": 1,
@@ -17750,14 +17719,14 @@
     "publisher_name": "Teaching.com",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 700000,
+    "total_revenue": 600000,
     "total_downloads": 50000,
     "avg_rating": 4.72,
     "categories": [
       "Education"
     ],
     "top_app_name": "Learn to Read - Reading.com",
-    "top_app_revenue": 700000
+    "top_app_revenue": 600000
   },
   {
     "publisher_name": "Lingvano GmbH",
@@ -17928,6 +17897,20 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "TwoDoor Games",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 50000,
+    "total_downloads": 30000,
+    "avg_rating": 4.61,
+    "categories": [
+      "Books",
+      "Utilities"
+    ],
+    "top_app_name": "Bookly: Book Tracker",
+    "top_app_revenue": 50000
+  },
+  {
     "publisher_name": "Oleg Shukalovich",
     "app_count": 1,
     "chart_appearances": 1,
@@ -17969,18 +17952,18 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Pubmark Inc.",
+    "publisher_name": "Tarteel Inc.",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 20000,
-    "avg_rating": 4.77,
+    "total_revenue": 200000,
+    "total_downloads": 100000,
+    "avg_rating": 4.73,
     "categories": [
       "Books",
-      "Entertainment"
+      "Reference"
     ],
-    "top_app_name": "Chirp Audiobooks",
-    "top_app_revenue": 1000
+    "top_app_name": "Tarteel: AI Quran Memorization",
+    "top_app_revenue": 200000
   },
   {
     "publisher_name": "Nataliia Shukalovich",
@@ -18011,30 +17994,44 @@
     "top_app_revenue": 100000
   },
   {
+    "publisher_name": "Barnes & Noble",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 60000,
+    "avg_rating": 1.88,
+    "categories": [
+      "Books",
+      "Shopping"
+    ],
+    "top_app_name": "Barnes & Noble",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "BookFunnel",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 20000,
+    "avg_rating": 3.66,
+    "categories": [
+      "Books",
+      "Entertainment"
+    ],
+    "top_app_name": "BookFunnel",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "HK Qingmo Technology limited",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 10000,
-    "avg_rating": 4.28,
+    "avg_rating": 4.29,
     "categories": [
       "Books"
     ],
     "top_app_name": "FantacyStory",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "Pangobooks Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 10000,
-    "avg_rating": 4.89,
-    "categories": [
-      "Books",
-      "Shopping"
-    ],
-    "top_app_name": "PangoBooks: Buy & Sell Books",
     "top_app_revenue": 1000
   },
   {
@@ -18085,7 +18082,7 @@
     "chart_appearances": 1,
     "total_revenue": 70000,
     "total_downloads": 100000,
-    "avg_rating": 4.47,
+    "avg_rating": 4.46,
     "categories": [
       "Books"
     ],
@@ -18134,6 +18131,20 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "AvnTech Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 40000,
+    "total_downloads": 50000,
+    "avg_rating": 4.65,
+    "categories": [
+      "Books",
+      "Reference"
+    ],
+    "top_app_name": "Holy Quran - Deeper journey",
+    "top_app_revenue": 40000
+  },
+  {
     "publisher_name": "HONGKONG COLLECT VISION LIMITED",
     "app_count": 1,
     "chart_appearances": 1,
@@ -18153,12 +18164,26 @@
     "chart_appearances": 1,
     "total_revenue": 20000,
     "total_downloads": 10000,
-    "avg_rating": 4.35,
+    "avg_rating": 4.34,
     "categories": [
       "Books"
     ],
     "top_app_name": "NovelMist - Novels & Stories",
     "top_app_revenue": 20000
+  },
+  {
+    "publisher_name": "Magnificat, Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 30000,
+    "total_downloads": 1000,
+    "avg_rating": 4.35,
+    "categories": [
+      "Books",
+      "Lifestyle"
+    ],
+    "top_app_name": "Magnificat English Editions",
+    "top_app_revenue": 30000
   },
   {
     "publisher_name": "LitRes OOO",
@@ -18175,17 +18200,45 @@
     "top_app_revenue": 300000
   },
   {
+    "publisher_name": "HarperCollins Christian Publishing, Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 60000,
+    "total_downloads": 1000,
+    "avg_rating": 4.86,
+    "categories": [
+      "Books",
+      "Lifestyle"
+    ],
+    "top_app_name": "Jesus Calling Devotional",
+    "top_app_revenue": 60000
+  },
+  {
+    "publisher_name": "Radish Media",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 700000,
+    "total_downloads": 30000,
+    "avg_rating": 4.57,
+    "categories": [
+      "Books",
+      "Entertainment"
+    ],
+    "top_app_name": "Tapas \u2013 Comics and Novels",
+    "top_app_revenue": 700000
+  },
+  {
     "publisher_name": "Lezhin Entertainment",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 300000,
+    "total_revenue": 400000,
     "total_downloads": 30000,
     "avg_rating": 2.58,
     "categories": [
       "Books"
     ],
     "top_app_name": "Lezhin Comics-Premium Webtoons",
-    "top_app_revenue": 300000
+    "top_app_revenue": 400000
   },
   {
     "publisher_name": "Tencent Technology (Shenzhen) Company Limited",
@@ -18322,7 +18375,7 @@
       "Books",
       "Newsstand"
     ],
-    "top_app_name": "MyPassion: Read, Listen Novels",
+    "top_app_name": "MyPassion: Read Novels & Books",
     "top_app_revenue": 200000
   },
   {
@@ -18351,19 +18404,6 @@
     ],
     "top_app_name": "Tapon - Stories & Novels",
     "top_app_revenue": 300000
-  },
-  {
-    "publisher_name": "Womanly Corp",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 40000,
-    "total_downloads": 1000,
-    "avg_rating": 4.78,
-    "categories": [
-      "Books"
-    ],
-    "top_app_name": "Tempt: Romance Audiobooks",
-    "top_app_revenue": 40000
   },
   {
     "publisher_name": "RNOVEL PTE. LTD.",
@@ -18399,7 +18439,7 @@
     "chart_appearances": 1,
     "total_revenue": 500000,
     "total_downloads": 20000,
-    "avg_rating": 4.19,
+    "avg_rating": 4.18,
     "categories": [
       "Books",
       "Utilities"
@@ -18589,11 +18629,25 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Oscar Management Corporation",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 20000,
+    "avg_rating": 4.85,
+    "categories": [
+      "Health & Fitness",
+      "Medical"
+    ],
+    "top_app_name": "Oscar Health",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Optum Inc.",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
-    "total_downloads": 30000,
+    "total_downloads": 20000,
     "avg_rating": 4.73,
     "categories": [
       "Health & Fitness",
@@ -18699,19 +18753,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Meditech",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 40000,
-    "avg_rating": 2.56,
-    "categories": [
-      "Medical"
-    ],
-    "top_app_name": "MEDITECH MHealth",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Takeda Pharmaceuticals International AG",
     "app_count": 1,
     "chart_appearances": 1,
@@ -18730,7 +18771,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
-    "total_downloads": 80000,
+    "total_downloads": 90000,
     "avg_rating": 4.75,
     "categories": [
       "Medical"
@@ -18772,7 +18813,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 50000,
-    "avg_rating": 4.68,
+    "avg_rating": 4.69,
     "categories": [
       "Medical"
     ],
@@ -18876,16 +18917,17 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Verily Health Inc.",
+    "publisher_name": "Centene Corporation",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
-    "total_downloads": 30000,
-    "avg_rating": 4.48,
+    "total_downloads": 20000,
+    "avg_rating": 4.83,
     "categories": [
+      "Health & Fitness",
       "Medical"
     ],
-    "top_app_name": "Verily Me",
+    "top_app_name": "Ambetter Health",
     "top_app_revenue": 1000
   },
   {
@@ -18959,6 +19001,20 @@
     "top_app_revenue": 50000
   },
   {
+    "publisher_name": "Atmosphere Apps, Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 30000,
+    "total_downloads": 1000,
+    "avg_rating": 4.81,
+    "categories": [
+      "Health & Fitness",
+      "Medical"
+    ],
+    "top_app_name": "Davis Drug Guide For Nurses",
+    "top_app_revenue": 30000
+  },
+  {
     "publisher_name": "Evolve Medical Systems, LLC",
     "app_count": 1,
     "chart_appearances": 1,
@@ -19001,6 +19057,20 @@
     "top_app_revenue": 70000
   },
   {
+    "publisher_name": "Vargo Anesthesia Inc",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 30000,
+    "total_downloads": 1000,
+    "avg_rating": 4.7,
+    "categories": [
+      "Medical",
+      "Reference"
+    ],
+    "top_app_name": "Vargo Anesthesia Mega App",
+    "top_app_revenue": 30000
+  },
+  {
     "publisher_name": "Antimicrobial Therapy, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -19013,20 +19083,6 @@
     ],
     "top_app_name": "Sanford Guide Antimicrobial",
     "top_app_revenue": 200000
-  },
-  {
-    "publisher_name": "NYSORA inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 100000,
-    "total_downloads": 1000,
-    "avg_rating": 4.86,
-    "categories": [
-      "Education",
-      "Medical"
-    ],
-    "top_app_name": "NYSORA Nerve Blocks",
-    "top_app_revenue": 100000
   },
   {
     "publisher_name": "Globalia",
@@ -19043,20 +19099,6 @@
     "top_app_revenue": 80000
   },
   {
-    "publisher_name": "Apirox, s.r.o.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 60000,
-    "total_downloads": 20000,
-    "avg_rating": 4.51,
-    "categories": [
-      "Health & Fitness",
-      "Medical"
-    ],
-    "top_app_name": "Sleep Tracker & Sleep Recorder",
-    "top_app_revenue": 60000
-  },
-  {
     "publisher_name": "Voluntis",
     "app_count": 1,
     "chart_appearances": 1,
@@ -19071,18 +19113,18 @@
     "top_app_revenue": 70000
   },
   {
-    "publisher_name": "Inquiry Health LLC",
+    "publisher_name": "Glow",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 40000,
-    "total_downloads": 9000,
-    "avg_rating": 4.84,
+    "total_revenue": 30000,
+    "total_downloads": 1000,
+    "avg_rating": 4.67,
     "categories": [
       "Health & Fitness",
       "Medical"
     ],
-    "top_app_name": "Clarity: CBT Self Help Journal",
-    "top_app_revenue": 40000
+    "top_app_name": "Glow Baby Tracker & Growth App",
+    "top_app_revenue": 30000
   },
   {
     "publisher_name": "App Sub 1 LLC",
@@ -19097,6 +19139,20 @@
     ],
     "top_app_name": "Glucose | Blood Sugar Tracker",
     "top_app_revenue": 50000
+  },
+  {
+    "publisher_name": "hearingOS GmbH",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 30000,
+    "total_downloads": 8000,
+    "avg_rating": 4.11,
+    "categories": [
+      "Health & Fitness",
+      "Medical"
+    ],
+    "top_app_name": "hearingOS - Hearing Aid App",
+    "top_app_revenue": 30000
   },
   {
     "publisher_name": "AMBOSS",
@@ -19169,25 +19225,12 @@
     "top_app_revenue": 40000
   },
   {
-    "publisher_name": "LifeLearn USA",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 1000,
-    "avg_rating": 4.74,
-    "categories": [
-      "Medical"
-    ],
-    "top_app_name": "Vetcalculators",
-    "top_app_revenue": 20000
-  },
-  {
     "publisher_name": "KHN Solutions Inc",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 20000,
     "total_downloads": 1000,
-    "avg_rating": 4.31,
+    "avg_rating": 4.32,
     "categories": [
       "Health & Fitness",
       "Medical"
@@ -19199,7 +19242,7 @@
     "publisher_name": "Emergency Medicine Residents' Association",
     "app_count": 1,
     "chart_appearances": 1,
-    "total_revenue": 20000,
+    "total_revenue": 10000,
     "total_downloads": 1000,
     "avg_rating": 3.55,
     "categories": [
@@ -19207,7 +19250,7 @@
       "Reference"
     ],
     "top_app_name": "MobilEM",
-    "top_app_revenue": 20000
+    "top_app_revenue": 10000
   },
   {
     "publisher_name": "Imago AI LLC",
@@ -19250,6 +19293,20 @@
     "top_app_revenue": 20000
   },
   {
+    "publisher_name": "Cosmas Health LLC",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 20000,
+    "total_downloads": 1000,
+    "avg_rating": 4.82,
+    "categories": [
+      "Medical",
+      "Productivity"
+    ],
+    "top_app_name": "Pyrls",
+    "top_app_revenue": 20000
+  },
+  {
     "publisher_name": "Mobius Connective Technologies, Ltd.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -19268,7 +19325,7 @@
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 30000,
-    "total_downloads": 7000,
+    "total_downloads": 8000,
     "avg_rating": 2.92,
     "categories": [
       "Medical",
@@ -19374,45 +19431,17 @@
     "top_app_revenue": 100000
   },
   {
-    "publisher_name": "\u519b \u5218",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 30000,
-    "total_downloads": 20000,
-    "avg_rating": 4.47,
-    "categories": [
-      "Health & Fitness",
-      "Medical"
-    ],
-    "top_app_name": "Finger Blood Pressure: BP Mate",
-    "top_app_revenue": 30000
-  },
-  {
     "publisher_name": "EpiWatch, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 20000,
     "total_downloads": 1000,
-    "avg_rating": 4.19,
+    "avg_rating": 4.2,
     "categories": [
       "Health & Fitness",
       "Medical"
     ],
     "top_app_name": "EpiWatch - Seizure Monitor",
-    "top_app_revenue": 20000
-  },
-  {
-    "publisher_name": "Applogy",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 30000,
-    "avg_rating": 4.59,
-    "categories": [
-      "Medical",
-      "Photo & Video"
-    ],
-    "top_app_name": "Hear Baby Heartbeat - Pumly",
     "top_app_revenue": 20000
   },
   {
@@ -19497,6 +19526,20 @@
       "Lifestyle"
     ],
     "top_app_name": "Starbucks",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Papa John's International Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 100000,
+    "avg_rating": 4.85,
+    "categories": [
+      "Entertainment",
+      "Food & Drink"
+    ],
+    "top_app_name": "Papa Johns Pizza & Delivery",
     "top_app_revenue": 1000
   },
   {
@@ -19608,6 +19651,20 @@
       "Travel"
     ],
     "top_app_name": "Speedway: Rewards & Shopping",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "7-Eleven, Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 500000,
+    "avg_rating": 4.81,
+    "categories": [
+      "Food & Drink",
+      "Lifestyle"
+    ],
+    "top_app_name": "7-Eleven: Rewards & Shopping",
     "top_app_revenue": 1000
   },
   {
@@ -19842,6 +19899,19 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Arby's",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 100000,
+    "avg_rating": 4.82,
+    "categories": [
+      "Food & Drink"
+    ],
+    "top_app_name": "Arby's - Fast Food Sandwiches",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "International Dairy Queen, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -19911,26 +19981,12 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Beli Technologies, Inc.",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 200000,
-    "avg_rating": 4.85,
-    "categories": [
-      "Food & Drink",
-      "Travel"
-    ],
-    "top_app_name": "Beli",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Per Diem Subscriptions, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 20000,
-    "avg_rating": 4.81,
+    "avg_rating": 4.82,
     "categories": [
       "Food & Drink",
       "Shopping"
@@ -19983,7 +20039,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 200000,
-    "avg_rating": 3.4,
+    "avg_rating": 3.39,
     "categories": [
       "Food & Drink"
     ],
@@ -20003,6 +20059,20 @@
     ],
     "top_app_name": "Nothing Bundt Cakes",
     "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "Cookpad Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 900000,
+    "total_downloads": 20000,
+    "avg_rating": 4.84,
+    "categories": [
+      "Food & Drink",
+      "Lifestyle"
+    ],
+    "top_app_name": "Cookpad Recipes",
+    "top_app_revenue": 900000
   },
   {
     "publisher_name": "M. Shanken Communications, Inc.",
@@ -20255,20 +20325,6 @@
     "top_app_revenue": 10000
   },
   {
-    "publisher_name": "Sorted Food",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 1000,
-    "avg_rating": 4.49,
-    "categories": [
-      "Food & Drink",
-      "Lifestyle"
-    ],
-    "top_app_name": "Sidekick by Sorted Food",
-    "top_app_revenue": 20000
-  },
-  {
     "publisher_name": "Stashbox Ltd",
     "app_count": 1,
     "chart_appearances": 1,
@@ -20476,6 +20532,19 @@
     "top_app_revenue": 60000
   },
   {
+    "publisher_name": "Nicholas Owens",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 1000,
+    "avg_rating": 1.97,
+    "categories": [
+      "Food & Drink"
+    ],
+    "top_app_name": "Bourboneur",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Mouth Group Limited",
     "app_count": 1,
     "chart_appearances": 1,
@@ -20587,35 +20656,7 @@
     "top_app_revenue": 20000
   },
   {
-    "publisher_name": "BarrelBook, LLC",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 1000,
-    "avg_rating": 4.83,
-    "categories": [
-      "Food & Drink",
-      "Lifestyle"
-    ],
-    "top_app_name": "BarrelBook: Whiskey Collection",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "The Good Bite",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 20000,
-    "total_downloads": 9000,
-    "avg_rating": 2.33,
-    "categories": [
-      "Food & Drink",
-      "Lifestyle"
-    ],
-    "top_app_name": "TGB: Meal Planner & Recipes",
-    "top_app_revenue": 20000
-  },
-  {
-    "publisher_name": "Snag Reservations",
+    "publisher_name": "KARAN SINGH JAGGI",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 10000,
@@ -20627,6 +20668,20 @@
     ],
     "top_app_name": "Snag Reservations",
     "top_app_revenue": 10000
+  },
+  {
+    "publisher_name": "Balanced Roots LLC",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 1000,
+    "avg_rating": 4.0,
+    "categories": [
+      "Food & Drink",
+      "Health & Fitness"
+    ],
+    "top_app_name": "Balanced Roots Nutrition App",
+    "top_app_revenue": 1000
   },
   {
     "publisher_name": "CAMERON PAUL PARKER",
@@ -20699,20 +20754,6 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "Macys Inc",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 200000,
-    "avg_rating": 4.86,
-    "categories": [
-      "Lifestyle",
-      "Shopping"
-    ],
-    "top_app_name": "Macy's: Shop, Save, and Earn",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "The Home Depot, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -20766,6 +20807,20 @@
       "Shopping"
     ],
     "top_app_name": "Sephora US: Makeup & Skincare",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "The Kroger Co.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 200000,
+    "avg_rating": 4.77,
+    "categories": [
+      "Lifestyle",
+      "Shopping"
+    ],
+    "top_app_name": "Kroger",
     "top_app_revenue": 1000
   },
   {
@@ -21061,6 +21116,20 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Lidl Digital International GmbH & Co. KG",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 1000000,
+    "avg_rating": 4.73,
+    "categories": [
+      "Lifestyle",
+      "Shopping"
+    ],
+    "top_app_name": "Lidl Plus",
+    "top_app_revenue": 1000
+  },
+  {
     "publisher_name": "Bath & Body Works Brand Management, Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -21278,19 +21347,6 @@
     "top_app_revenue": 30000
   },
   {
-    "publisher_name": "HopUp",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 1000,
-    "avg_rating": 4.62,
-    "categories": [
-      "Shopping"
-    ],
-    "top_app_name": "HopUp - Airsoft Marketplace",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "Binspir Technologies Co., Ltd.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -21324,7 +21380,7 @@
     "chart_appearances": 1,
     "total_revenue": 30000,
     "total_downloads": 20000,
-    "avg_rating": 2.68,
+    "avg_rating": 2.73,
     "categories": [
       "Shopping"
     ],
@@ -21406,7 +21462,7 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 1000,
-    "avg_rating": 4.72,
+    "avg_rating": 4.71,
     "categories": [
       "Lifestyle",
       "Shopping"
@@ -21554,6 +21610,20 @@
     "top_app_revenue": 20000
   },
   {
+    "publisher_name": "Allergy Translation Inc.",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 6000,
+    "total_downloads": 1000,
+    "avg_rating": 4.62,
+    "categories": [
+      "Shopping",
+      "Travel"
+    ],
+    "top_app_name": "Equal Eats",
+    "top_app_revenue": 6000
+  },
+  {
     "publisher_name": "MultiApp Dynamics OU",
     "app_count": 1,
     "chart_appearances": 1,
@@ -21620,6 +21690,20 @@
     "top_app_revenue": 1000
   },
   {
+    "publisher_name": "Mattijs Verschuren",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 8000,
+    "total_downloads": 1000,
+    "avg_rating": 4.41,
+    "categories": [
+      "Shopping",
+      "Utilities"
+    ],
+    "top_app_name": "Scout for Facebook Marketplace",
+    "top_app_revenue": 8000
+  },
+  {
     "publisher_name": "Currents Systems Inc.",
     "app_count": 1,
     "chart_appearances": 1,
@@ -21676,6 +21760,34 @@
     "top_app_revenue": 50000
   },
   {
+    "publisher_name": "Adem Cilgin",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 1000,
+    "total_downloads": 1000,
+    "avg_rating": 4.32,
+    "categories": [
+      "Productivity",
+      "Shopping"
+    ],
+    "top_app_name": "Price Snap - Thrift Scanner AI",
+    "top_app_revenue": 1000
+  },
+  {
+    "publisher_name": "ButtonUp App LLC",
+    "app_count": 1,
+    "chart_appearances": 1,
+    "total_revenue": 5000,
+    "total_downloads": 1000,
+    "avg_rating": 4.79,
+    "categories": [
+      "Lifestyle",
+      "Shopping"
+    ],
+    "top_app_name": "ButtonUp",
+    "top_app_revenue": 5000
+  },
+  {
     "publisher_name": "rohe.ai",
     "app_count": 1,
     "chart_appearances": 1,
@@ -21695,26 +21807,12 @@
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 1000,
-    "avg_rating": 4.14,
+    "avg_rating": 4.12,
     "categories": [
       "Shopping",
       "Utilities"
     ],
     "top_app_name": "Guppy: Collector Copilot",
-    "top_app_revenue": 1000
-  },
-  {
-    "publisher_name": "AAB Creative Studio",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 1000,
-    "avg_rating": 4.05,
-    "categories": [
-      "Productivity",
-      "Shopping"
-    ],
-    "top_app_name": "Thrift AI Profit Identifier",
     "top_app_revenue": 1000
   },
   {
@@ -21801,26 +21899,12 @@
     "top_app_revenue": 1000
   },
   {
-    "publisher_name": "ALEX ENRIQUE SANCHEZ JARDINES",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 1000,
-    "avg_rating": 3.25,
-    "categories": [
-      "Lifestyle",
-      "Shopping"
-    ],
-    "top_app_name": "Penny: Deal Scanner & Alerts",
-    "top_app_revenue": 1000
-  },
-  {
     "publisher_name": "EpicScale Inc",
     "app_count": 1,
     "chart_appearances": 1,
     "total_revenue": 1000,
     "total_downloads": 1000,
-    "avg_rating": 3.75,
+    "avg_rating": 3.71,
     "categories": [
       "Business",
       "Shopping"
@@ -21840,19 +21924,5 @@
     ],
     "top_app_name": "Yardly - Find Garage Sales",
     "top_app_revenue": 20000
-  },
-  {
-    "publisher_name": "Michael Moran",
-    "app_count": 1,
-    "chart_appearances": 1,
-    "total_revenue": 1000,
-    "total_downloads": 1000,
-    "avg_rating": 3.0,
-    "categories": [
-      "Productivity",
-      "Shopping"
-    ],
-    "top_app_name": "Freezy - Find Free Stuff",
-    "top_app_revenue": 1000
   }
 ]
