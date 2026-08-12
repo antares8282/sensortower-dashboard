@@ -27,20 +27,10 @@ if not check_password(auth_cookies):
 
 # Initialize page state
 if "page" not in st.session_state:
-    st.session_state.page = "rankings"
+    st.session_state.page = "opportunities"
 
 # Sidebar navigation (TOP)
 st.sidebar.markdown("### Navigation")
-if st.sidebar.button(
-    "📊 Rankings",
-    use_container_width=True,
-    type="primary" if st.session_state.page == "rankings" else "secondary"
-):
-    st.session_state.page = "rankings"
-    if "selected_app_id" in st.session_state:
-        del st.session_state.selected_app_id
-    st.rerun()
-
 if st.sidebar.button(
     "💡 Opportunities",
     use_container_width=True,
@@ -109,11 +99,8 @@ if st.session_state.get("selected_app_id"):
 if st.session_state.page == "app_details":
     from pages.p3_app_details import render
     render()
-elif st.session_state.page == "opportunities":
+else:  # opportunities (default)
     from pages.p2_opportunities import render
-    render()
-else:  # rankings
-    from pages.p1_rankings import render
     render()
 
 # Logout
