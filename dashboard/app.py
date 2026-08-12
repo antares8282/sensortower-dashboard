@@ -9,7 +9,7 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from components.auth import check_password
+from components.auth import check_password, get_cookie_manager
 
 st.set_page_config(
     page_title="PowerStack Labs | Market Intel",
@@ -19,7 +19,8 @@ st.set_page_config(
 )
 
 # Auth gate
-if not check_password():
+auth_cookies = get_cookie_manager()
+if not check_password(auth_cookies):
     st.stop()
 
 # --- Authenticated content ---
@@ -119,5 +120,7 @@ else:  # rankings
 st.sidebar.divider()
 if st.sidebar.button("🚪 Logout", use_container_width=True):
     st.session_state.authenticated = False
+    auth_cookies["authenticated"] = "false"
+    auth_cookies.save()
     st.rerun()
 
