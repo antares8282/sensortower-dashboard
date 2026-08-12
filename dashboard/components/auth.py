@@ -1,30 +1,26 @@
 """Authentication wrapper for the dashboard.
 
-For local development, set environment variables:
-  DASHBOARD_USERNAME=admin
-  DASHBOARD_PASSWORD=yourpassword
-
-For Streamlit Cloud, configure in the Secrets UI.
+Credentials are hardcoded (hash-compared) below rather than read from env
+vars or Streamlit secrets. Render's DASHBOARD_USERNAME/DASHBOARD_PASSWORD
+env vars were previously wired up but drifted out of sync with what's in
+this file, which silently locked out the real credentials. This file is
+now the single source of truth — change CORRECT_USER/CORRECT_HASH here to
+rotate the password.
 """
-import os
 import hashlib
 import streamlit as st
+
+CORRECT_USER = "gokhan"
+# sha256("PowerStack-2026!")
+CORRECT_HASH = "642f77dee5ceacd1fdaff6d417cd6e26330a8315ba7a14dcf0163422bf6ae186"
+
+
+def _hash(pw):
+    return hashlib.sha256(pw.encode()).hexdigest()
 
 
 def check_password():
     """Returns True if the user has entered the correct password."""
-
-    def _hash(pw):
-        return hashlib.sha256(pw.encode()).hexdigest()
-
-    # Get credentials from secrets or env vars
-    try:
-        correct_user = st.secrets["auth"]["username"]
-        correct_hash = st.secrets["auth"]["password_hash"]
-    except (KeyError, FileNotFoundError):
-        correct_user = os.getenv("DASHBOARD_USERNAME", "admin")
-        correct_pw = os.getenv("DASHBOARD_PASSWORD", "sensortower2025")
-        correct_hash = _hash(correct_pw)
 
     if "authenticated" not in st.session_state:
         st.session_state.authenticated = False
@@ -51,7 +47,7 @@ def check_password():
             submitted = st.form_submit_button("Log in", use_container_width=True)
 
             if submitted:
-                if username == correct_user and _hash(password) == correct_hash:
+                if username == CORRECT_USER and _hash(password) == CORRECT_HASH:
                     st.session_state.authenticated = True
                     st.rerun()
                 else:
