@@ -15,6 +15,13 @@ ENV/
 # API cache (regenerated, large)
 data/raw/cache/
 
+# Niche pipeline intermediates — large and fully regenerable from the cache.
+# The scored output the dashboard actually reads lives in
+# dashboard_data/current/niches.json and IS tracked.
+data/niche/catalog.json
+data/niche/shortlist.json
+data/niche/enriched.json
+
 # Jupyter checkpoints
 .ipynb_checkpoints/
 

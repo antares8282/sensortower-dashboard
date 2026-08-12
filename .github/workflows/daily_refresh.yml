@@ -1,24 +1,26 @@
-name: Daily Data Refresh
+name: Weekly Chart Refresh
 
+# Was daily, which cost ~145 calls/day = ~4,350/month against a 2,500 budget.
+# Top-chart composition does not move meaningfully day to day, so weekly keeps
+# the App Details data current at ~631/month.
 on:
   schedule:
-    # Run daily at 06:00 UTC
-    - cron: '0 6 * * *'
-  workflow_dispatch:  # Allow manual trigger
+    - cron: '0 6 * * 1'  # Mondays 06:00 UTC
+  workflow_dispatch:
 
 permissions:
-  contents: write  # Required to push updated data files back to the repo
+  contents: write
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 30  # Prevent hanging if an API call stalls
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # Required for authenticated push
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,19 +28,17 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install requests python-dotenv
+        run: pip install requests python-dotenv
 
       - name: Run data refresh
         env:
           SENSORTOWER_API_TOKEN: ${{ secrets.SENSORTOWER_API_TOKEN }}
-        run: |
-          python scripts/data_refresh.py
+        run: python scripts/data_refresh.py
 
       - name: Commit and push updated data
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add dashboard_data/ data/api_usage_log.json data/processed/
-          git diff --staged --quiet || git commit -m "Daily data refresh $(date +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "Weekly chart refresh $(date +%Y-%m-%d)"
           git push origin HEAD:main

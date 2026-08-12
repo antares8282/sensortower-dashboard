@@ -332,6 +332,51 @@ class SensorTowerClient:
         data = self._make_request(endpoint, params, use_cache)
         return data.get("apps", [])
 
+    # ---- Catalog search ----
+
+    def search_apps(
+        self,
+        term: str,
+        device: str = "ios",
+        limit: int = 250,
+        offset: int = 0,
+        use_cache: bool = True
+    ) -> List[Dict]:
+        """
+        Keyword search across the store catalog.
+
+        This is the only endpoint that reaches apps outside the top charts, so it
+        is how we enumerate a niche (e.g. Turkish Quran apps) rather than just its
+        winners. Max 250 per call; page with `offset`.
+
+        Returns app records with: app_id, name, publisher_name, publisher_id,
+        categories, global_rating_count, release_date, updated_date, active,
+        valid_countries.
+        """
+        params = {"entity_type": "app", "term": term, "limit": limit}
+        if offset:
+            params["offset"] = offset
+
+        endpoint = f"{device}/search_entities"
+        data = self._make_request(endpoint, params, use_cache)
+        return data if isinstance(data, list) else data.get("apps", [])
+
+    def get_top_in_app_purchases(
+        self,
+        app_ids: List,
+        device: str = "ios",
+        country: str = "US",
+        use_cache: bool = True
+    ) -> List[Dict]:
+        """Top IAP SKUs per app — reveals the monetization ladder of a niche."""
+        params = {
+            "app_ids": ",".join(str(x) for x in app_ids),
+            "country": country,
+        }
+        endpoint = f"{device}/apps/top_in_app_purchases"
+        data = self._make_request(endpoint, params, use_cache)
+        return data.get("apps", [])
+
     # ---- Cache management ----
 
     def clear_old_cache(self, days: int = 30):

@@ -1,0 +1,148 @@
+{
+  "probed_at": "2026-08-12T17:47:19.209848",
+  "calls_used": 17,
+  "results": [
+    {
+      "label": "ranking TR Lifestyle",
+      "endpoint": "ios/ranking",
+      "status": 200,
+      "shape": "dict['category', 'chart_type', 'country', 'date', 'ranking']",
+      "len_ranking": 250
+    },
+    {
+      "label": "ranking TR Reference",
+      "endpoint": "ios/ranking",
+      "status": 200,
+      "shape": "dict['category', 'chart_type', 'country', 'date', 'ranking']",
+      "len_ranking": 250
+    },
+    {
+      "label": "ranking TR Utilities grossing",
+      "endpoint": "ios/ranking",
+      "status": 200,
+      "shape": "dict['category', 'chart_type', 'country', 'date', 'ranking']",
+      "len_ranking": 200
+    },
+    {
+      "label": "search_entities (keyword catalog search)",
+      "endpoint": "ios/search_entities",
+      "status": 200,
+      "shape": "list[25]",
+      "sample_keys": [
+        "active",
+        "app_id",
+        "canonical_country",
+        "categories",
+        "global_rating_count",
+        "humanized_name",
+        "icon_url",
+        "name",
+        "os",
+        "publisher_id",
+        "publisher_name",
+        "publisher_profile_url",
+        "release_date",
+        "updated_date"
+      ]
+    },
+    {
+      "label": "top_and_trending",
+      "endpoint": "ios/top_and_trending",
+      "status": 404,
+      "note": "<!DOCTYPE HTML>\n<!-- Thank you Teamliquid for the inspiration -->\n<!-- And thanks to Sandy for the beaver drawing! -->\n\n<html>\n  <head>\n    <title>Sensor Tower 404 - the page you w"
+    },
+    {
+      "label": "top_publishers",
+      "endpoint": "ios/top_and_trending/publishers",
+      "status": 422,
+      "note": "{\"errors\":[{\"title\":\"Required parameter: 'time_range' is missing\"}]}"
+    },
+    {
+      "label": "keyword research",
+      "endpoint": "ios/keywords/research_keyword",
+      "status": 404,
+      "note": "<!DOCTYPE HTML>\n<!-- Thank you Teamliquid for the inspiration -->\n<!-- And thanks to Sandy for the beaver drawing! -->\n\n<html>\n  <head>\n    <title>Sensor Tower 404 - the page you w"
+    },
+    {
+      "label": "app current keywords",
+      "endpoint": "ios/keywords/get_current_keywords",
+      "status": 404,
+      "note": "<!DOCTYPE HTML>\n<!-- Thank you Teamliquid for the inspiration -->\n<!-- And thanks to Sandy for the beaver drawing! -->\n\n<html>\n  <head>\n    <title>Sensor Tower 404 - the page you w"
+    },
+    {
+      "label": "top in-app purchases",
+      "endpoint": "ios/apps/top_in_app_purchases",
+      "status": 200,
+      "shape": "dict['apps']",
+      "len_apps": 1,
+      "keys_apps": [
+        "app_id",
+        "top_in_app_purchases"
+      ]
+    },
+    {
+      "label": "review history",
+      "endpoint": "ios/review_history",
+      "status": 404,
+      "note": "<!DOCTYPE HTML>\n<!-- Thank you Teamliquid for the inspiration -->\n<!-- And thanks to Sandy for the beaver drawing! -->\n\n<html>\n  <head>\n    <title>Sensor Tower 404 - the page you w"
+    },
+    {
+      "label": "reviews",
+      "endpoint": "ios/reviews",
+      "status": 404,
+      "note": "<!DOCTYPE HTML>\n<!-- Thank you Teamliquid for the inspiration -->\n<!-- And thanks to Sandy for the beaver drawing! -->\n\n<html>\n  <head>\n    <title>Sensor Tower 404 - the page you w"
+    },
+    {
+      "label": "app update timeline",
+      "endpoint": "ios/app_update_history",
+      "status": 404,
+      "note": "<!DOCTYPE HTML>\n<!-- Thank you Teamliquid for the inspiration -->\n<!-- And thanks to Sandy for the beaver drawing! -->\n\n<html>\n  <head>\n    <title>Sensor Tower 404 - the page you w"
+    },
+    {
+      "label": "active users (usage intel)",
+      "endpoint": "ios/usage/active_users",
+      "status": 200,
+      "shape": "list[2]",
+      "sample_keys": [
+        "app_id",
+        "country",
+        "date",
+        "ipad_users",
+        "iphone_users"
+      ]
+    },
+    {
+      "label": "retention",
+      "endpoint": "ios/usage/retention",
+      "status": 404,
+      "note": "<!DOCTYPE HTML>\n<!-- Thank you Teamliquid for the inspiration -->\n<!-- And thanks to Sandy for the beaver drawing! -->\n\n<html>\n  <head>\n    <title>Sensor Tower 404 - the page you w"
+    },
+    {
+      "label": "demographics",
+      "endpoint": "ios/usage/demographics",
+      "status": 422,
+      "note": "{\"errors\":[{\"title\":\"Required parameter: 'start_date' is missing\"}]}"
+    },
+    {
+      "label": "category history",
+      "endpoint": "ios/category_history",
+      "status": 404,
+      "note": "<!DOCTYPE HTML>\n<!-- Thank you Teamliquid for the inspiration -->\n<!-- And thanks to Sandy for the beaver drawing! -->\n\n<html>\n  <head>\n    <title>Sensor Tower 404 - the page you w"
+    },
+    {
+      "label": "store summary",
+      "endpoint": "ios/store_summary",
+      "status": 200,
+      "shape": "list[2]",
+      "sample_keys": [
+        "ar",
+        "au",
+        "ca",
+        "cc",
+        "d",
+        "ir",
+        "iu"
+      ]
+    }
+  ]
+}
