@@ -136,7 +136,7 @@ def main():
     print("Fetching app details...")
     details = fetch_details(client, app_ids)
 
-    print("\nFetching sales estimates (12m, TR + worldwide in one pass)...")
+    print("\nFetching sales estimates (12m; US, TR and worldwide in one pass)...")
     est = fetch_estimates(client, app_ids)
 
     merged = {}
@@ -151,11 +151,7 @@ def main():
             "has_iap": d.get("in_app_purchases"),
             "version": d.get("version"),
             "supported_languages": d.get("supported_languages"),
-            "supports_turkish": bool(
-                d.get("supported_languages")
-                and any(str(l).upper().startswith(("TR", "TUR"))
-                        for l in d["supported_languages"])
-            ),
+            "n_languages": len(d.get("supported_languages") or []),
             "publisher_country": d.get("publisher_country"),
             "subtitle": d.get("subtitle"),
             "description_head": d.get("description_head"),

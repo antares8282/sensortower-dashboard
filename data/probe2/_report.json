@@ -1,0 +1,206 @@
+{
+  "probed_at": "2026-08-13T13:29:12.212969",
+  "calls": 25,
+  "results": [
+    {
+      "label": "kw research v1",
+      "path": "/v1/ios/keywords/research_keyword",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "kw research (no country)",
+      "path": "/v1/ios/keywords/research_keyword",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "kw current",
+      "path": "/v1/ios/keywords/get_current_keywords",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "kw spy",
+      "path": "/v1/ios/keywords/keyword_spy",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "kw ranks",
+      "path": "/v1/ios/keywords/get_keyword_rankings",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "kw translate",
+      "path": "/v1/ios/keywords/translate",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "aso keywords",
+      "path": "/v1/ios/aso/keywords",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "search rankings",
+      "path": "/v1/ios/search_rankings",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "app keyword rank hist",
+      "path": "/v1/ios/keyword_rankings",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "ad networks",
+      "path": "/v1/ios/ad_intel/networks",
+      "status": 200,
+      "shape": "list[27]"
+    },
+    {
+      "label": "ad network_analysis",
+      "path": "/v1/ios/ad_intel/network_analysis",
+      "status": 200,
+      "shape": "list[403]",
+      "keys": [
+        "app_id",
+        "country",
+        "date",
+        "network",
+        "sov"
+      ]
+    },
+    {
+      "label": "ad top_advertisers",
+      "path": "/v1/ios/ad_intel/top_advertisers",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "ad top_publishers",
+      "path": "/v1/ios/ad_intel/top_publishers",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "ad share_of_voice",
+      "path": "/v1/ios/ad_intel/share_of_voice",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "ad creatives",
+      "path": "/v1/ios/ad_intel/creatives",
+      "status": 422,
+      "note": "{\"errors\":[{\"title\":\"Invalid 'networks' parameter. The network 'Facebook' is invalid for the current endpoint. Possible values are: Adcolony, Admob, Applovin, C"
+    },
+    {
+      "label": "ad impressions",
+      "path": "/v1/ios/ad_intel/impressions",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "ad intel bare",
+      "path": "/v1/ad_intel/network_analysis",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "featured today",
+      "path": "/v1/ios/featured/today/stories",
+      "status": 200,
+      "shape": "list[31]",
+      "keys": [
+        "country",
+        "date",
+        "stories"
+      ]
+    },
+    {
+      "label": "featured apps",
+      "path": "/v1/ios/featured/apps",
+      "status": 200,
+      "shape": "list[31]",
+      "keys": [
+        "category",
+        "country",
+        "date",
+        "sections"
+      ]
+    },
+    {
+      "label": "featured creatives",
+      "path": "/v1/ios/featured/creatives",
+      "status": 200,
+      "shape": "dict['features']",
+      "len_features": 11,
+      "keys_features": [
+        "category",
+        "country",
+        "country_name",
+        "creatives",
+        "downloads",
+        "downloads_share",
+        "feature_downloads",
+        "first_seen_at",
+        "occurrences",
+        "path",
+        "positions",
+        "store_positions",
+        "type"
+      ]
+    },
+    {
+      "label": "store summary (cat totals)",
+      "path": "/v1/ios/store_summary",
+      "status": 200,
+      "shape": "list[2]",
+      "keys": [
+        "ar",
+        "au",
+        "ca",
+        "cc",
+        "d",
+        "ir",
+        "iu"
+      ]
+    },
+    {
+      "label": "category ranking summary",
+      "path": "/v1/ios/category_ranking_summary",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "download estimates by src",
+      "path": "/v1/ios/downloads_by_sources",
+      "status": 200,
+      "shape": "dict['data']"
+    },
+    {
+      "label": "app analysis: retention",
+      "path": "/v1/ios/usage/retention",
+      "status": 404,
+      "note": "HTML 404"
+    },
+    {
+      "label": "usage active users",
+      "path": "/v1/ios/usage/active_users",
+      "status": 200,
+      "shape": "list[2]",
+      "keys": [
+        "app_id",
+        "country",
+        "date",
+        "ipad_users",
+        "iphone_users"
+      ]
+    }
+  ]
+}

@@ -1,11 +1,12 @@
 name: Monthly Niche Scan
 
-# Feeds the Opportunities page. Runs monthly rather than weekly because the
-# thing it measures — how crowded and how well-monetized a niche is — moves on
-# a scale of months, not days. ~291 calls per run.
+# Feeds the Opportunities page. Monthly rather than weekly because what it
+# measures — how crowded, how well-monetized and how ad-gated a niche is —
+# moves on a scale of months.
 #
-# Order matters: scan (catalog sweep) -> filter (no API) -> enrich (estimates)
-# -> opportunity (no API, writes dashboard_data/current/niches.json).
+# Cost per run: ~462 catalog sweep + ~350 enrich + ~135 ad-intel ≈ 950 calls.
+# (niche_reclassify.py is a local dev tool for when classification rules
+# change; CI runs filter and enrich fresh, so it is not needed here.)
 on:
   schedule:
     - cron: '0 4 1 * *'  # 1st of the month, 04:00 UTC
@@ -17,7 +18,7 @@ permissions:
 jobs:
   niche-scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
 
     steps:
       - name: Checkout repository
@@ -36,7 +37,7 @@ jobs:
       - name: Catalog sweep
         env:
           SENSORTOWER_API_TOKEN: ${{ secrets.SENSORTOWER_API_TOKEN }}
-        run: python scripts/niche_scan.py --budget 400
+        run: python scripts/niche_scan.py --budget 600
 
       - name: Confirm niche membership
         run: python scripts/niche_filter.py
@@ -44,7 +45,12 @@ jobs:
       - name: Enrich with ratings and estimates
         env:
           SENSORTOWER_API_TOKEN: ${{ secrets.SENSORTOWER_API_TOKEN }}
-        run: python scripts/niche_enrich.py --budget 250
+        run: python scripts/niche_enrich.py --budget 600
+
+      - name: Sample paid-UA pressure
+        env:
+          SENSORTOWER_API_TOKEN: ${{ secrets.SENSORTOWER_API_TOKEN }}
+        run: python scripts/niche_ads.py --top 5 --budget 250
 
       - name: Score opportunities
         run: python scripts/niche_opportunity.py

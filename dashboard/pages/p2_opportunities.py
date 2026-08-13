@@ -1,15 +1,14 @@
 """
 Opportunities — niche-level, not app-level.
 
-The previous version listed individual stale apps from the US top-50 charts.
-That could not answer "which niche is underserved" for two reasons: it worked
-on the wrong unit (an app, not a market), and its data was survivorship-biased
-by construction — top-chart apps are the winners, and an underserved niche is
-precisely one where nobody has charted.
+The original version listed individual stale apps from the US top-50 charts,
+which could not find underserved niches: wrong unit (an app, not a market), and
+top-chart data is survivorship-biased by construction — an underserved niche is
+precisely one where nobody charted.
 
-This version reads dashboard_data/current/niches.json, built by the niche
-pipeline (search_entities → keyword confirmation → sales estimates), which
-reaches apps that never chart.
+Reads dashboard_data/current/niches.json, produced by the niche pipeline
+(search_entities catalog sweep → membership confirmation → sales estimates →
+ad-intel sampling), which reaches apps that never chart.
 """
 import json
 import pandas as pd
@@ -31,52 +30,51 @@ def load_niches():
 
 def scatter(rows):
     """
-    Market vs buildability. This chart exists to make one thing unmissable:
-    the best-paying niches are usually the least buildable, because the barrier
-    IS the reason they stay underserved. The top-right quadrant is the only
-    place worth starting.
+    Money against paid-UA pressure. The useful region is bottom-right: a niche
+    that monetizes while its leaders are *not* buying installs, which is where
+    an organic launch can still land.
     """
-    x = [r["buildability"] for r in rows]
-    y = [r["market_score"] for r in rows]
-    size = [max(8, min(40, (r["us_downloads_12m"] / 60000) + 8)) for r in rows]
-    color = ["#FF6B6B" if r["ads_caveat"] else "#4FB7C2" for r in rows]
-    text = [r["sub_niche"] for r in rows]
-    hover = [
-        f"<b>{r['sub_niche']}</b><br>"
-        f"US downloads 12m: {r['us_downloads_12m']:,}<br>"
-        f"Revenue/download: ${r['us_rpd_smoothed']:.2f}<br>"
-        f"Live apps: {r['apps_with_downloads']}<br>"
-        f"Leader rating: {r['leader_avg_rating'] or '—'}<br>"
-        f"GO score: {r['go_score']}<extra></extra>"
-        for r in rows
-    ]
+    pts = [r for r in rows if r["ua_advertiser_share"] is not None]
+    if not pts:
+        return None
+
+    x = [r["ua_advertiser_share"] * 100 for r in pts]
+    y = [min(r["us_rpd_smoothed"], 30) for r in pts]
+    size = [max(9, min(42, (r["us_downloads_12m"] / 70000) + 9)) for r in pts]
+    color = ["#E8925A" if r["ads_caveat"] else "#4FB7C2" for r in pts]
 
     fig = go.Figure()
-    mx, my = 62, 55  # quadrant dividers, drawn before points so dots sit on top
-    fig.add_vrect(x0=mx, x1=100, fillcolor="#4FB7C2", opacity=0.06, line_width=0)
-    fig.add_hrect(y0=my, y1=100, fillcolor="#4FB7C2", opacity=0.06, line_width=0)
-    fig.add_vline(x=mx, line_dash="dot", line_color="#666", line_width=1)
-    fig.add_hline(y=my, line_dash="dot", line_color="#666", line_width=1)
+    fig.add_vrect(x0=0, x1=35, fillcolor="#4FB7C2", opacity=0.07, line_width=0)
+    fig.add_vline(x=35, line_dash="dot", line_color="#666", line_width=1)
 
     fig.add_trace(go.Scatter(
-        x=x, y=y, mode="markers+text", text=text,
-        textposition="top center", textfont=dict(size=9, color="#AAA"),
-        marker=dict(size=size, color=color, opacity=0.8,
+        x=x, y=y, mode="markers+text",
+        text=[r["sub_niche"] for r in pts],
+        textposition="top center", textfont=dict(size=9, color="#9AA"),
+        marker=dict(size=size, color=color, opacity=0.82,
                     line=dict(width=1, color="#0E1117")),
-        hovertemplate=hover,
+        hovertemplate=[
+            f"<b>{r['sub_niche']}</b><br>{r['family']}<br>"
+            f"US downloads: {r['us_downloads_12m']:,}<br>"
+            f"Revenue/download: ${r['us_rpd_smoothed']:.2f}<br>"
+            f"Leaders advertising: {r['ua_advertisers']}/{r['ua_sampled']}<br>"
+            f"Live apps: {r['apps_with_downloads']}<br>"
+            f"Score: {r['score']}<extra></extra>"
+            for r in pts
+        ],
     ))
     fig.update_layout(
-        height=520,
-        margin=dict(l=10, r=10, t=30, b=10),
-        xaxis=dict(title="Buildability →  (higher = shippable by a small team)",
-                   range=[30, 105], gridcolor="#222"),
-        yaxis=dict(title="Market score →", range=[0, 100], gridcolor="#222"),
+        height=520, margin=dict(l=10, r=10, t=34, b=10),
+        xaxis=dict(title="← share of leaders buying installs (paid UA)",
+                   range=[-4, 104], gridcolor="#222", ticksuffix="%"),
+        yaxis=dict(title="revenue per download →", gridcolor="#222",
+                   tickprefix="$"),
         plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
         showlegend=False,
-        annotations=[dict(
-            x=97, y=97, xref="x", yref="y", text="build here",
-            showarrow=False, font=dict(size=10, color="#4FB7C2"),
-        )],
+        annotations=[dict(x=3, y=max(y) * 0.96, xref="x", yref="y",
+                          text="pays, and not ad-gated", showarrow=False,
+                          xanchor="left",
+                          font=dict(size=10, color="#4FB7C2"))],
     )
     return fig
 
@@ -87,9 +85,9 @@ def render():
     rows = load_niches()
     if not rows:
         st.warning(
-            "No niche data yet. Run the pipeline:\n\n"
+            "No niche data yet. Run:\n\n"
             "`python scripts/niche_scan.py` → `niche_filter.py` → "
-            "`niche_enrich.py` → `niche_opportunity.py`"
+            "`niche_enrich.py` → `niche_ads.py` → `niche_opportunity.py`"
         )
         return
 
@@ -99,60 +97,60 @@ def render():
     )
 
     # ---- filters ----
-    parents = sorted({r["niche"] for r in rows})
-    sel_parent = st.sidebar.multiselect(
-        "Niche family", parents, placeholder="All families"
-    )
+    families = sorted({r["family"] for r in rows})
+    sel_fam = st.sidebar.multiselect("Family", families, placeholder="All families")
     show_thin = st.sidebar.checkbox(
         "Show low-volume niches", value=False,
-        help="Under 10,000 US downloads/yr — revenue-per-download is not "
+        help="Under 10,000 US downloads/yr — revenue per download is not "
              "trustworthy at that sample size.",
     )
-    min_build = st.sidebar.slider(
-        "Minimum buildability", 0, 100, 0,
-        help="Higher = fewer data moats, hardware dependencies, network effects "
-             "and regulatory barriers.",
+    max_ua = st.sidebar.slider(
+        "Max % of leaders running paid ads", 0, 100, 100,
+        help="Lower this to find niches where installs are still earned "
+             "organically rather than bought.",
     )
+    min_rpd = st.sidebar.slider("Min revenue per download ($)", 0.0, 20.0, 0.0, 0.5)
 
     view = rows
-    if sel_parent:
-        view = [r for r in view if r["niche"] in sel_parent]
+    if sel_fam:
+        view = [r for r in view if r["family"] in sel_fam]
     if not show_thin:
         view = [r for r in view if not r["low_volume"]]
-    view = [r for r in view if (r["buildability"] or 0) >= min_build]
+    view = [r for r in view if r["us_rpd_smoothed"] >= min_rpd]
+    view = [r for r in view
+            if r["ua_advertiser_share"] is None
+            or r["ua_advertiser_share"] * 100 <= max_ua]
 
     if not view:
         st.info("No niches match those filters.")
         return
 
-    # ---- the tension, stated once ----
-    st.info(
-        "**Buildability and opportunity pull against each other.** The moat is "
-        "usually *why* a niche stays underserved — Navionics earns $23M rated "
-        "2.86★ because charts need licensed hydrographic data, not better code. "
-        "Qibla finders are trivially buildable, which is why 55 exist and revenue "
-        "is $0.37/download. Look for niches gated by effort, not by data."
-    )
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Sub-niches", len(view))
+    c2.metric("Apps covered", f"{sum(r['apps_total'] for r in view):,}")
+    c3.metric("US downloads 12m", f"{sum(r['us_downloads_12m'] for r in view):,}")
+    c4.metric("US revenue 12m", f"${sum(r['us_revenue_12m'] for r in view):,.0f}")
 
-    st.plotly_chart(scatter(view), use_container_width=True)
+    fig = scatter(view)
+    if fig:
+        st.plotly_chart(fig, use_container_width=True)
 
-    # ---- table ----
     df = pd.DataFrame([{
         "Sub-niche": r["sub_niche"],
-        "Family": r["niche"],
+        "Family": r["family"],
         "Live apps": r["apps_with_downloads"],
         "US downloads": r["us_downloads_12m"],
         "$/download": r["us_rpd_smoothed"],
         "Leader ★": r["leader_avg_rating"],
-        "Stale leaders": r["leaders_stale_9m"],
+        "Stale": r["leaders_stale_9m"],
+        "Paid UA": (r["ua_advertiser_share"] * 100
+                    if r["ua_advertiser_share"] is not None else None),
         "Ads?": "yes" if r["ads_caveat"] else "",
-        "Market": r["market_score"],
-        "Build": r["buildability"],
-        "GO": r["go_score"],
+        "Score": r["score"],
     } for r in view])
 
     event = st.dataframe(
-        df, use_container_width=True, hide_index=True, height=430,
+        df, use_container_width=True, hide_index=True, height=440,
         on_select="rerun", selection_mode="single-row", key="niche_table",
         column_config={
             "US downloads": st.column_config.NumberColumn(format="%d"),
@@ -161,19 +159,14 @@ def render():
                 help="Revenue per download, shrunk toward zero on small samples. "
                      "Excludes ad revenue, which this API does not report.",
             ),
-            "Stale leaders": st.column_config.NumberColumn(
-                format="%d/5", help="Top-5 apps with no release in 9+ months."
-            ),
-            "Market": st.column_config.ProgressColumn(
-                format="%.0f", min_value=0, max_value=100
-            ),
-            "Build": st.column_config.ProgressColumn(
-                format="%.0f", min_value=0, max_value=100
-            ),
-            "GO": st.column_config.ProgressColumn(
-                format="%.0f", min_value=0, max_value=100,
-                help="Geometric mean of Market and Build — a niche must clear both.",
-            ),
+            "Stale": st.column_config.NumberColumn(
+                format="%d/5", help="Top-5 apps with no release in 9+ months."),
+            "Paid UA": st.column_config.NumberColumn(
+                format="%.0f%%",
+                help="Share of sampled leaders running paid user acquisition. "
+                     "High means installs are bought, not earned."),
+            "Score": st.column_config.ProgressColumn(
+                format="%.0f", min_value=0, max_value=100),
         },
     )
 
@@ -182,23 +175,35 @@ def render():
         r = view[event.selection.rows[0]]
         st.divider()
         st.subheader(r["sub_niche"])
+        st.caption(r["family"])
 
-        c1, c2, c3, c4 = st.columns(4)
-        c1.metric("US downloads 12m", f"{r['us_downloads_12m']:,}")
-        c2.metric("US revenue 12m", f"${r['us_revenue_12m']:,.0f}")
-        c3.metric("Revenue / download", f"${r['us_rpd_smoothed']:.2f}")
-        c4.metric("Live competitors", r["apps_with_downloads"])
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("US downloads 12m", f"{r['us_downloads_12m']:,}")
+        m2.metric("US revenue 12m", f"${r['us_revenue_12m']:,.0f}")
+        m3.metric("Revenue / download", f"${r['us_rpd_smoothed']:.2f}")
+        m4.metric("Live competitors", r["apps_with_downloads"])
 
-        if r["barrier_note"]:
-            barriers = ", ".join(r["top_barriers"]) or "no dominant barrier"
-            st.markdown(f"**Build barriers** — *{barriers}*  \n{r['barrier_note']}")
+        if r["ua_sampled"]:
+            share = r["ua_advertiser_share"] * 100
+            verdict = ("installs are largely bought here — organic entry is hard"
+                       if share >= 60 else
+                       "mixed; some paid pressure" if share >= 35 else
+                       "little paid UA — organic and ASO can still win")
+            st.markdown(
+                f"**Paid user acquisition** — {r['ua_advertisers']} of "
+                f"{r['ua_sampled']} sampled leaders are advertising "
+                f"({share:.0f}%), total share of voice {r['ua_total_sov']}. "
+                f"*{verdict}.*"
+            )
+        else:
+            st.caption("No ad-intel sample for this niche.")
 
         if r["ads_caveat"]:
             st.warning(
                 f"{r['ad_funded_apps']} apps here are free with no IAP and carry "
-                f"{r['ad_funded_download_share']*100:.0f}% of downloads — they are "
-                "almost certainly ad-funded, and that revenue is invisible to this "
-                "API. Treat the revenue figure as a floor."
+                f"{r['ad_funded_download_share']*100:.0f}% of downloads — almost "
+                "certainly ad-funded, and that revenue is invisible to this API. "
+                "Treat the revenue figure as a floor."
             )
 
         conc = r["hhi_us"]
@@ -207,28 +212,30 @@ def render():
                      else "fragmented — no dominant incumbent" if conc < 0.10
                      else "moderately concentrated")
             st.caption(
-                f"Concentration HHI {conc} — {shape}. "
-                f"{r['paid_apps']} paid, {r['iap_apps']} with IAP. "
-                f"US is {r['us_share_of_ww_rev']*100:.0f}% of worldwide revenue."
+                f"Concentration HHI {conc} — {shape}. {r['paid_apps']} paid, "
+                f"{r['iap_apps']} with IAP. US is "
+                f"{r['us_share_of_ww_rev']*100:.0f}% of worldwide revenue."
             )
 
         st.markdown("**Leading apps**")
-        leaders = pd.DataFrame([{
-            "App": a["name"],
-            "Publisher": a["publisher"],
-            "US downloads": a["us_downloads_12m"],
-            "US revenue": a["us_revenue_12m"],
-            "Rating": a["rating"],
-            "Ratings": a["global_rating_count"],
-            "Last update": a["updated_date"],
-            "Days stale": a["days_since_update"],
-        } for a in r["leaders"]])
         st.dataframe(
-            leaders, use_container_width=True, hide_index=True,
+            pd.DataFrame([{
+                "App": a["name"],
+                "Publisher": a["publisher"],
+                "US downloads": a["us_downloads_12m"],
+                "US revenue": a["us_revenue_12m"],
+                "★": a["rating"],
+                "Ratings": a["global_rating_count"],
+                "Last update": a["updated_date"],
+                "Days stale": a["days_since_update"],
+                "Ad SoV": a["ua_sov"],
+            } for a in r["leaders"]]),
+            use_container_width=True, hide_index=True,
             column_config={
                 "US downloads": st.column_config.NumberColumn(format="%d"),
                 "US revenue": st.column_config.NumberColumn(format="$%d"),
                 "Ratings": st.column_config.NumberColumn(format="%d"),
-                "Rating": st.column_config.NumberColumn(format="%.2f"),
+                "★": st.column_config.NumberColumn(format="%.2f"),
+                "Ad SoV": st.column_config.NumberColumn(format="%.4f"),
             },
         )

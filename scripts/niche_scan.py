@@ -1,32 +1,27 @@
 """
-Phase 1 of the opportunity scan: enumerate the candidate universe.
+Phase 1: sweep the catalog for every seed term.
 
-Two passes, both cached so re-runs cost nothing:
-  A. Keyword sweep  — search_entities over the niche seed terms (catalog reach,
-                      finds apps that never chart).
-  B. Ranking sweep  — TR and US top charts for the categories these niches live
-                      in (tells us who actually wins, and how deep the tail is).
+search_entities is the only endpoint that reaches apps outside the top charts,
+which is the entire point — an underserved niche is one where nobody charted,
+so ranking data cannot see it by construction.
 
-Output: data/niche/{catalog.json, rankings_tr.json, rankings_us.json}
-Run: python scripts/niche_scan.py [--budget N]
+Output: data/niche/catalog.json
+Run: python scripts/niche_scan.py [--budget N] [--pages N]
 """
 import sys
 import json
 import argparse
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from api.sensortower_client import SensorTowerClient  # noqa: E402
-from config.niches import (  # noqa: E402
-    NICHES, TR_SWEEP_CATEGORIES, US_SWEEP_CATEGORIES, CHARTS, IOS_CATEGORIES,
-)
+from config.niches import NICHE_DEFS, TOTAL_SEEDS  # noqa: E402
 
 OUT_DIR = PROJECT_ROOT / "data" / "niche"
-BUDGET_CAP = 2500
 
 
 class Budget:
@@ -43,116 +38,67 @@ class Budget:
 
     def check(self):
         if self.used >= self.max_calls:
-            raise RuntimeError(
-                f"Budget cap hit: {self.used}/{self.max_calls} calls used this run."
-            )
-
-
-def keyword_sweep(client, budget, pages_per_term=1):
-    """Search each seed term; dedupe by app_id, remember which terms hit it."""
-    catalog = {}
-
-    for niche, terms in NICHES.items():
-        print(f"\n=== {niche} ({len(terms)} terms) ===")
-        for term in terms:
-            budget.check()
-            for page in range(pages_per_term):
-                try:
-                    apps = client.search_apps(term, limit=250, offset=page * 250)
-                except Exception as e:
-                    print(f"  ! '{term}' page {page}: {type(e).__name__}: {e}")
-                    break
-
-                for a in apps:
-                    aid = str(a.get("app_id"))
-                    if not aid or aid == "None":
-                        continue
-                    rec = catalog.setdefault(aid, {**a, "_niches": [], "_terms": []})
-                    if niche not in rec["_niches"]:
-                        rec["_niches"].append(niche)
-                    if term not in rec["_terms"]:
-                        rec["_terms"].append(term)
-
-                if len(apps) < 250:
-                    break
-
-            print(f"  {term:22s} -> catalog now {len(catalog)}")
-
-    return catalog
-
-
-def ranking_sweep(client, budget, categories, country, date):
-    """Top charts per category × chart type. Raw app-id lists, no detail resolve."""
-    out = {}
-    for cat_id in categories:
-        cat_name = IOS_CATEGORIES.get(cat_id, cat_id)
-        out[cat_id] = {"name": cat_name, "charts": {}}
-        for chart in CHARTS:
-            budget.check()
-            try:
-                res = client.get_top_apps(
-                    category=cat_id,
-                    chart_type=chart,
-                    country=country,
-                    date=date,
-                    resolve_details=False,
-                )
-                ids = [str(x) for x in res.get("ranking", [])]
-            except Exception as e:
-                print(f"  ! {country}/{cat_name}/{chart}: {type(e).__name__}: {e}")
-                ids = []
-            out[cat_id]["charts"][chart] = ids
-            print(f"  {country} {cat_name:18s} {chart:26s} {len(ids):4d} apps")
-    return out
+            raise RuntimeError(f"Budget cap hit: {self.used}/{self.max_calls}")
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--budget", type=int, default=400,
-                    help="max API calls this run (default 400)")
-    ap.add_argument("--skip-rankings", action="store_true")
-    ap.add_argument("--skip-search", action="store_true")
+    ap.add_argument("--budget", type=int, default=1200)
+    ap.add_argument("--pages", type=int, default=1,
+                    help="pages of 250 per seed term")
     args = ap.parse_args()
 
-    client = SensorTowerClient(cache_ttl_hours=72)
-    monthly = client.get_monthly_usage()
-    print(f"Monthly usage before scan: {monthly}/{BUDGET_CAP}")
-    if monthly >= 2000:
-        print("WARNING: monthly usage above 2000 — aborting.")
-        sys.exit(1)
-
+    client = SensorTowerClient(cache_ttl_hours=336)  # 14d — niches move slowly
     budget = Budget(client, args.budget)
+    print(f"Monthly usage: {client.get_monthly_usage()}")
+    print(f"Sweeping {TOTAL_SEEDS} seeds across {len(NICHE_DEFS)} families "
+          f"({args.pages} page(s) each)\n")
+
+    catalog = {}
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    ranking_date = (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d")
 
     try:
-        if not args.skip_search:
-            catalog = keyword_sweep(client, budget)
-            (OUT_DIR / "catalog.json").write_text(
-                json.dumps(catalog, indent=2, ensure_ascii=False))
-            print(f"\nCatalog: {len(catalog)} unique apps -> data/niche/catalog.json")
-
-        if not args.skip_rankings:
-            print(f"\n=== TR ranking sweep ({ranking_date}) ===")
-            tr = ranking_sweep(client, budget, TR_SWEEP_CATEGORIES, "TR", ranking_date)
-            (OUT_DIR / "rankings_tr.json").write_text(json.dumps(tr, indent=2))
-
-            print(f"\n=== US ranking sweep ({ranking_date}) ===")
-            us = ranking_sweep(client, budget, US_SWEEP_CATEGORIES, "US", ranking_date)
-            (OUT_DIR / "rankings_us.json").write_text(json.dumps(us, indent=2))
-
+        for d in NICHE_DEFS:
+            fam = d["family"]
+            print(f"=== {fam} ({len(d['seeds'])} seeds) ===")
+            for term in d["seeds"]:
+                budget.check()
+                for page in range(args.pages):
+                    try:
+                        apps = client.search_apps(term, limit=250, offset=page * 250)
+                    except Exception as e:
+                        print(f"  ! '{term}': {type(e).__name__}: {e}")
+                        break
+                    for a in apps:
+                        aid = str(a.get("app_id"))
+                        if not aid or aid == "None":
+                            continue
+                        rec = catalog.setdefault(
+                            aid, {**a, "_families": [], "_terms": []})
+                        if fam not in rec["_families"]:
+                            rec["_families"].append(fam)
+                        if term not in rec["_terms"]:
+                            rec["_terms"].append(term)
+                    if len(apps) < 250:
+                        break
+            print(f"  catalog now {len(catalog):,} apps  "
+                  f"(calls {budget.used})")
     except RuntimeError as e:
         print(f"\nSTOPPED: {e}")
 
+    (OUT_DIR / "catalog.json").write_text(
+        json.dumps(catalog, indent=2, ensure_ascii=False))
     (OUT_DIR / "_scan_meta.json").write_text(json.dumps({
         "scanned_at": datetime.now().isoformat(),
-        "ranking_date": ranking_date,
+        "seeds": TOTAL_SEEDS,
+        "families": len(NICHE_DEFS),
+        "unique_apps": len(catalog),
         "calls_used": budget.used,
         "monthly_usage": client.get_monthly_usage(),
     }, indent=2))
 
-    print(f"\nDone. Calls used this run: {budget.used}. "
-          f"Monthly: {client.get_monthly_usage()}/{BUDGET_CAP}")
+    print(f"\nCatalog: {len(catalog):,} unique apps")
+    print(f"Calls used: {budget.used}. Monthly: {client.get_monthly_usage()}")
 
 
 if __name__ == "__main__":

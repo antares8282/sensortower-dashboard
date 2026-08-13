@@ -41,7 +41,9 @@ class SensorTowerClient:
         self,
         api_token: Optional[str] = None,
         cache_ttl_hours: int = 168,  # 1 week default
-        rate_limit_delay: float = 1.0
+        rate_limit_delay: float = 1.0,
+        max_retries: int = 4,
+        retry_backoff: float = 3.0
     ):
         self.api_token = api_token or os.getenv('SENSORTOWER_API_TOKEN')
         if not self.api_token:
@@ -49,6 +51,8 @@ class SensorTowerClient:
 
         self.cache_ttl = timedelta(hours=cache_ttl_hours)
         self.rate_limit_delay = rate_limit_delay
+        self.max_retries = max_retries
+        self.retry_backoff = retry_backoff
         self.last_request_time = 0
         self.request_count = 0
 
@@ -153,15 +157,43 @@ class SensorTowerClient:
         if usage >= 2000:
             print(f"  WARNING: Monthly usage is {usage}/2500!")
 
-        response = requests.get(url, headers=headers, params=params, timeout=30)
-        self.last_request_time = time.time()
-        response.raise_for_status()
-        data = response.json()
+        # Retry transient network failures with backoff. A brief DNS or
+        # connectivity blip once wiped out all 201 batches of an enrichment run
+        # in a single pass; unattended monthly CI runs cannot afford that.
+        last_err = None
+        for attempt in range(self.max_retries):
+            try:
+                response = requests.get(
+                    url, headers=headers, params=params, timeout=60
+                )
+                self.last_request_time = time.time()
+                response.raise_for_status()
+                data = response.json()
 
-        self._log_request(endpoint)
-        self._save_to_cache(cache_key, data)
+                self._log_request(endpoint)
+                self._save_to_cache(cache_key, data)
+                return data
 
-        return data
+            except (requests.ConnectionError, requests.Timeout) as e:
+                last_err = e
+                self.last_request_time = time.time()
+                if attempt < self.max_retries - 1:
+                    backoff = self.retry_backoff * (2 ** attempt)
+                    print(f"  [retry {attempt + 1}/{self.max_retries - 1}] "
+                          f"{type(e).__name__} — waiting {backoff:.0f}s")
+                    time.sleep(backoff)
+            except requests.HTTPError as e:
+                # 5xx is worth retrying; 4xx means the request itself is wrong.
+                status = e.response.status_code if e.response is not None else 0
+                if status < 500 or attempt == self.max_retries - 1:
+                    self._log_request(endpoint)
+                    raise
+                last_err = e
+                backoff = self.retry_backoff * (2 ** attempt)
+                print(f"  [retry {attempt + 1}] HTTP {status} — waiting {backoff:.0f}s")
+                time.sleep(backoff)
+
+        raise last_err
 
     # ---- Rankings / Top Charts ----
 
