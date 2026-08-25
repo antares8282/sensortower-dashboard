@@ -21,7 +21,17 @@ to every session after that.
 """
 import hashlib
 import streamlit as st
-from streamlit_cookies_manager import EncryptedCookieManager
+
+# streamlit_cookies_manager is unmaintained and still decorates a function with
+# @st.cache, an API Streamlit has since removed entirely (not just deprecated).
+# requirements.txt pins streamlit loosely (>=1.30.0), so a routine Render
+# rebuild resolved a newer Streamlit and broke this import in production —
+# AttributeError: module 'streamlit' has no attribute 'cache'. Shim it back in
+# as an alias for its direct replacement before the import runs.
+if not hasattr(st, "cache"):
+    st.cache = st.cache_data
+
+from streamlit_cookies_manager import EncryptedCookieManager  # noqa: E402
 
 CORRECT_USER = "gokhan"
 # sha256("PowerStack-2026!")
