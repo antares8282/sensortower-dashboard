@@ -7,9 +7,9 @@ name: Monthly Niche Scan
 # Cost per run: ~462 catalog sweep + ~350 enrich + ~135 ad-intel ≈ 950 calls.
 # (niche_reclassify.py is a local dev tool for when classification rules
 # change; CI runs filter and enrich fresh, so it is not needed here.)
+# Schedule removed 2026-09-17: manual only (Actions → Run workflow), to save
+# API budget while the dashboard is seldom used.
 on:
-  schedule:
-    - cron: '0 4 1 * *'  # 1st of the month, 04:00 UTC
   workflow_dispatch:
 
 permissions:

@@ -8,9 +8,9 @@ name: Biweekly Chart Refresh
 # 15th of each month instead -- the standard idiom for "biweekly" in cron,
 # and close enough to true 14-day spacing (13-16 days depending on month
 # length) without needing a script-side week-parity check.
+# Schedule removed 2026-09-17: manual only (Actions → Run workflow), to save
+# API budget while the dashboard is seldom used.
 on:
-  schedule:
-    - cron: '0 6 1,15 * *'  # 1st and 15th of each month, 06:00 UTC
   workflow_dispatch:
 
 permissions:
